@@ -1,0 +1,381 @@
+{
+  "chapter": 6,
+  "verses": [
+    {
+      "number": 1,
+      "english": "A person who gets on with the work that is theirs to do, and does not lean on what it will bring, is the real renunciate and the real yogi. Putting out the ritual fire, or giving up activity, does not make one so.",
+      "hindi": "जो कर्मफल का सहारा लिए बिना करने योग्य काम करता है, वही संन्यासी है और वही योगी; वह नहीं जो केवल यज्ञ की अग्नि छोड़ दे, या काम करना बंद कर दे।",
+      "simpleEnglish": "Chapter 6 is about meditation, but it begins by repeating the key point: a real renunciate is not someone who stops working, but someone who works without selfish motives.",
+      "simpleHindi": "छठा अध्याय ध्यान के बारे में है, पर यह मुख्य बात दोहराकर शुरू होता है: सच्चा संन्यासी वह नहीं जो काम छोड़ दे, बल्कि वह है जो बिना स्वार्थ के काम करे।",
+      "status": "draft"
+    },
+    {
+      "number": 2,
+      "english": "What people call renunciation, Pandava, know it to be yoga. No one becomes a yogi without first giving up selfish intentions.",
+      "hindi": "पाण्डव, जिसे लोग संन्यास कहते हैं, उसे ही योग समझो। स्वार्थ भरे संकल्पों को छोड़े बिना कोई योगी नहीं बनता।",
+      "simpleEnglish": "Renunciation and yoga are two names for the same inner letting go.",
+      "simpleHindi": "संन्यास और योग, भीतर से छोड़ देने की एक ही बात के दो नाम हैं।",
+      "status": "draft"
+    },
+    {
+      "number": 3,
+      "english": "When a sage wishes to rise to yoga, action is the way up. Once that sage has risen, calm becomes the way forward.",
+      "hindi": "जो मुनि योग की ऊँचाई पर चढ़ना चाहता है, उसके लिए कर्म को साधन कहा गया है। और योग पर चढ़ चुके उसी मुनि के लिए शांति को साधन कहा गया है।",
+      "simpleEnglish": "At first we grow through selfless work. Later, inner calm becomes the main practice.",
+      "simpleHindi": "शुरुआत में हम निःस्वार्थ काम से आगे बढ़ते हैं। बाद में भीतर की शांति ही मुख्य साधना बन जाती है।",
+      "status": "draft"
+    },
+    {
+      "number": 4,
+      "english": "Someone who no longer clings to sense objects or to deeds, and has dropped every self-serving plan, has reached the summit of yoga, people say.",
+      "hindi": "जब मनुष्य न इन्द्रियों के विषयों में अटकता है, न कर्मों में, और जिसने हर स्वार्थी संकल्प छोड़ दिया हो, तब उसे योग पर चढ़ा हुआ कहा जाता है।",
+      "simpleEnglish": "You have 'arrived' in yoga when nothing outside pulls at you any more.",
+      "simpleHindi": "योग में 'पहुँचना' तब होता है जब बाहर की कोई चीज़ आपको खींचती नहीं।",
+      "status": "draft"
+    },
+    {
+      "number": 5,
+      "english": "Lift yourself up by your own effort; do not let yourself sink. For you alone are your own friend, and you alone are your own enemy.",
+      "hindi": "अपने प्रयास से अपने आप को ऊपर उठाओ; अपने आप को गिरने मत दो। क्योंकि तुम ही अपने मित्र हो, और तुम ही अपने शत्रु।",
+      "simpleEnglish": "One of the most practical verses in the Gita: no one else can do your growing for you. You can help yourself, or hold yourself back.",
+      "simpleHindi": "गीता के सबसे व्यावहारिक श्लोकों में से एक: तुम्हारी जगह कोई और आगे नहीं बढ़ सकता। तुम अपनी मदद भी कर सकते हो, और अपने को रोक भी सकते हो।",
+      "status": "draft"
+    },
+    {
+      "number": 6,
+      "english": "Your self is a friend to you when you have won mastery over yourself. But if you have not, your own self will act against you like an enemy.",
+      "hindi": "जिसने अपने आप को जीत लिया, उसका मन उसका मित्र है। पर जिसने नहीं जीता, उसका अपना मन ही शत्रु की तरह उसके विरुद्ध काम करता है।",
+      "simpleEnglish": "A disciplined mind helps us. An undisciplined mind works against us.",
+      "simpleHindi": "अनुशासित मन हमारी मदद करता है। बेकाबू मन हमारे ही विरुद्ध काम करता है।",
+      "status": "draft"
+    },
+    {
+      "number": 7,
+      "english": "In one who has mastered himself and is at peace, the highest Self stays settled, in cold and heat, joy and pain, honour and disgrace alike.",
+      "hindi": "जिसने अपने आप को जीत लिया है और जो शांत है, उसमें परमात्मा सर्दी-गर्मी, सुख-दुःख और मान-अपमान, सबमें एक-सा स्थिर रहता है।",
+      "simpleEnglish": "A calm, self-controlled person stays steady whatever the weather, the mood or the opinion of others.",
+      "simpleHindi": "शांत और संयमी व्यक्ति मौसम, मनोदशा या दूसरों की राय, कुछ भी हो, स्थिर रहता है।",
+      "status": "draft"
+    },
+    {
+      "number": 8,
+      "english": "A yogi content with knowledge and realised knowledge, unshakeable, master of the senses, who regards a clod of earth, a stone and a lump of gold as the same, is called joined in yoga.",
+      "hindi": "ज्ञान और अनुभव से तृप्त, अटल, इन्द्रियों को जीत चुका योगी, जिसके लिए मिट्टी, पत्थर और सोना एक बराबर हैं, उसे योग से जुड़ा हुआ कहा जाता है।",
+      "simpleEnglish": "For a wise person, gold and a lump of earth have the same value. Possessions no longer have a grip on them.",
+      "simpleHindi": "ज्ञानी के लिए सोना और मिट्टी का ढेला एक जैसे हैं। चीज़ों की उस पर कोई पकड़ नहीं रहती।",
+      "status": "draft"
+    },
+    {
+      "number": 9,
+      "english": "One who has the same regard for well-wishers, friends and enemies, for the neutral and the go-between, for the hateful and the related, for saints and sinners, stands out.",
+      "hindi": "जो हितैषी, मित्र, शत्रु, उदासीन, मध्यस्थ, द्वेष करने वाले और संबंधी, सज्जनों और पापियों, सबके प्रति एक-सा भाव रखता है, वह श्रेष्ठ है।",
+      "simpleEnglish": "Treating everyone fairly, whether they like us or not, is a sign of real spiritual growth.",
+      "simpleHindi": "हर किसी से समान व्यवहार करना, चाहे वह हमें पसंद करे या न करे, सच्ची आध्यात्मिक प्रगति की पहचान है।",
+      "status": "draft"
+    },
+    {
+      "number": 10,
+      "english": "A yogi should keep the mind steadily joined to the Self, staying in a quiet place, alone, with thoughts and body held in check, wanting nothing and owning nothing.",
+      "hindi": "योगी को एकांत में, अकेले रहकर, मन और शरीर को वश में रखकर, कुछ न चाहते हुए और कुछ संग्रह न करते हुए, लगातार मन को आत्मा में लगाना चाहिए।",
+      "simpleEnglish": "Krishna now gives practical instructions for meditation, starting with a quiet place and a mind free of wanting.",
+      "simpleHindi": "अब कृष्ण ध्यान के लिए व्यावहारिक निर्देश देते हैं, शुरुआत एक शांत स्थान और इच्छाओं से मुक्त मन से।",
+      "status": "draft"
+    },
+    {
+      "number": 11,
+      "english": "Choose a clean spot and fix a steady seat there, at a moderate height, laid with kusha grass, then a deerskin, then cloth on top.",
+      "hindi": "किसी साफ़ जगह पर अपने लिए एक स्थिर आसन बिछाओ, न बहुत ऊँचा, न बहुत नीचा; नीचे कुश घास, उस पर मृगछाला, और उसके ऊपर कपड़ा।",
+      "simpleEnglish": "A clean, steady and comfortable seat helps the mind settle. Today, a simple mat or cushion serves the same purpose.",
+      "simpleHindi": "साफ़, स्थिर और आरामदायक आसन मन को टिकने में मदद करता है। आज एक साधारण चटाई या गद्दी भी यही काम करती है।",
+      "status": "draft"
+    },
+    {
+      "number": 12,
+      "english": "Sitting on it, bring the mind to a single point. Hold the busy movements of thought and sense in check, and practise yoga so that the self is made clean.",
+      "hindi": "उस आसन पर बैठकर मन को एक जगह टिकाओ। विचारों और इन्द्रियों की भाग-दौड़ पर लगाम रखो, और अपने भीतर को निर्मल करने के लिए योग साधो।",
+      "simpleEnglish": "Meditation means gently gathering the scattered mind onto one point.",
+      "simpleHindi": "ध्यान का अर्थ है बिखरे हुए मन को धीरे-धीरे एक बिंदु पर इकट्ठा करना।",
+      "status": "draft"
+    },
+    {
+      "number": 13,
+      "english": "Sit erect, with spine, head and neck in one still line. Stay firm, let the eyes rest on the end of your nose, and do not glance in any direction,",
+      "hindi": "शरीर, सिर और गर्दन को एक सीध में, अचल और स्थिर रखकर, अपनी नाक के अगले हिस्से पर दृष्टि टिकाकर, और इधर-उधर न देखते हुए,",
+      "simpleEnglish": "Sit upright and keep the eyes still. A steady body makes a steady mind easier.",
+      "simpleHindi": "सीधे बैठो और आँखों को स्थिर रखो। शरीर स्थिर हो तो मन को स्थिर करना आसान होता है।",
+      "status": "draft"
+    },
+    {
+      "number": 14,
+      "english": "calm and without fear, keeping the vow of celibacy, restraining the mind and thinking of me, one should sit in yoga with me as the highest goal.",
+      "hindi": "शांत और निर्भय होकर, ब्रह्मचर्य का व्रत रखते हुए, मन को रोककर और मुझमें चित्त लगाकर, मुझे ही परम लक्ष्य मानकर योग में बैठना चाहिए।",
+      "simpleEnglish": "Calm, courage and self-restraint support meditation. Keeping the Divine in mind gives it direction.",
+      "simpleHindi": "शांति, साहस और संयम ध्यान को सहारा देते हैं। ईश्वर को मन में रखने से ध्यान को दिशा मिलती है।",
+      "status": "draft"
+    },
+    {
+      "number": 15,
+      "english": "Always joining the self in this way, the yogi with a disciplined mind reaches the peace that rests in me, the peace whose height is nirvana.",
+      "hindi": "इस तरह मन को सदा लगाते हुए, अनुशासित मन वाला योगी उस शांति को पाता है जो मुझमें टिकी है, जिसका शिखर निर्वाण है।",
+      "simpleEnglish": "Regular practice leads to a deep and lasting peace.",
+      "simpleHindi": "नियमित अभ्यास गहरी और स्थायी शांति तक ले जाता है।",
+      "status": "draft"
+    },
+    {
+      "number": 16,
+      "english": "Arjuna, yoga does not work for someone who overeats, or for someone who fasts to the extreme. It does not work for the person who oversleeps, or for the one who barely sleeps.",
+      "hindi": "अर्जुन, योग उसके लिए नहीं जो बहुत ज़्यादा खाता है, न उसके लिए जो बिल्कुल नहीं खाता; न उसके लिए जो बहुत सोता है, न उसके लिए जो ज़रूरत से ज़्यादा जागता है।",
+      "simpleEnglish": "The Gita teaches balance, not extremes. Too much and too little both get in the way.",
+      "simpleHindi": "गीता अति नहीं, संतुलन सिखाती है। बहुत ज़्यादा और बहुत कम, दोनों ही बाधा बनते हैं।",
+      "status": "draft"
+    },
+    {
+      "number": 17,
+      "english": "For one who is measured in eating and recreation, measured in effort at work, and measured in sleep and waking, yoga becomes the destroyer of sorrow.",
+      "hindi": "जिसका खाना-पीना और घूमना-फिरना संतुलित है, काम में प्रयास संतुलित है, और सोना-जागना संतुलित है, उसके लिए योग दुःखों का नाश करने वाला बन जाता है।",
+      "simpleEnglish": "A balanced daily routine of food, rest, work and play is itself part of spiritual practice.",
+      "simpleHindi": "भोजन, आराम, काम और मनोरंजन की संतुलित दिनचर्या अपने-आप में साधना का हिस्सा है।",
+      "status": "draft"
+    },
+    {
+      "number": 18,
+      "english": "When the well-trained mind comes to rest in the Self and nowhere else, no longer hungry for anything it might desire, a person is called united in yoga.",
+      "hindi": "जब अच्छी तरह साधा हुआ मन केवल आत्मा में टिक जाता है, और किसी भी चाही गई चीज़ की लालसा नहीं रहती, तब मनुष्य को योगयुक्त कहा जाता है।",
+      "simpleEnglish": "Yoga is reached when the mind rests within and stops chasing things.",
+      "simpleHindi": "योग तब मिलता है जब मन भीतर टिक जाता है और चीज़ों के पीछे भागना छोड़ देता है।",
+      "status": "draft"
+    },
+    {
+      "number": 19,
+      "english": "Think of a flame sheltered from the wind: it holds perfectly still. That is the picture of a yogi with mastered thoughts, absorbed in the yoga of the Self.",
+      "hindi": "बिना हवा वाली जगह में रखा दीपक काँपता नहीं। यही उपमा उस योगी के लिए दी जाती है जिसका मन वश में है और जो आत्मा से जुड़ने का अभ्यास कर रहा है।",
+      "simpleEnglish": "A famous image: the meditating mind is like a flame where no wind blows, perfectly still and bright.",
+      "simpleHindi": "एक प्रसिद्ध चित्र: ध्यान में लगा मन ऐसी लौ जैसा है जहाँ हवा नहीं चलती, पूरी तरह स्थिर और उजली।",
+      "status": "draft"
+    },
+    {
+      "number": 20,
+      "english": "When the mind, reined in by steady practice, comes to rest; when, looking at the Self through the Self, a person finds contentment within;",
+      "hindi": "जब योग के अभ्यास से रोका हुआ मन शांत हो जाता है, और जब मनुष्य अपने से अपने को देखकर अपने में ही संतुष्ट रहता है,",
+      "simpleEnglish": "Verses 20 to 23 describe the experience of deep meditation, and should be read together.",
+      "simpleHindi": "श्लोक 20 से 23 गहरे ध्यान के अनुभव का वर्णन करते हैं, और इन्हें साथ पढ़ना चाहिए।",
+      "status": "draft"
+    },
+    {
+      "number": 21,
+      "english": "when one knows that boundless happiness which the understanding can grasp but the senses cannot, and, established there, never moves away from the truth,",
+      "hindi": "जब मनुष्य उस असीम सुख को जानता है जिसे बुद्धि पकड़ सकती है पर इन्द्रियाँ नहीं, और उसमें टिककर सत्य से कभी नहीं डिगता,",
+      "simpleEnglish": "There is a joy deeper than anything the senses can give. It is found within, and once found it is not lost.",
+      "simpleHindi": "एक ऐसा आनंद है जो इन्द्रियों से मिलने वाले हर सुख से गहरा है। वह भीतर मिलता है, और मिल जाए तो खोता नहीं।",
+      "status": "draft"
+    },
+    {
+      "number": 22,
+      "english": "having found it, one counts nothing else as a greater prize; resting in it, even the weight of great grief cannot shake a person;",
+      "hindi": "जिसे पाकर मनुष्य किसी और लाभ को उससे बड़ा नहीं मानता, और जिसमें टिककर भारी दुःख भी उसे हिला नहीं पाता,",
+      "simpleEnglish": "Once you find this inner peace, nothing else seems as valuable, and even great pain cannot shake you.",
+      "simpleHindi": "यह भीतर की शांति मिल जाए तो और कुछ उतना कीमती नहीं लगता, और बड़ा दुःख भी आपको हिला नहीं पाता।",
+      "status": "draft"
+    },
+    {
+      "number": 23,
+      "english": "know that to be yoga: the breaking of every bond with sorrow. This yoga should be practised with determination and a heart that does not lose courage.",
+      "hindi": "उसे ही योग जानो: दुःख के हर संबंध का टूट जाना। इस योग का अभ्यास दृढ़ निश्चय और हिम्मत न हारने वाले मन से करना चाहिए।",
+      "simpleEnglish": "Here Krishna gives another definition of yoga: freedom from all suffering. Keep practising, even when it feels slow.",
+      "simpleHindi": "यहाँ कृष्ण योग की एक और परिभाषा देते हैं: हर दुःख से मुक्ति। अभ्यास करते रहो, भले ही प्रगति धीमी लगे।",
+      "status": "draft"
+    },
+    {
+      "number": 24,
+      "english": "Giving up completely every desire that springs from selfish intention, and with the mind alone pulling in the crowd of senses from every side,",
+      "hindi": "स्वार्थी संकल्पों से पैदा होने वाली हर इच्छा को पूरी तरह छोड़कर, और मन से ही इन्द्रियों के समूह को चारों ओर से समेटकर,",
+      "simpleEnglish": "Meditation begins with gently drawing the senses back from the world outside.",
+      "simpleHindi": "ध्यान की शुरुआत इन्द्रियों को बाहर की दुनिया से धीरे-धीरे वापस खींचने से होती है।",
+      "status": "draft"
+    },
+    {
+      "number": 25,
+      "english": "One should come to stillness gradually, with an understanding that patience holds steady. Let the mind rest in the Self, and do not let it think of other things.",
+      "hindi": "धीरज से थामी हुई बुद्धि के साथ धीरे-धीरे शांत होना चाहिए। मन को आत्मा में टिकाकर और कुछ भी नहीं सोचना चाहिए।",
+      "simpleEnglish": "Go slowly. Patience matters more than force in meditation.",
+      "simpleHindi": "धीरे चलो। ध्यान में ज़ोर से ज़्यादा धैर्य काम आता है।",
+      "status": "draft"
+    },
+    {
+      "number": 26,
+      "english": "Each time the fickle, unsettled mind runs off somewhere, lead it back from there and place it again under the guidance of the Self.",
+      "hindi": "बेचैन और अस्थिर मन जहाँ-जहाँ भटककर जाए, वहाँ-वहाँ से उसे लौटाकर आत्मा के वश में लाना चाहिए।",
+      "simpleEnglish": "The mind will wander; that is normal. Each time, simply bring it back. That gentle returning is the practice.",
+      "simpleHindi": "मन भटकेगा; यह स्वाभाविक है। हर बार बस उसे वापस ले आओ। यही धीरे से लौटाना साधना है।",
+      "status": "draft"
+    },
+    {
+      "number": 27,
+      "english": "The yogi whose mind has grown fully calm, in whom restlessness has died down, who is spotless and one with Brahman, comes to know the greatest happiness.",
+      "hindi": "जिस योगी का मन गहरी शांति में है, जिसकी बेचैनी थम गई है, जो दोषों से मुक्त है और ब्रह्म से एक हो गया है, उसे सबसे ऊँचा सुख मिलता है।",
+      "simpleEnglish": "A settled, pure mind is where the highest happiness is found.",
+      "simpleHindi": "शांत और शुद्ध मन में ही सबसे ऊँचा सुख मिलता है।",
+      "status": "draft"
+    },
+    {
+      "number": 28,
+      "english": "Practising like this continually, the yogi, rid of every stain, comes with ease to the endless joy of touching Brahman.",
+      "hindi": "इस तरह सदा मन को लगाते हुए, दोषों से शुद्ध हुआ योगी आसानी से ब्रह्म के स्पर्श का असीम सुख पाता है।",
+      "simpleEnglish": "With practice, this deep joy becomes natural and easy.",
+      "simpleHindi": "अभ्यास के साथ यह गहरा आनंद सहज और आसान हो जाता है।",
+      "status": "draft"
+    },
+    {
+      "number": 29,
+      "english": "With the self united in yoga, a person sees the Self dwelling in every creature, and every creature dwelling in the Self. Such a person looks on everything alike.",
+      "hindi": "जिसका मन योग से जुड़ा है, वह आत्मा को सब प्राणियों में और सब प्राणियों को आत्मा में देखता है, और हर चीज़ को समान दृष्टि से देखता है।",
+      "simpleEnglish": "Deep meditation leads to a sense of oneness with all life.",
+      "simpleHindi": "गहरा ध्यान सारे जीवन से एकता के अनुभव तक ले जाता है।",
+      "status": "draft"
+    },
+    {
+      "number": 30,
+      "english": "If someone finds me in every place and finds every thing within me, I do not slip away from that person, and that person does not slip away from me.",
+      "hindi": "जिसे मैं हर जगह दिखता हूँ और जिसे सब कुछ मुझमें दिखता है, मैं उसकी आँखों से कभी ओझल नहीं होता, और वह भी मेरी आँखों से कभी ओझल नहीं होता।",
+      "simpleEnglish": "A beautiful promise: for one who sees the Divine everywhere, the Divine is always near.",
+      "simpleHindi": "एक सुंदर वचन: जो ईश्वर को हर जगह देखता है, उसके लिए ईश्वर सदा पास हैं।",
+      "status": "draft"
+    },
+    {
+      "number": 31,
+      "english": "Grounded in oneness, the yogi honours me as the one who lives in every being. Whatever such a person is doing, they live within me.",
+      "hindi": "जो योगी एकता में टिककर मुझे सब प्राणियों में बसा हुआ मानकर मेरी भक्ति करता है, वह किसी भी तरह जीते हुए मुझमें ही रहता है।",
+      "simpleEnglish": "Whatever your outer life looks like, if you see the Divine in all, you live in the Divine.",
+      "simpleHindi": "बाहर का जीवन कैसा भी हो, यदि आप सबमें ईश्वर देखते हैं, तो आप ईश्वर में ही रहते हैं।",
+      "status": "draft"
+    },
+    {
+      "number": 32,
+      "english": "Arjuna, the one who, comparing others with oneself, sees the joy and the pain of all as equal is held to be the highest yogi.",
+      "hindi": "अर्जुन, जो दूसरों की तुलना अपने से करके सबके सुख और दुःख को एक-सा देखता है, वह सबसे ऊँचा योगी माना जाता है।",
+      "simpleEnglish": "The highest yogi feels others' happiness and pain as if they were their own. Spirituality and compassion go together.",
+      "simpleHindi": "सबसे ऊँचा योगी दूसरों के सुख-दुःख को अपना ही मानकर महसूस करता है। आध्यात्मिकता और करुणा साथ-साथ चलते हैं।",
+      "status": "draft"
+    },
+    {
+      "number": 33,
+      "english": "Madhusudana, this yoga of evenness you have described, I cannot see how it can last, because the mind is so restless.",
+      "hindi": "मधुसूदन, समता का जो योग आपने बताया, मन की चंचलता के कारण मुझे नहीं लगता कि वह टिक सकेगा।",
+      "simpleEnglish": "Arjuna voices what many people feel: this sounds wonderful, but my mind will never sit still.",
+      "simpleHindi": "अर्जुन वही कहते हैं जो बहुत-से लोग महसूस करते हैं: यह सुनने में अच्छा है, पर मेरा मन कभी टिकेगा नहीं।",
+      "status": "draft"
+    },
+    {
+      "number": 34,
+      "english": "For the mind is restless, Krishna, unruly, strong and stubborn. Holding it back seems to me as hard as holding back the wind.",
+      "hindi": "कृष्ण, मन बहुत चंचल है, उथल-पुथल मचाने वाला, बलवान और ज़िद्दी। मुझे लगता है उसे रोकना हवा को रोकने जितना कठिन है।",
+      "simpleEnglish": "Trying to control the mind can feel like trying to catch the wind. Arjuna is honest about how hard it is.",
+      "simpleHindi": "मन को काबू करना हवा को पकड़ने जैसा लग सकता है। अर्जुन साफ़ कहते हैं कि यह कितना कठिन है।",
+      "status": "draft"
+    },
+    {
+      "number": 35,
+      "english": "You are right, strong-armed one: the mind wavers and is hard to hold. Yet, Kaunteya, steady practice and dispassion will hold it.",
+      "hindi": "महाबाहु, इसमें संदेह नहीं कि मन चंचल है और उसे वश में करना कठिन है। पर कौन्तेय, अभ्यास और वैराग्य से उसे काबू में लाया जा सकता है।",
+      "simpleEnglish": "Krishna agrees it is hard, but gives two tools: regular practice, and gradually letting go of cravings. Both work over time.",
+      "simpleHindi": "कृष्ण मानते हैं कि यह कठिन है, पर दो साधन देते हैं: नियमित अभ्यास, और धीरे-धीरे चाहतों को छोड़ना। समय के साथ दोनों काम करते हैं।",
+      "status": "draft"
+    },
+    {
+      "number": 36,
+      "english": "I hold that yoga is hard to reach for someone who does not rein in the self. But one who governs the self and keeps striving can gain it by the right means.",
+      "hindi": "मेरा मानना है कि जो अपने को वश में नहीं रखता, उसके लिए योग पाना कठिन है। पर जो अपने को साधता है और लगातार प्रयास करता है, वह सही उपाय से उसे पा सकता है।",
+      "simpleEnglish": "Effort and the right method together make the impossible possible.",
+      "simpleHindi": "प्रयास और सही तरीका मिलकर असंभव को भी संभव बना देते हैं।",
+      "status": "draft"
+    },
+    {
+      "number": 37,
+      "english": "Krishna, what becomes of someone who has faith but does not keep up the effort, whose mind slips away from yoga before reaching its fulfilment?",
+      "hindi": "कृष्ण, जिसमें श्रद्धा है पर जो प्रयास जारी नहीं रख पाता, जिसका मन योग की सिद्धि से पहले ही भटक जाता है, उसका क्या होता है?",
+      "simpleEnglish": "Arjuna asks what happens to someone who starts the spiritual path but does not finish it.",
+      "simpleHindi": "अर्जुन पूछते हैं कि उस व्यक्ति का क्या होता है जो आध्यात्मिक मार्ग शुरू तो करता है पर पूरा नहीं कर पाता।",
+      "status": "draft"
+    },
+    {
+      "number": 38,
+      "english": "Strong-armed one, does such a person, having lost both worlds, scatter like a torn cloud, with nothing to stand on, lost on the way to Brahman?",
+      "hindi": "महाबाहु, क्या ऐसा व्यक्ति दोनों ओर से छूटकर, फटे बादल की तरह बिखर नहीं जाता, बिना किसी आधार के, ब्रह्म के मार्ग में भटका हुआ?",
+      "simpleEnglish": "Arjuna fears that such a person loses both worldly success and spiritual progress, like a small cloud breaking apart in the sky.",
+      "simpleHindi": "अर्जुन को डर है कि ऐसा व्यक्ति सांसारिक सफलता और आध्यात्मिक प्रगति, दोनों खो देता है, जैसे आकाश में छोटा बादल बिखर जाता है।",
+      "status": "draft"
+    },
+    {
+      "number": 39,
+      "english": "Krishna, please clear this doubt of mine completely. No one but you could cut it away.",
+      "hindi": "कृष्ण, मेरे इस संदेह को पूरी तरह मिटा दीजिए। आपके सिवा कोई और इसे काट नहीं सकता।",
+      "simpleEnglish": "Arjuna trusts that only Krishna can answer this question fully.",
+      "simpleHindi": "अर्जुन को भरोसा है कि इस प्रश्न का पूरा उत्तर केवल कृष्ण ही दे सकते हैं।",
+      "status": "draft"
+    },
+    {
+      "number": 40,
+      "english": "Partha, that person is not destroyed, here or hereafter. No one who does what is good, dear friend, ends up on a road to ruin.",
+      "hindi": "पार्थ, ऐसे व्यक्ति का न इस लोक में नाश होता है, न परलोक में। प्रिय, भला करने वाला कोई भी बुरी गति को नहीं पाता।",
+      "simpleEnglish": "One of the most comforting verses in the Gita: no sincere effort towards goodness is ever wasted.",
+      "simpleHindi": "गीता के सबसे सांत्वना देने वाले श्लोकों में से एक: अच्छाई की ओर किया गया कोई भी सच्चा प्रयास कभी व्यर्थ नहीं जाता।",
+      "status": "draft"
+    },
+    {
+      "number": 41,
+      "english": "That person goes on to the worlds earned by the righteous and spends years beyond counting there. Afterwards, the one who strayed from yoga takes birth again among people who are pure and well-to-do.",
+      "hindi": "पुण्य करने वालों के लोकों में पहुँचकर और वहाँ अनगिनत वर्ष रहकर, योग से भटका हुआ व्यक्ति पवित्र और समृद्ध लोगों के घर जन्म लेता है।",
+      "simpleEnglish": "The seeker's progress is not lost; they are given good conditions to continue in a future life.",
+      "simpleHindi": "साधक की प्रगति खोती नहीं; अगले जन्म में उसे आगे बढ़ने के लिए अच्छे हालात मिलते हैं।",
+      "status": "draft"
+    },
+    {
+      "number": 42,
+      "english": "Or they may be born among yogis who are wise. A birth of that kind is one of the rarest things in this world.",
+      "hindi": "या ऐसा व्यक्ति बुद्धिमान योगियों के कुल में जन्म लेता है। ऐसा जन्म इस संसार में बहुत दुर्लभ है।",
+      "simpleEnglish": "Sometimes they are even born among spiritual teachers, which is a rare blessing.",
+      "simpleHindi": "कभी-कभी उनका जन्म आध्यात्मिक गुरुओं के बीच होता है, जो एक दुर्लभ सौभाग्य है।",
+      "status": "draft"
+    },
+    {
+      "number": 43,
+      "english": "There, son of the Kurus, they regain the understanding they had in their former body, and from there they strive again, harder, towards perfection.",
+      "hindi": "कुरुनन्दन, वहाँ उन्हें पिछले शरीर की बुद्धि फिर से मिल जाती है, और वहाँ से वे सिद्धि के लिए और ज़्यादा प्रयास करते हैं।",
+      "simpleEnglish": "They pick up where they left off. Spiritual progress carries over.",
+      "simpleHindi": "वे वहीं से शुरू करते हैं जहाँ छोड़ा था। आध्यात्मिक प्रगति आगे साथ चलती है।",
+      "status": "draft"
+    },
+    {
+      "number": 44,
+      "english": "The old practice carries them along, even when they do not choose it. A person who simply wants to know about yoga already passes beyond the Vedic rites.",
+      "hindi": "पहले के उसी अभ्यास से वे मानो अपने-आप आगे खिंचे चले जाते हैं। योग को केवल जानने की इच्छा रखने वाला भी वेदों के कर्मकांड वाले शब्दों से आगे निकल जाता है।",
+      "simpleEnglish": "Past effort keeps pulling us forward. Even curiosity about yoga is a step beyond mere ritual.",
+      "simpleHindi": "पहले का प्रयास हमें आगे खींचता रहता है। योग के बारे में जिज्ञासा भी केवल कर्मकांड से आगे का एक कदम है।",
+      "status": "draft"
+    },
+    {
+      "number": 45,
+      "english": "Through determined effort the yogi's wrongs are washed away. Brought to fullness over many births, that yogi at last arrives at the highest goal.",
+      "hindi": "जो योगी सच्चे प्रयास से जुटा रहता है, दोषों से शुद्ध होकर और अनेक जन्मों में पूर्ण होकर, वह अंत में परम गति पाता है।",
+      "simpleEnglish": "The road may take many lifetimes, but sincere effort always reaches the goal.",
+      "simpleHindi": "यात्रा में कई जन्म लग सकते हैं, पर सच्चा प्रयास हमेशा लक्ष्य तक पहुँचता है।",
+      "status": "draft"
+    },
+    {
+      "number": 46,
+      "english": "The yogi is greater than the ascetics, greater even than the learned, and greater than those who perform rites. So, Arjuna, be a yogi.",
+      "hindi": "योग में लगा व्यक्ति तपस्या करने वालों से आगे है, शास्त्र के ज्ञानियों से भी आगे है, और विधि-विधान करने वालों से भी आगे है। इसलिए, अर्जुन, योगी बनो।",
+      "simpleEnglish": "Krishna encourages Arjuna: being a yogi, someone whose whole life is joined to the Divine, is better than any single practice.",
+      "simpleHindi": "कृष्ण अर्जुन को प्रोत्साहित करते हैं: योगी होना, यानी ऐसा व्यक्ति जिसका पूरा जीवन ईश्वर से जुड़ा हो, किसी एक साधना से बेहतर है।",
+      "status": "draft"
+    },
+    {
+      "number": 47,
+      "english": "And of all yogis, the one who worships me with faith, with the inmost self absorbed in me, I hold to be the most closely joined.",
+      "hindi": "और सब योगियों में भी, जो श्रद्धा से, अपने अंतरतम को मुझमें लगाकर मेरी भक्ति करता है, उसे मैं सबसे अधिक जुड़ा हुआ मानता हूँ।",
+      "simpleEnglish": "Chapter 6 ends by pointing ahead: the best yogi is the one who loves the Divine. This leads into the theme of devotion in the chapters to come.",
+      "simpleHindi": "छठा अध्याय आगे का संकेत देकर समाप्त होता है: सबसे अच्छा योगी वह है जो ईश्वर से प्रेम करता है। यही आगे के अध्यायों में भक्ति के विषय तक ले जाता है।",
+      "status": "draft"
+    }
+  ]
+}
