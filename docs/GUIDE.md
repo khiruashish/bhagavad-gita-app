@@ -16,7 +16,7 @@ it and roughly how long it takes.
 | App code (Android + iOS, Flutter) | Done: daily verse, chapters, Sanskrit/Hindi/English, simple meanings, audio, Hindi/English interface, settings, offline, no data collection |
 | Automated tests | 17 app tests + 7 content-tool tests, run in CI on every push |
 | Sanskrit text, all 701 verses | Done (public domain) + our own generated pronunciation (IAST) |
-| Original translations + simple meanings | **595 of 701 verses drafted** (Chapters 1–16); none reviewed yet |
+| Original translations + simple meanings | **623 of 701 verses drafted** (Chapters 1–17); none reviewed yet |
 | Chapter summaries (18), "Start here" guide, glossary | Done (original) |
 | Human scholar review | Not started; **required before launch** |
 | App icon, store screenshots, store listings | Not started |
@@ -32,7 +32,7 @@ Assumes one person working part-time on the app plus one paid Sanskrit/Hindi rev
 | Week | Work | Who |
 |---|---|---|
 | 1 | Decisions, licences, accounts, clean up the repository (Steps 1–3) | You |
-| 1–4 | Draft the remaining 106 verses in batches + similarity checks (Step 4) | You, with an AI assistant |
+| 1–4 | Draft the remaining 78 verses in batches + similarity checks (Step 4) | You, with an AI assistant |
 | 2–8 | Scholar reviews every verse (Step 5), overlapping with drafting | Reviewer |
 | 3–5 | App icon, store graphics, screenshots, store text (Step 6) | You / a designer |
 | 5–6 | Privacy policy, store forms, signing keys, first test builds (Steps 7–9) | You |
@@ -136,7 +136,7 @@ For each batch of about 10 verses:
    than the names.
 5. `python3 tool/build_content.py` and commit.
 
-At 10 verses a batch this is about 11 batches.
+At 10 verses a batch this is about 8 batches.
 
 ## Step 5: Scholar review (weeks 2–8, reviewer)
 
