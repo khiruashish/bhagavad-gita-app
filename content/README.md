@@ -39,4 +39,5 @@ accurate. It is the project's record that the content is free of third-party cop
 | 7 | 30 | 30 | 0 |
 | 8 | 28 | 28 | 0 |
 | 9 | 34 | 34 | 0 |
-| 10–18 | 329 | 0 | 0 |
+| 10 | 42 | 42 | 0 |
+| 11–18 | 287 | 0 | 0 |
