@@ -27,6 +27,11 @@ class ImportCleanTest(unittest.TestCase):
         self.assertEqual(speaker, "धृतराष्ट्र उवाच")
         self.assertEqual(text, "धर्मक्षेत्रे कुरुक्षेत्रे समवेता युयुत्सवः।\nमामकाः पाण्डवाश्चैव किमकुर्वत सञ्जय॥")
 
+    def test_speaker_on_the_same_line_as_the_verse(self):
+        speaker, text = clean("श्री भगवानुवाच अशोच्यानन्वशोचस्त्वं प्रज्ञावादांश्च भाषसे।\n\nगतासूनगतासूंश्च नानुशोचन्ति पण्डिताः।।2.11।।")
+        self.assertEqual(speaker, "श्री भगवानुवाच")
+        self.assertTrue(text.startswith("अशोच्यान"))
+
     def test_misplaced_vowel_sign_is_fixed(self):
         _, text = clean("यच्छ्रेयः स्यान्निश्िचतं ब्रूहि।।2.7।।")
         self.assertIn("निश्चितं", text)

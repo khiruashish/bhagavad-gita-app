@@ -25,7 +25,14 @@ class _VerseReaderScreenState extends State<VerseReaderScreen> {
     initialPage: widget.initialIndex,
   );
   late int _index = widget.initialIndex;
-  late final VerseSpeaker _speaker = AppScope.speakerOf(context);
+  late VerseSpeaker _speaker;
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    // Looked up here, not in dispose(), where ancestors can no longer be reached.
+    _speaker = AppScope.speakerOf(context);
+  }
 
   @override
   void dispose() {

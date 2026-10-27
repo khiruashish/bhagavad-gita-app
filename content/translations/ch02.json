@@ -93,6 +93,502 @@
       "simpleHindi": "कृष्ण हल्के से मुस्कराते हैं। वे चिंतित नहीं हैं, क्योंकि वे अर्जुन के दुःख का उत्तर जानते हैं। अगले श्लोक से उनका उपदेश शुरू होता है।",
       "wordMeanings": "tam — to him; uvāca — said; hṛṣīkeśaḥ — Hrishikesha; prahasan iva — almost smiling; bhārata — Bharata (Dhritarashtra); senayoḥ — of the armies; ubhayoḥ — of both; madhye — in the middle; viṣīdantam — the despairing one; idam — these; vacaḥ — words",
       "status": "draft"
+    },
+    {
+      "number": 11,
+      "english": "The things you mourn do not deserve mourning, yet you talk like a man of learning. Those who really know shed no tears for those who have gone, or for those who remain.",
+      "hindi": "जिनके लिए शोक नहीं करना चाहिए, तुम उनके लिए शोक कर रहे हो, और फिर भी बातें विद्वानों जैसी करते हो। ज्ञानी लोग न मरे हुओं के लिए शोक करते हैं, न जीवितों के लिए।",
+      "simpleEnglish": "Krishna's teaching begins here. He gently points out that Arjuna is grieving over something that does not call for grief. Wise people are not shaken by death, because they understand what lives on.",
+      "simpleHindi": "कृष्ण का उपदेश यहीं से शुरू होता है। वे प्रेम से बताते हैं कि अर्जुन ऐसी बात पर दुखी है जिस पर दुःख नहीं होना चाहिए। ज्ञानी मृत्यु से विचलित नहीं होते, क्योंकि वे जानते हैं कि वास्तव में क्या हमेशा रहता है।",
+      "status": "draft"
+    },
+    {
+      "number": 12,
+      "english": "It is not that I ever was not, or you, or these rulers of men. Nor is it that any of us will stop being, from now on.",
+      "hindi": "ऐसा कभी नहीं हुआ कि मैं न रहा हूँ, या तुम, या ये राजा। और ऐसा भी नहीं होगा कि आगे चलकर हम सब न रहें।",
+      "simpleEnglish": "Krishna says that every one of us has always existed and always will. The real person is not the body that is born and dies.",
+      "simpleHindi": "कृष्ण कहते हैं कि हम सब सदा से हैं और सदा रहेंगे। असली व्यक्ति वह शरीर नहीं जो जन्म लेता और मरता है।",
+      "status": "draft"
+    },
+    {
+      "number": 13,
+      "english": "The one living in this body is first a child, then young, then old; taking another body is just one more such step. The steady-minded are not thrown by it.",
+      "hindi": "जैसे देह में रहने वाला इस शरीर में बचपन, जवानी और बुढ़ापे से गुज़रता है, वैसे ही वह दूसरे शरीर को पाता है। धीर व्यक्ति इससे भ्रमित नहीं होता।",
+      "simpleEnglish": "We change from child to young adult to old person, yet we feel we are the same person. In the same way, Krishna says, the Self moves on to a new body after death.",
+      "simpleHindi": "हम बच्चे से जवान और जवान से बूढ़े होते हैं, फिर भी लगता है कि हम वही व्यक्ति हैं। कृष्ण कहते हैं कि इसी तरह मृत्यु के बाद आत्मा नए शरीर में चली जाती है।",
+      "status": "draft"
+    },
+    {
+      "number": 14,
+      "english": "Kaunteya, when the senses meet their objects, we feel cold or heat, comfort or pain. These feelings arrive and leave again; none of them stays. Learn to endure them, Bharata.",
+      "hindi": "कौन्तेय, इन्द्रियों और विषयों के मेल से सर्दी-गर्मी, सुख-दुःख होते हैं। ये आते-जाते रहते हैं, टिकते नहीं। भारत, इन्हें धीरज से सहो।",
+      "simpleEnglish": "Heat and cold, pleasure and pain come and go like the seasons. Krishna advises Arjuna to bear them calmly instead of being carried away by them.",
+      "simpleHindi": "सर्दी-गर्मी, सुख-दुःख मौसम की तरह आते-जाते हैं। कृष्ण अर्जुन को सलाह देते हैं कि इनमें बह जाने के बजाय इन्हें शांति से सहें।",
+      "status": "draft"
+    },
+    {
+      "number": 15,
+      "english": "Best of men, a steady person who is not shaken by these, who takes pain and pleasure alike, is ready for immortality.",
+      "hindi": "पुरुषश्रेष्ठ, जिस धीर मनुष्य को ये विचलित नहीं करते, जो दुःख और सुख में एक-सा रहता है, वह अमरता के योग्य है।",
+      "simpleEnglish": "Someone who stays calm in good times and in bad is on the way to true freedom.",
+      "simpleHindi": "जो अच्छे और बुरे, दोनों समय में शांत रहता है, वह सच्ची मुक्ति के मार्ग पर है।",
+      "status": "draft"
+    },
+    {
+      "number": 16,
+      "english": "What is unreal has no being, and what is real never ceases to be. Those who see things as they are have reached the final understanding of both.",
+      "hindi": "जो असत् है उसका होना संभव नहीं, और जो सत् है उसका न होना संभव नहीं। तत्त्व को देखने वालों ने इन दोनों का अंतिम सत्य जान लिया है।",
+      "simpleEnglish": "Krishna separates what passes away, like the body and the changes of the world, from what lasts, the Self. What is real cannot be destroyed.",
+      "simpleHindi": "कृष्ण बीत जाने वाली चीज़ों, जैसे शरीर और संसार के बदलावों, को उससे अलग करते हैं जो टिकी रहती है, यानी आत्मा। जो सच में है, उसे नष्ट नहीं किया जा सकता।",
+      "status": "draft"
+    },
+    {
+      "number": 17,
+      "english": "Understand that the one through which all this is spread out cannot perish. Nobody has the power to destroy what is imperishable.",
+      "hindi": "समझ लो कि जो इस सबमें फैला हुआ है, उसका कभी नाश नहीं होता। उस अविनाशी को कोई मिटा नहीं सकता।",
+      "simpleEnglish": "The Self is present in everything that lives. Nothing and no one can destroy it.",
+      "simpleHindi": "आत्मा हर जीवित वस्तु में है। कोई भी चीज़ या कोई भी व्यक्ति उसे नष्ट नहीं कर सकता।",
+      "status": "draft"
+    },
+    {
+      "number": 18,
+      "english": "These bodies come to an end, it is said, but the one who dwells in them is eternal, indestructible and beyond measure. So fight, Bharata.",
+      "hindi": "कहा गया है कि ये शरीर नाशवान हैं, पर इनमें रहने वाला नित्य, अविनाशी और अपरिमेय है। इसलिए, भारत, युद्ध करो।",
+      "simpleEnglish": "Bodies end; the Self does not. So, Krishna says, Arjuna should not let grief stop him from doing his duty as a warrior. The call to fight here is about duty, not about violence for its own sake.",
+      "simpleHindi": "शरीर का अंत होता है, आत्मा का नहीं। इसलिए कृष्ण कहते हैं कि अर्जुन दुःख के कारण योद्धा के अपने कर्तव्य से पीछे न हटे। यहाँ लड़ने की बात कर्तव्य की है, हिंसा के लिए हिंसा की नहीं।",
+      "status": "draft"
+    },
+    {
+      "number": 19,
+      "english": "If someone believes this [Self] is a killer, or believes it can be killed, neither has understood. This does not kill, and it does not die.",
+      "hindi": "कोई इसे हत्यारा माने, या कोई माने कि यह मारा जा सकता है, दोनों ही भूल में हैं। यह न किसी को मारता है, न स्वयं मरता है।",
+      "simpleEnglish": "The true Self is not the doer of killing and cannot be killed. Only bodies are born and die.",
+      "simpleHindi": "असली आत्मा न मारने वाली है, न मारी जा सकती है। केवल शरीर जन्म लेते और मरते हैं।",
+      "status": "draft"
+    },
+    {
+      "number": 20,
+      "english": "This is not born, and at no time does it die. It did not come to be at some point, nor will it cease to be. Without birth, lasting, always the same, ancient, it does not perish when the body is struck down.",
+      "hindi": "यह न कभी जन्म लेता है, न कभी मरता है। ऐसा भी नहीं कि यह एक बार होकर फिर न रहे। बिना जन्म का, सदा रहने वाला, कभी न बदलने वाला और सबसे पुराना यह, शरीर के नष्ट होने पर भी नष्ट नहीं होता।",
+      "simpleEnglish": "This is one of the best-known verses of the Gita. The Self has no beginning and no end. Death happens to the body, not to who you really are.",
+      "simpleHindi": "यह गीता के सबसे प्रसिद्ध श्लोकों में से एक है। आत्मा का न आरंभ है, न अंत। मृत्यु शरीर की होती है, आपके असली स्वरूप की नहीं।",
+      "status": "draft"
+    },
+    {
+      "number": 21,
+      "english": "Partha, once a person understands that this [Self] never perishes or ends, was never born and never changes, whom could such a one slay? Whom could he have slain by another's hand?",
+      "hindi": "पार्थ, जो यह समझ गया कि यह कभी नष्ट नहीं होता, कभी समाप्त नहीं होता, कभी जन्मा नहीं और कभी बदलता नहीं, वह किसे मरवाएगा, और किसे मारेगा?",
+      "simpleEnglish": "If the Self cannot die, then in the deepest sense no one really kills and no one is really killed.",
+      "simpleHindi": "यदि आत्मा मर ही नहीं सकती, तो गहरे अर्थ में न कोई सच में मारता है, न कोई सच में मरता है।",
+      "status": "draft"
+    },
+    {
+      "number": 22,
+      "english": "When clothes grow old, a man lays them aside and takes new ones. So too, when bodies grow old, the dweller in the body lays them aside and moves into new ones.",
+      "hindi": "जैसे कपड़े पुराने हो जाने पर मनुष्य उन्हें उतारकर नए पहन लेता है, वैसे ही शरीर पुराने हो जाने पर देह में रहने वाला उन्हें छोड़कर नए शरीरों में चला जाता है।",
+      "simpleEnglish": "Krishna compares the body to clothing. We change clothes without changing who we are; the Self changes bodies in the same way.",
+      "simpleHindi": "कृष्ण शरीर की तुलना कपड़ों से करते हैं। कपड़े बदलने से हम नहीं बदलते; आत्मा भी इसी तरह शरीर बदलती है।",
+      "status": "draft"
+    },
+    {
+      "number": 23,
+      "english": "No blade can cut this, no flame can burn it. Water does not soak it, and the wind does not dry it out.",
+      "hindi": "इसे कोई हथियार काट नहीं सकता, कोई आग जला नहीं सकती। पानी इसे भिगो नहीं सकता, और हवा इसे सुखा नहीं सकती।",
+      "simpleEnglish": "Nothing in the physical world, not weapons, fire, water or wind, can harm the Self.",
+      "simpleHindi": "भौतिक संसार की कोई भी चीज़, न हथियार, न आग, न पानी, न हवा, आत्मा को हानि नहीं पहुँचा सकती।",
+      "status": "draft"
+    },
+    {
+      "number": 24,
+      "english": "It is beyond cutting and beyond burning; nothing can soak it or dry it. Everlasting, reaching everywhere, firm and still, it has always been.",
+      "hindi": "इसे न काटा जा सकता है, न जलाया जा सकता है, न भिगोया जा सकता है, न सुखाया जा सकता है। यह सदा रहने वाला, हर जगह पहुँचा हुआ, दृढ़, अडिग और सनातन है।",
+      "simpleEnglish": "Krishna repeats the idea in a different way so that it sinks in: the Self is beyond all harm and change.",
+      "simpleHindi": "कृष्ण बात को दूसरे ढंग से दोहराते हैं ताकि वह मन में बैठ जाए: आत्मा हर हानि और हर बदलाव से परे है।",
+      "status": "draft"
+    },
+    {
+      "number": 25,
+      "english": "It is called unseen, beyond thought and beyond change. Knowing it to be like this, you have no reason to grieve.",
+      "hindi": "इसे अव्यक्त, अचिन्त्य और विकाररहित कहा जाता है। इसे ऐसा जानकर तुम्हें शोक नहीं करना चाहिए।",
+      "simpleEnglish": "The Self cannot be seen with the eyes or fully grasped by thinking. Once you know this, grief loses its hold.",
+      "simpleHindi": "आत्मा को न आँखों से देखा जा सकता है, न सोचकर पूरी तरह समझा जा सकता है। यह जान लेने पर दुःख की पकड़ ढीली हो जाती है।",
+      "status": "draft"
+    },
+    {
+      "number": 26,
+      "english": "Suppose you hold that it is born over and over and dies over and over. Even so, strong-armed one, there is no call for you to mourn like this.",
+      "hindi": "और यदि तुम इसे बार-बार जन्म लेने वाला या बार-बार मरने वाला भी मानो, तब भी, महाबाहु, तुम्हें इस तरह शोक नहीं करना चाहिए।",
+      "simpleEnglish": "Now Krishna argues from the other side: even if you do not accept that the Self is eternal, grief still does not help.",
+      "simpleHindi": "अब कृष्ण दूसरी ओर से तर्क देते हैं: यदि तुम आत्मा को नित्य न भी मानो, तब भी शोक करने से कुछ नहीं मिलता।",
+      "status": "draft"
+    },
+    {
+      "number": 27,
+      "english": "Whoever is born is sure to die, and whoever dies is sure to be born. Do not grieve, then, over something no one can prevent.",
+      "hindi": "जो जन्मा है वह मरेगा ही, और जो मरा है वह फिर जन्म लेगा ही। तो जिसे कोई रोक नहीं सकता, उस बात पर शोक मत करो।",
+      "simpleEnglish": "Birth and death are part of nature's cycle. Grieving over what cannot be changed only adds to our pain.",
+      "simpleHindi": "जन्म और मृत्यु प्रकृति के चक्र का हिस्सा हैं। जो बदला नहीं जा सकता, उस पर शोक करने से दुःख बस बढ़ता है।",
+      "status": "draft"
+    },
+    {
+      "number": 28,
+      "english": "Before birth, beings cannot be seen; in between, Bharata, they can; and after death they cannot be seen again. Why mourn over this?",
+      "hindi": "भारत, प्राणी जन्म से पहले दिखाई नहीं देते, बीच में दिखाई देते हैं, और मृत्यु के बाद फिर दिखाई नहीं देते। फिर इसमें रोना कैसा?",
+      "simpleEnglish": "We come from the unseen and go back to it. Life as we see it is only the middle part of the story.",
+      "simpleHindi": "हम अदृश्य से आते हैं और उसी में लौट जाते हैं। जो जीवन हमें दिखता है, वह कहानी का केवल बीच का हिस्सा है।",
+      "status": "draft"
+    },
+    {
+      "number": 29,
+      "english": "To one it is a marvel to behold, to another a marvel to describe, to a third a marvel to hear about. Yet hearing of it, nobody comes to know it.",
+      "hindi": "कोई इसे अचरज की तरह देखता है, कोई इसकी बात अचरज की तरह करता है, और कोई इसके बारे में अचरज की तरह सुनता है। पर सुनकर भी कोई इसे सचमुच नहीं जान पाता।",
+      "simpleEnglish": "The Self is so amazing that people speak of it with wonder, yet it is very hard to understand fully.",
+      "simpleHindi": "आत्मा इतनी अद्भुत है कि लोग अचरज से उसकी बात करते हैं, फिर भी उसे सच में समझना बहुत कठिन है।",
+      "status": "draft"
+    },
+    {
+      "number": 30,
+      "english": "Bharata, the dweller in every body is beyond killing, always. So there is no creature you need to mourn.",
+      "hindi": "भारत, सबके शरीर में रहने वाला यह देही कभी मारा नहीं जा सकता। इसलिए तुम्हें किसी भी प्राणी के लिए शोक नहीं करना चाहिए।",
+      "simpleEnglish": "Krishna sums up his first argument: the Self in every living being is beyond death, so grieving for them is misplaced.",
+      "simpleHindi": "कृष्ण अपना पहला तर्क समेटते हैं: हर प्राणी की आत्मा मृत्यु से परे है, इसलिए उनके लिए शोक करना उचित नहीं।",
+      "status": "draft"
+    },
+    {
+      "number": 31,
+      "english": "Look at your own duty too, and you will see no reason to waver. For a warrior there is nothing better than a battle fought in keeping with dharma.",
+      "hindi": "अपने धर्म को देखो तो भी तुम्हें डगमगाना नहीं चाहिए। क्षत्रिय के लिए धर्म के अनुसार लड़े जाने वाले युद्ध से बढ़कर कोई कल्याण नहीं।",
+      "simpleEnglish": "Now Krishna speaks about Arjuna's duty. Arjuna is a kshatriya, a member of the warrior class whose role was to protect people and uphold justice. For him, a just war is a duty, not a choice.",
+      "simpleHindi": "अब कृष्ण अर्जुन के कर्तव्य की बात करते हैं। अर्जुन क्षत्रिय हैं, यानी उस योद्धा वर्ग के, जिसका काम लोगों की रक्षा करना और न्याय बनाए रखना था। उनके लिए न्याय का युद्ध कर्तव्य है, विकल्प नहीं।",
+      "status": "draft"
+    },
+    {
+      "number": 32,
+      "english": "Partha, a war like this, arriving unasked, is a door to heaven standing open. Fortunate are the warriors who are given such a fight.",
+      "hindi": "पार्थ, अपने-आप सामने आया ऐसा युद्ध स्वर्ग का खुला द्वार है। भाग्यशाली क्षत्रियों को ही ऐसा युद्ध मिलता है।",
+      "simpleEnglish": "Arjuna did not go looking for this war; it came to him. Krishna says that for a warrior, such a chance to fight for what is right is a blessing.",
+      "simpleHindi": "अर्जुन ने यह युद्ध खोजा नहीं था; यह स्वयं उनके सामने आया। कृष्ण कहते हैं कि योद्धा के लिए सही के पक्ष में लड़ने का ऐसा अवसर सौभाग्य है।",
+      "status": "draft"
+    },
+    {
+      "number": 33,
+      "english": "If, however, you refuse to take part in this just war, you will have thrown away both your duty and your honour, and wrong will be the result.",
+      "hindi": "पर यदि तुम यह धर्मयुक्त युद्ध नहीं करोगे, तो अपने धर्म और यश को खोकर पाप के भागी बनोगे।",
+      "simpleEnglish": "Krishna warns that walking away from a duty is itself a wrong action, with its own consequences.",
+      "simpleHindi": "कृष्ण चेतावनी देते हैं कि अपने कर्तव्य से मुँह मोड़ना भी एक गलत कर्म है, जिसके अपने परिणाम होते हैं।",
+      "status": "draft"
+    },
+    {
+      "number": 34,
+      "english": "People everywhere will go on telling of your dishonour, and it will never fade. For a man who has been held in high regard, dishonour is worse than dying.",
+      "hindi": "लोग सदा तुम्हारी बदनामी की बातें करते रहेंगे। और जिसका सम्मान रहा हो, उसके लिए अपमान मृत्यु से भी बढ़कर है।",
+      "simpleEnglish": "Arjuna is famous as a hero. Krishna reminds him that running away would leave a lasting stain on his name.",
+      "simpleHindi": "अर्जुन एक वीर के रूप में प्रसिद्ध हैं। कृष्ण याद दिलाते हैं कि भाग जाने से उनके नाम पर हमेशा के लिए दाग लग जाएगा।",
+      "status": "draft"
+    },
+    {
+      "number": 35,
+      "english": "The great warriors will decide that fear drove you off the field, and you will sink low in the eyes of men who used to admire you.",
+      "hindi": "महारथी समझेंगे कि तुम डर के मारे युद्ध से हट गए। जो तुम्हें बहुत मानते थे, उनकी नज़रों में तुम छोटे हो जाओगे।",
+      "simpleEnglish": "No one will believe that Arjuna left out of kindness. They will simply say he was afraid.",
+      "simpleHindi": "कोई नहीं मानेगा कि अर्जुन दया के कारण पीछे हटे। लोग बस यही कहेंगे कि वे डर गए।",
+      "status": "draft"
+    },
+    {
+      "number": 36,
+      "english": "Those who wish you harm will say a great deal that ought not to be spoken, belittling your strength. Is anything harder to bear?",
+      "hindi": "तुम्हारे शत्रु तुम्हारी शक्ति की निंदा करते हुए बहुत-सी न कहने योग्य बातें कहेंगे। इससे बढ़कर दुःख क्या होगा?",
+      "simpleEnglish": "Krishna points out how much it would hurt to hear his enemies insult his courage.",
+      "simpleHindi": "कृष्ण बताते हैं कि शत्रुओं के मुँह से अपने साहस का अपमान सुनना कितना दुखदायी होगा।",
+      "status": "draft"
+    },
+    {
+      "number": 37,
+      "english": "Fall, and heaven is yours; win, and you will rule the earth. So rise, Kaunteya, with your mind made up for battle.",
+      "hindi": "मारे गए तो स्वर्ग पाओगे, जीत गए तो धरती का सुख भोगोगे। इसलिए, कौन्तेय, युद्ध का निश्चय करके उठो।",
+      "simpleEnglish": "Either way, Krishna says, doing his duty will bring Arjuna good. There is no reason to hold back.",
+      "simpleHindi": "कृष्ण कहते हैं कि दोनों ही स्थितियों में कर्तव्य करने से अर्जुन का भला होगा। पीछे हटने का कोई कारण नहीं।",
+      "status": "draft"
+    },
+    {
+      "number": 38,
+      "english": "Hold pleasure and pain as equal, and gain and loss, and winning and losing. Then turn to the fight, and no wrong will attach to you.",
+      "hindi": "सुख-दुःख, लाभ-हानि और जीत-हार को एक समान मानकर फिर युद्ध में लग जाओ। ऐसा करने से तुम्हें पाप नहीं लगेगा।",
+      "simpleEnglish": "This is a key idea of the Gita: act without being driven by the hope of winning or the fear of losing. An action done with a calm, balanced mind does not bind us.",
+      "simpleHindi": "यह गीता का एक मुख्य विचार है: जीतने की आशा या हारने के डर से प्रेरित हुए बिना कर्म करो। शांत और संतुलित मन से किया गया कर्म हमें बाँधता नहीं।",
+      "status": "draft"
+    },
+    {
+      "number": 39,
+      "english": "What I have told you so far is the understanding of Sankhya. Now hear it as it applies to yoga. With this understanding, Partha, you will throw off the hold that action has on you.",
+      "hindi": "अब तक मैंने तुम्हें सांख्य की दृष्टि से यह बुद्धि बताई। अब इसे योग की दृष्टि से सुनो। पार्थ, इस बुद्धि से युक्त होकर तुम कर्म के बंधन से छूट जाओगे।",
+      "simpleEnglish": "Sankhya here means knowledge of the Self. Krishna now moves to the practical side: how to act in the world without getting tied up by our actions.",
+      "simpleHindi": "यहाँ सांख्य का अर्थ है आत्मा का ज्ञान। अब कृष्ण व्यावहारिक पक्ष पर आते हैं: संसार में कर्म करते हुए भी उनसे बँधे बिना कैसे रहें।",
+      "status": "draft"
+    },
+    {
+      "number": 40,
+      "english": "Nothing begun on this path is ever lost, and there is no danger of it going wrong. Even a small measure of this dharma shields a person from great fear.",
+      "hindi": "इस मार्ग में किया गया आरंभ कभी व्यर्थ नहीं जाता, और इसमें कोई उलटा फल नहीं होता। इस धर्म का थोड़ा-सा पालन भी बड़े भय से बचा लेता है।",
+      "simpleEnglish": "Even small steps on this path count. Nothing you do here is wasted.",
+      "simpleHindi": "इस मार्ग पर छोटे-छोटे कदम भी मायने रखते हैं। यहाँ किया गया कुछ भी बेकार नहीं जाता।",
+      "status": "draft"
+    },
+    {
+      "number": 41,
+      "english": "Here, son of the Kurus, the understanding of the resolute is single. The thoughts of the irresolute branch out without end.",
+      "hindi": "कुरुनन्दन, इस मार्ग में निश्चय वाली बुद्धि एक ही होती है। पर जिनमें निश्चय नहीं, उनकी बुद्धि की अनगिनत शाखाएँ होती हैं।",
+      "simpleEnglish": "A focused mind moves in one clear direction. A mind without purpose is pulled many ways at once.",
+      "simpleHindi": "एकाग्र मन एक साफ़ दिशा में चलता है। बिना लक्ष्य का मन एक साथ कई ओर खिंचता रहता है।",
+      "status": "draft"
+    },
+    {
+      "number": 42,
+      "english": "Partha, some unwise people speak in fine, flowery words. Taken with the ritual sayings of the Vedas, they claim there is nothing beyond them.",
+      "hindi": "पार्थ, कुछ अविवेकी लोग फूलों जैसी सुंदर लगने वाली बातें कहते हैं। वे वेदों के कर्मकांड वाले वचनों में ही रमे रहते हैं और कहते हैं कि इसके सिवा कुछ है ही नहीं।",
+      "simpleEnglish": "Krishna warns about people who use religious words only to chase rewards.",
+      "simpleHindi": "कृष्ण उन लोगों से सावधान करते हैं जो धार्मिक शब्दों का उपयोग केवल फल पाने के लिए करते हैं।",
+      "status": "draft"
+    },
+    {
+      "number": 43,
+      "english": "Driven by desire and set on reaching heaven, they talk of many special rites meant to win pleasure and power, rites whose fruit is another birth.",
+      "hindi": "वे कामनाओं से भरे होते हैं और स्वर्ग को ही सबसे ऊँचा मानते हैं। वे सुख और ऐश्वर्य पाने के लिए तरह-तरह के कर्मकांड बताते हैं, जिनका फल फिर से जन्म होता है।",
+      "simpleEnglish": "Their religion is really a way of getting things: comfort, power and a better next life.",
+      "simpleHindi": "उनका धर्म असल में चीज़ें पाने का साधन है: आराम, शक्ति और अगला अच्छा जन्म।",
+      "status": "draft"
+    },
+    {
+      "number": 44,
+      "english": "People who cling to enjoyment and power, their minds swept away by such talk, never reach the resolute understanding that settles in samadhi, deep absorption.",
+      "hindi": "जो सुख और ऐश्वर्य में आसक्त हैं, और जिनका मन ऐसी बातों से भटक गया है, उनकी बुद्धि निश्चयपूर्वक समाधि में नहीं टिकती।",
+      "simpleEnglish": "When our minds are busy chasing rewards, we cannot become calm and focused enough to know the truth.",
+      "simpleHindi": "जब मन इनामों के पीछे भागने में लगा हो, तब वह इतना शांत और एकाग्र नहीं हो पाता कि सत्य को जान सके।",
+      "status": "draft"
+    },
+    {
+      "number": 45,
+      "english": "The subject of the Vedas is the three qualities. Go beyond them, Arjuna. Be free of opposites, rooted always in sattva, unconcerned with getting and keeping, and centred in the Self.",
+      "hindi": "वेद तीनों गुणों के विषयों की बात करते हैं। अर्जुन, तुम तीनों गुणों से ऊपर उठो। द्वंद्वों से मुक्त रहो, सदा सत्त्व में स्थित रहो, पाने और बचाने की चिंता छोड़ो, और आत्मा में टिके रहो।",
+      "simpleEnglish": "Krishna asks Arjuna to rise above life's ups and downs, such as heat and cold or praise and blame, and stay anchored in his true Self.",
+      "simpleHindi": "कृष्ण अर्जुन से कहते हैं कि जीवन के उतार-चढ़ाव, जैसे सर्दी-गर्मी या प्रशंसा-निंदा, से ऊपर उठें और अपने सच्चे स्वरूप में टिके रहें।",
+      "status": "draft"
+    },
+    {
+      "number": 46,
+      "english": "When there is water flooding on every side, a small well serves little purpose. All the Vedas serve the knowing brahmin to about that degree.",
+      "hindi": "चारों ओर पानी भर जाने पर छोटे कुएँ का जितना काम रह जाता है, ज्ञानी ब्राह्मण के लिए सारे वेदों का उतना ही काम रह जाता है।",
+      "simpleEnglish": "Someone who has found the deepest truth no longer depends on rituals, just as no one needs a small well during a flood.",
+      "simpleHindi": "जिसने सबसे गहरा सत्य पा लिया, वह कर्मकांडों पर निर्भर नहीं रहता, जैसे बाढ़ के समय किसी को छोटे कुएँ की ज़रूरत नहीं होती।",
+      "status": "draft"
+    },
+    {
+      "number": 47,
+      "english": "Your concern is with the doing alone, never with what comes of it. Do not make the fruit of action your reason for acting, and do not cling to doing nothing either.",
+      "hindi": "तुम्हारे हाथ में केवल काम करना है, उसका फल कभी नहीं। फल पाने की इच्छा को काम का कारण मत बनाओ, और काम न करने से भी मोह मत रखो।",
+      "simpleEnglish": "This is the most famous verse of the Gita. Do your best and let go of worrying about the outcome. But do not use that as an excuse to do nothing.",
+      "simpleHindi": "यह गीता का सबसे प्रसिद्ध श्लोक है। अपना पूरा प्रयास करो और परिणाम की चिंता छोड़ दो। पर इसे कुछ न करने का बहाना मत बनाओ।",
+      "status": "draft"
+    },
+    {
+      "number": 48,
+      "english": "Dhananjaya, stand firm in yoga and act. Drop attachment, and be the same whether you succeed or fail. That sameness is what is called yoga.",
+      "hindi": "धनंजय, योग में स्थित होकर, आसक्ति छोड़कर, सफलता और असफलता में एक-सा रहकर अपने कर्म करो। मन के इसी संतुलन को योग कहते हैं।",
+      "simpleEnglish": "Here Krishna gives a simple definition: yoga is keeping a balanced mind, whatever happens.",
+      "simpleHindi": "यहाँ कृष्ण योग की सरल परिभाषा देते हैं: जो भी हो, मन को संतुलित रखना ही योग है।",
+      "status": "draft"
+    },
+    {
+      "number": 49,
+      "english": "Work done for its rewards is far below work done with this understanding, Dhananjaya. Take refuge in understanding. Those who act for the fruit are to be pitied.",
+      "hindi": "धनंजय, बुद्धियोग की तुलना में फल के लिए किया गया कर्म बहुत नीचे है। बुद्धि की शरण लो। जो फल के लिए काम करते हैं, वे दया के पात्र हैं।",
+      "simpleEnglish": "Working only for rewards makes us anxious and small. Working with a clear, unselfish mind is far better.",
+      "simpleHindi": "केवल इनाम के लिए काम करना हमें बेचैन और छोटा बना देता है। साफ़ और निःस्वार्थ मन से काम करना कहीं बेहतर है।",
+      "status": "draft"
+    },
+    {
+      "number": 50,
+      "english": "One joined with understanding leaves behind both good and bad deeds, here in this life. So take up yoga. Being skilful in action: that is yoga.",
+      "hindi": "बुद्धि से युक्त व्यक्ति इसी जीवन में पुण्य और पाप, दोनों से ऊपर उठ जाता है। इसलिए योग में लग जाओ। कर्म में कुशलता ही योग है।",
+      "simpleEnglish": "Yoga is not only something done on a mat. Doing any work well, with a calm and unselfish mind, is yoga.",
+      "simpleHindi": "योग केवल चटाई पर किया जाने वाला अभ्यास नहीं है। शांत और निःस्वार्थ मन से कोई भी काम अच्छी तरह करना भी योग है।",
+      "status": "draft"
+    },
+    {
+      "number": 51,
+      "english": "The wise, joined with understanding, give up the fruit that comes from action. Released from the chain of rebirth, they reach the place where nothing ails.",
+      "hindi": "बुद्धि से युक्त ज्ञानी कर्म से पैदा होने वाले फल को छोड़ देते हैं। जन्म के बंधन से मुक्त होकर वे उस पद को पाते हैं जहाँ कोई दुःख नहीं।",
+      "simpleEnglish": "When we stop working only for rewards, we become free, and that freedom leads to a state where suffering ends.",
+      "simpleHindi": "जब हम केवल इनाम के लिए काम करना छोड़ देते हैं, तो मुक्त हो जाते हैं, और यही मुक्ति उस अवस्था तक ले जाती है जहाँ दुःख समाप्त हो जाता है।",
+      "status": "draft"
+    },
+    {
+      "number": 52,
+      "english": "When your understanding crosses the thicket of confusion, you will grow indifferent to all you have heard and all that is still to be heard.",
+      "hindi": "जब तुम्हारी बुद्धि मोह के दलदल को पार कर लेगी, तब तुम जो सुन चुके हो और जो सुनना बाकी है, उन सबसे उदासीन हो जाओगे।",
+      "simpleEnglish": "Once the mind is clear, you no longer need to keep hearing more opinions and teachings about rituals and rewards.",
+      "simpleHindi": "जब मन साफ़ हो जाता है, तब कर्मकांड और इनामों के बारे में और-और बातें सुनने की ज़रूरत नहीं रहती।",
+      "status": "draft"
+    },
+    {
+      "number": 53,
+      "english": "When your understanding, now unsettled by conflicting texts, stands still and unmoving, firm in samadhi, then you will reach yoga.",
+      "hindi": "जब अलग-अलग वचनों को सुनकर डगमगाई तुम्हारी बुद्धि समाधि में अचल और स्थिर होकर टिक जाएगी, तब तुम योग को पा लोगे।",
+      "simpleEnglish": "Hearing many different views can confuse us. Yoga is reached when the mind becomes steady and still.",
+      "simpleHindi": "बहुत-से अलग-अलग मत सुनकर हम उलझ सकते हैं। जब मन स्थिर और शांत हो जाता है, तब योग मिलता है।",
+      "status": "draft"
+    },
+    {
+      "number": 54,
+      "english": "Keshava, what marks out a person whose wisdom is steady, who rests in samadhi? When a person of settled mind speaks, sits or moves about, what is that like?",
+      "hindi": "केशव, जिसकी बुद्धि स्थिर हो और जो समाधि में टिका हो, उसे कैसे पहचानें? ऐसा स्थिर मन वाला व्यक्ति बोलता, बैठता और चलता-फिरता किस तरह है?",
+      "simpleEnglish": "Arjuna asks a practical question: what does a wise and steady person look like in daily life? Krishna's answer fills the rest of the chapter.",
+      "simpleHindi": "अर्जुन एक व्यावहारिक प्रश्न पूछते हैं: सच में ज्ञानी और स्थिर व्यक्ति रोज़ के जीवन में कैसा दिखता है? अध्याय के बाकी हिस्से में कृष्ण इसी का उत्तर देते हैं।",
+      "status": "draft"
+    },
+    {
+      "number": 55,
+      "english": "Partha, a person who has let go of every wish the mind throws up, and who is at ease in the Self with nothing but the Self, is the one we call steady in wisdom.",
+      "hindi": "पार्थ, जब कोई मन में उठने वाली सारी कामनाओं को छोड़ देता है, और अपने भीतर ही अपने से संतुष्ट रहता है, तब उसे स्थितप्रज्ञ कहते हैं।",
+      "simpleEnglish": "A wise person does not need outside things to feel complete. Their happiness comes from within.",
+      "simpleHindi": "ज्ञानी व्यक्ति को पूरा महसूस करने के लिए बाहरी चीज़ों की ज़रूरत नहीं होती। उसकी खुशी भीतर से आती है।",
+      "status": "draft"
+    },
+    {
+      "number": 56,
+      "english": "Pain does not unsettle such a person's mind, and pleasure stirs no hunger. Longing, fear and anger have left. A sage like this is called steady of mind.",
+      "hindi": "जिसका मन दुःख में विचलित नहीं होता, सुखों की लालसा नहीं रहती, और जो राग, भय और क्रोध से मुक्त है, उसे स्थिर बुद्धि वाला मुनि कहते हैं।",
+      "simpleEnglish": "Krishna lists the signs: calm in hard times, not greedy in good times, and free of clinging, fear and anger.",
+      "simpleHindi": "कृष्ण पहचान बताते हैं: कठिन समय में शांत, अच्छे समय में लालच से दूर, और मोह, भय तथा क्रोध से मुक्त।",
+      "status": "draft"
+    },
+    {
+      "number": 57,
+      "english": "One who is unattached everywhere, who neither celebrates when good comes nor resents it when bad comes, has wisdom that is firmly set.",
+      "hindi": "जो कहीं भी आसक्त नहीं, जो अच्छा मिलने पर उछलता नहीं और बुरा मिलने पर कुढ़ता नहीं, उसकी बुद्धि स्थिर है।",
+      "simpleEnglish": "Good and bad things happen to everyone. A wise person meets both without getting carried away.",
+      "simpleHindi": "अच्छी और बुरी बातें सबके साथ होती हैं। ज्ञानी व्यक्ति दोनों का सामना बहे बिना करता है।",
+      "status": "draft"
+    },
+    {
+      "number": 58,
+      "english": "As a turtle pulls its legs in from every side, this person can pull the senses back from what they reach for. Such a person's wisdom is firmly set.",
+      "hindi": "कछुआ जैसे अपने सारे अंग भीतर खींच लेता है, उसी तरह जो व्यक्ति इन्द्रियों को उनके विषयों से वापस खींच सके, उसकी प्रज्ञा अडिग रहती है।",
+      "simpleEnglish": "A tortoise pulls in its legs and head when it needs to. A wise person can likewise pull their attention away from distractions.",
+      "simpleHindi": "कछुआ ज़रूरत पड़ने पर अपने पैर और सिर अंदर खींच लेता है। ज्ञानी व्यक्ति भी इसी तरह अपना ध्यान भटकाने वाली चीज़ों से हटा सकता है।",
+      "status": "draft"
+    },
+    {
+      "number": 59,
+      "english": "For one who stops feeding the senses, the objects of the senses fall away, but the taste for them remains. Even that taste fades once the Supreme is seen.",
+      "hindi": "जो इन्द्रियों को विषयों का आहार नहीं देता, उससे विषय तो दूर हो जाते हैं, पर उनका रस बना रहता है। परम को देख लेने पर वह रस भी छूट जाता है।",
+      "simpleEnglish": "We can stay away from things we crave, but the craving often stays. It goes for good only when we find something far greater.",
+      "simpleHindi": "हम जिन चीज़ों की चाह रखते हैं, उनसे दूर रह सकते हैं, पर चाह अक्सर बनी रहती है। वह सच में तभी जाती है जब हमें कुछ कहीं बड़ा मिल जाता है।",
+      "status": "draft"
+    },
+    {
+      "number": 60,
+      "english": "Kaunteya, even when a wise person is making every effort, the senses, stormy and wild, can drag the mind off by force.",
+      "hindi": "कौन्तेय, बेचैन इन्द्रियाँ प्रयत्न करते हुए बुद्धिमान मनुष्य के मन को भी ज़बरदस्ती खींच ले जाती हैं।",
+      "simpleEnglish": "Krishna is honest: even sincere, intelligent people get pulled away by their senses. Self-control is hard for everyone.",
+      "simpleHindi": "कृष्ण साफ़ कहते हैं: सच्चे और समझदार लोग भी इन्द्रियों के खिंचाव में आ जाते हैं। संयम सबके लिए कठिन है।",
+      "status": "draft"
+    },
+    {
+      "number": 61,
+      "english": "Holding them all in check, one should sit in yoga, intent on me. Whoever has the senses under control has wisdom that is firmly set.",
+      "hindi": "उन सबको वश में करके, मुझमें मन लगाकर, योग में बैठना चाहिए। जिसकी इन्द्रियाँ वश में हैं, उसकी बुद्धि स्थिर है।",
+      "simpleEnglish": "Krishna gives the remedy: gently bring the senses under control and turn the mind towards the Divine.",
+      "simpleHindi": "कृष्ण उपाय बताते हैं: इन्द्रियों को धीरे-धीरे वश में करो और मन को ईश्वर की ओर लगाओ।",
+      "status": "draft"
+    },
+    {
+      "number": 62,
+      "english": "Keep thinking about the things of the senses, and you grow attached to them. Attachment breeds desire, and desire breeds anger.",
+      "hindi": "विषयों के बारे में सोचते रहने से मनुष्य को उनसे लगाव हो जाता है। लगाव से कामना पैदा होती है, और कामना से क्रोध।",
+      "simpleEnglish": "Verses 62 and 63 describe a chain reaction. It starts with simply thinking about something again and again.",
+      "simpleHindi": "श्लोक 62 और 63 एक शृंखला बताते हैं। यह किसी चीज़ के बारे में बार-बार सोचने से ही शुरू हो जाती है।",
+      "status": "draft"
+    },
+    {
+      "number": 63,
+      "english": "Out of anger comes confusion, and out of confusion a wandering memory. When memory slips, understanding is lost, and with understanding gone, the person is lost.",
+      "hindi": "क्रोध से मोह होता है, मोह से स्मृति भटक जाती है। स्मृति खो जाने से बुद्धि नष्ट होती है, और बुद्धि नष्ट होने पर मनुष्य का पतन हो जाता है।",
+      "simpleEnglish": "Anger makes us confused, we forget what we know is right, our judgement fails, and we fall. Stopping the chain early is the key.",
+      "simpleHindi": "क्रोध हमें उलझा देता है, हम भूल जाते हैं कि क्या सही है, हमारा विवेक काम नहीं करता, और हम गिर जाते हैं। इस शृंखला को जल्दी रोकना ही उपाय है।",
+      "status": "draft"
+    },
+    {
+      "number": 64,
+      "english": "But a self-disciplined person who moves among the things of the senses with senses under control, free from liking and disliking, reaches inner calm.",
+      "hindi": "पर संयमी व्यक्ति, राग और द्वेष से मुक्त और अपने वश में रहने वाली इन्द्रियों के साथ विषयों के बीच रहते हुए भी, मन की प्रसन्नता पा लेता है।",
+      "simpleEnglish": "We do not need to run away from the world. We can live in it, enjoy it in a balanced way, and still be at peace.",
+      "simpleHindi": "संसार से भागने की ज़रूरत नहीं। हम इसमें रहकर, संतुलन के साथ इसका आनंद लेते हुए भी शांत रह सकते हैं।",
+      "status": "draft"
+    },
+    {
+      "number": 65,
+      "english": "In that calm, all sorrow comes to an end. For one whose mind is serene, understanding quickly becomes steady.",
+      "hindi": "उस प्रसन्नता में उसके सारे दुःख मिट जाते हैं। जिसका मन प्रसन्न है, उसकी बुद्धि जल्दी ही स्थिर हो जाती है।",
+      "simpleEnglish": "A peaceful mind is where sorrow ends and clear thinking begins.",
+      "simpleHindi": "शांत मन में ही दुःख का अंत और साफ़ सोच की शुरुआत होती है।",
+      "status": "draft"
+    },
+    {
+      "number": 66,
+      "english": "The undisciplined person has no clear understanding and no power to contemplate. Without contemplation there is no peace; and without peace, where would happiness come from?",
+      "hindi": "जो संयमी नहीं, उसमें न सही बुद्धि होती है, न ध्यान की शक्ति। ध्यान के बिना शांति नहीं, और शांति के बिना सुख कहाँ?",
+      "simpleEnglish": "Happiness depends on peace, peace on a focused mind, and a focused mind on self-discipline.",
+      "simpleHindi": "सुख शांति पर टिका है, शांति एकाग्र मन पर, और एकाग्र मन संयम पर।",
+      "status": "draft"
+    },
+    {
+      "number": 67,
+      "english": "If the mind runs after the senses as they roam, it sweeps a person's wisdom away, the way wind drives a boat off course on the water.",
+      "hindi": "जब मन भटकती इन्द्रियों के पीछे चलता है, तो वह मनुष्य की बुद्धि को वैसे ही बहा ले जाता है जैसे हवा पानी में नाव को।",
+      "simpleEnglish": "Krishna gives a picture: an uncontrolled mind is like a boat in strong wind, pushed wherever the senses blow it.",
+      "simpleHindi": "कृष्ण एक चित्र देते हैं: बेकाबू मन तेज़ हवा में फँसी नाव जैसा है, जिसे इन्द्रियाँ जिधर चाहें उधर धकेल देती हैं।",
+      "status": "draft"
+    },
+    {
+      "number": 68,
+      "english": "Therefore, strong-armed one, the person whose senses are reined in from their objects on every side is the one whose wisdom stands firm.",
+      "hindi": "इसलिए, महाबाहु, जिसकी इन्द्रियाँ अपने विषयों से हर तरह से रोकी हुई हैं, उसी की बुद्धि स्थिर है।",
+      "simpleEnglish": "Krishna repeats the main point so it is not forgotten: steady wisdom comes from mastering the senses.",
+      "simpleHindi": "कृष्ण मुख्य बात फिर दोहराते हैं ताकि वह भूले नहीं: स्थिर बुद्धि इन्द्रियों पर काबू पाने से आती है।",
+      "status": "draft"
+    },
+    {
+      "number": 69,
+      "english": "Where all beings are asleep in night, the self-controlled one keeps watch; and where all beings are wide awake, the sage who sees clearly finds only night.",
+      "hindi": "सारे प्राणी जिसे रात समझकर सोते हैं, संयमी उसमें जागता रहता है; और सारे प्राणी जिसमें जागते हैं, सच्चे द्रष्टा मुनि के लिए वह रात के समान है।",
+      "simpleEnglish": "A poetic verse. What most people ignore, such as the inner life, is what the wise are alert to; and what most people chase holds little interest for the wise.",
+      "simpleHindi": "एक काव्य भरा श्लोक। जिसे ज़्यादातर लोग अनदेखा करते हैं, जैसे भीतर का जीवन, उसके प्रति ज्ञानी सजग रहता है; और जिसके पीछे ज़्यादातर लोग भागते हैं, उसमें ज्ञानी की रुचि कम होती है।",
+      "status": "draft"
+    },
+    {
+      "number": 70,
+      "english": "Rivers keep pouring into the ocean, and the ocean, though always filling, stays steady within its shores. The person into whom all desires flow in the same way finds peace; the one who chases desires does not.",
+      "hindi": "जैसे नदियाँ लगातार भरते रहने वाले, फिर भी अपनी जगह स्थिर समुद्र में आकर समा जाती हैं, वैसे ही जिसमें सारी कामनाएँ समा जाती हैं, वह शांति पाता है; कामनाओं के पीछे भागने वाला नहीं।",
+      "simpleEnglish": "The ocean stays calm no matter how many rivers flow into it. A wise person is like that: desires come, but they do not disturb them.",
+      "simpleHindi": "कितनी भी नदियाँ आकर मिलें, समुद्र शांत रहता है। ज्ञानी व्यक्ति भी ऐसा ही होता है: इच्छाएँ आती हैं, पर उसे विचलित नहीं करतीं।",
+      "status": "draft"
+    },
+    {
+      "number": 71,
+      "english": "Whoever lets go of every desire and lives without craving, with no sense of 'mine' and no ego, comes to peace.",
+      "hindi": "जो मनुष्य सारी कामनाएँ छोड़कर, लालसा के बिना, 'मेरा' और 'मैं' के भाव से मुक्त होकर जीता है, वह शांति पाता है।",
+      "simpleEnglish": "Peace comes when we stop holding on so tightly to 'me' and 'mine'.",
+      "simpleHindi": "शांति तब आती है जब हम 'मैं' और 'मेरा' को इतनी कसकर पकड़ना छोड़ देते हैं।",
+      "status": "draft"
+    },
+    {
+      "number": 72,
+      "english": "Partha, this is the Brahman state. Whoever reaches it is not confused again, and whoever is established in it, even at the last moment of life, attains nirvana in Brahman.",
+      "hindi": "पार्थ, ब्रह्म में स्थित होने की यही अवस्था है। इसे पा लेने पर कोई फिर मोह में नहीं पड़ता। जीवन के अंतिम क्षण में भी इसमें टिका रहे तो वह ब्रह्म-निर्वाण पा लेता है।",
+      "simpleEnglish": "Chapter 2 ends by describing the goal: a lasting peace, free from confusion, which even death cannot take away.",
+      "simpleHindi": "दूसरा अध्याय लक्ष्य के वर्णन पर समाप्त होता है: ऐसी स्थायी शांति, जो भ्रम से मुक्त है और जिसे मृत्यु भी नहीं छीन सकती।",
+      "status": "draft"
     }
   ]
 }

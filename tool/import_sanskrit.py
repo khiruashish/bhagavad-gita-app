@@ -25,7 +25,13 @@ MISPLACED_I = re.compile("्ि([क-ह])")
 # Known typos in the digital source, fixed against standard printed editions.
 TYPO_FIXES = {
     (1, 34): [("श्चशुराः", "श्वशुराः")],
+    (2, 31): [("युद्धाछ्रेयो", "युद्धाच्छ्रेयो")],
+    (2, 33): [("चैत्त्वमिमं", "चेत्त्वमिमं")],
 }
+
+# Speaker lines ("X said") as they appear in the source. Sometimes they share a line
+# with the verse text instead of standing on their own line.
+SPEAKERS = ("धृतराष्ट्र उवाच", "सञ्जय उवाच", "संजय उवाच", "अर्जुन उवाच", "श्री भगवानुवाच", "श्रीभगवानुवाच")
 
 # In these verses the "X said" line falls between the two halves of the verse.
 MID_VERSE_SPEAKER = {(1, 21), (1, 28)}
@@ -41,8 +47,12 @@ def clean(text: str):
     lines = [re.sub(r"\s+", " ", l).strip() for l in text.splitlines()]
     lines = [l for l in lines if l]
     speaker = ""
-    if lines and lines[0].endswith("उवाच"):
-        speaker = lines.pop(0)
+    for name in SPEAKERS:
+        if lines and lines[0].startswith(name):
+            speaker = name
+            rest = lines[0][len(name):].strip()
+            lines = ([rest] if rest else []) + lines[1:]
+            break
     # One line per half-verse: break after a single danda.
     body = " ".join(lines)
     body = re.sub(r"।\s*", "।\n", body).strip()

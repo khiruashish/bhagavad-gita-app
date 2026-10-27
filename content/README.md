@@ -31,5 +31,5 @@ accurate. It is the project's record that the content is free of third-party cop
 | Chapter | Verses | Drafted | Reviewed |
 |---|---|---|---|
 | 1 | 47 | 47 | 0 |
-| 2 | 72 | 10 | 0 |
+| 2 | 72 | 72 | 0 |
 | 3–18 | 582 | 0 | 0 |

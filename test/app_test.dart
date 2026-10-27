@@ -92,9 +92,7 @@ void main() {
     expect(find.text('दिन 1'), findsOneWidget);
   });
 
-  testWidgets('chapters open, verses swipe, and untranslated verses say so', (
-    tester,
-  ) async {
+  testWidgets('chapters open and verses swipe', (tester) async {
     useTallPhone(tester);
     final app = await buildApp(clock: () => DateTime(2026, 1, 1));
     await tester.pumpWidget(app.widget);
@@ -114,8 +112,37 @@ void main() {
     await tester.tap(find.text('Next'));
     await tester.pumpAndSettle();
     expect(find.text('Chapter 2 · Verse 11'), findsOneWidget);
-    expect(find.text('Translation coming in a future update.'), findsOneWidget);
   });
+
+  testWidgets(
+    'a verse without a translation yet shows the Sanskrit and says so',
+    (tester) async {
+      useTallPhone(tester);
+      final firstUntranslated = realContent.verses.firstWhere(
+        (v) => !v.isTranslated,
+      );
+      final app = await buildApp(clock: () => DateTime(2026, 1, 1));
+      await tester.pumpWidget(app.widget);
+      await tester.pumpAndSettle();
+
+      await tester.tap(find.text('Chapters'));
+      await tester.pumpAndSettle();
+      await tester.tap(
+        find.text(realContent.chapters[firstUntranslated.chapter - 1].english),
+      );
+      await tester.pumpAndSettle();
+      await tester.tap(find.text(firstUntranslated.id));
+      await tester.pumpAndSettle();
+      expect(
+        find.text('Translation coming in a future update.'),
+        findsOneWidget,
+      );
+      expect(
+        find.textContaining(firstUntranslated.sanskrit.split('\n').first),
+        findsOneWidget,
+      );
+    },
+  );
 
   testWidgets('the Start here tab explains the Gita in plain words', (
     tester,
