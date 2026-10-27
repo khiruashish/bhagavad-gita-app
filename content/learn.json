@@ -1,0 +1,47 @@
+{
+  "speakers": {
+    "धृतराष्ट्र उवाच": { "english": "Dhritarashtra said", "hindi": "धृतराष्ट्र ने कहा" },
+    "सञ्जय उवाच": { "english": "Sanjaya said", "hindi": "संजय ने कहा" },
+    "संजय उवाच": { "english": "Sanjaya said", "hindi": "संजय ने कहा" },
+    "अर्जुन उवाच": { "english": "Arjuna said", "hindi": "अर्जुन ने कहा" },
+    "श्री भगवानुवाच": { "english": "The Blessed Lord said", "hindi": "श्रीभगवान ने कहा" },
+    "श्रीभगवानुवाच": { "english": "The Blessed Lord said", "hindi": "श्रीभगवान ने कहा" }
+  },
+  "sections": [
+    {
+      "id": "what",
+      "titleEnglish": "What is the Bhagavad Gita?",
+      "titleHindi": "भगवद्गीता क्या है?",
+      "bodyEnglish": "The Bhagavad Gita, 'the Song of the Lord', is a conversation of 700 verses between Prince Arjuna and Krishna. It is part of the Mahabharata, one of India's two great epics. Just before a great war, Arjuna loses heart and asks for guidance. Krishna's answers cover how to live, how to work, how to handle sorrow and how to find peace. People of every age and background read it for practical wisdom.",
+      "bodyHindi": "भगवद्गीता, यानी 'भगवान का गीत', राजकुमार अर्जुन और कृष्ण के बीच 700 श्लोकों का संवाद है। यह महाभारत का भाग है, जो भारत के दो महाकाव्यों में से एक है। एक बड़े युद्ध से ठीक पहले अर्जुन का मन टूट जाता है और वे मार्गदर्शन माँगते हैं। कृष्ण के उत्तर बताते हैं कि कैसे जिएँ, कैसे काम करें, दुःख को कैसे सँभालें और शांति कैसे पाएँ। हर उम्र और हर पृष्ठभूमि के लोग इसे जीवन की व्यावहारिक सीख के लिए पढ़ते हैं।"
+    },
+    {
+      "id": "who",
+      "titleEnglish": "Who's who",
+      "titleHindi": "कौन क्या है",
+      "bodyEnglish": "Krishna: Arjuna's friend and charioteer, revered as God; he is the teacher.\nArjuna: a great archer and one of the five Pandava brothers; he is the student.\nDhritarashtra: the blind king, father of the Kauravas; he asks what is happening.\nSanjaya: the king's minister, given the gift of seeing the battlefield from afar; he tells the story.\nThe Pandavas: Yudhishthira, Bhima, Arjuna, Nakula and Sahadeva, the sons of Pandu.\nThe Kauravas: Duryodhana and his brothers, the sons of Dhritarashtra and cousins of the Pandavas.\nBhishma and Drona: the respected grand-uncle and the teacher of both sides, who fight for the Kauravas.",
+      "bodyHindi": "कृष्ण: अर्जुन के मित्र और सारथी, जिन्हें भगवान माना जाता है; वे गुरु हैं।\nअर्जुन: महान धनुर्धर और पाँच पाण्डव भाइयों में से एक; वे शिष्य हैं।\nधृतराष्ट्र: अंधे राजा, कौरवों के पिता; वे पूछते हैं कि क्या हो रहा है।\nसंजय: राजा के मंत्री, जिन्हें दूर से युद्धभूमि देख सकने की शक्ति मिली है; वे कथा सुनाते हैं।\nपाण्डव: युधिष्ठिर, भीम, अर्जुन, नकुल और सहदेव, पाण्डु के पुत्र।\nकौरव: दुर्योधन और उसके भाई, धृतराष्ट्र के पुत्र और पाण्डवों के चचेरे भाई।\nभीष्म और द्रोण: सम्मानित पितामह और दोनों पक्षों के गुरु, जो कौरवों की ओर से लड़ते हैं।"
+    },
+    {
+      "id": "how",
+      "titleEnglish": "How to use this app",
+      "titleHindi": "इस ऐप का उपयोग कैसे करें",
+      "bodyEnglish": "Each day the app shows you the next verse, starting from the very first one, so you read the Gita in order, a little at a time. Every verse is shown in Sanskrit, then in Hindi and English, with a short simple explanation. Tap the speaker button to listen. You can also browse any chapter, and change the text size and language in Settings.",
+      "bodyHindi": "हर दिन ऐप आपको अगला श्लोक दिखाता है, बिल्कुल पहले श्लोक से शुरू करके, ताकि आप गीता को क्रम से, थोड़ा-थोड़ा करके पढ़ें। हर श्लोक संस्कृत में, फिर हिन्दी और अंग्रेज़ी में दिखाया जाता है, साथ में एक छोटी, सरल व्याख्या भी होती है। सुनने के लिए स्पीकर बटन दबाएँ। आप कोई भी अध्याय खोलकर पढ़ सकते हैं, और सेटिंग्स में अक्षरों का आकार और भाषा बदल सकते हैं।"
+    }
+  ],
+  "glossary": [
+    { "term": "Dharma", "termHindi": "धर्म", "english": "What is right; your duty, and the order that holds life together.", "hindi": "जो सही है; आपका कर्तव्य, और वह व्यवस्था जो जीवन को जोड़े रखती है।" },
+    { "term": "Karma", "termHindi": "कर्म", "english": "Action. Every action has results, and the Gita teaches how to act without being trapped by them.", "hindi": "काम। हर काम का फल होता है, और गीता सिखाती है कि फल में फँसे बिना काम कैसे करें।" },
+    { "term": "Yoga", "termHindi": "योग", "english": "Joining or discipline: a way of life that connects you to the Divine. In the Gita it means much more than physical exercise.", "hindi": "जुड़ना या साधना: जीवन का ऐसा ढंग जो आपको ईश्वर से जोड़े। गीता में इसका अर्थ केवल शारीरिक व्यायाम से कहीं अधिक है।" },
+    { "term": "Atman (the Self)", "termHindi": "आत्मा", "english": "Your true self, which is not the body or the mind, and which never dies.", "hindi": "आपका असली स्वरूप, जो न शरीर है न मन, और जो कभी नहीं मरता।" },
+    { "term": "Brahman", "termHindi": "ब्रह्म", "english": "The ultimate reality behind everything that exists.", "hindi": "हर चीज़ के पीछे की परम सत्ता।" },
+    { "term": "Bhakti", "termHindi": "भक्ति", "english": "Loving devotion to God.", "hindi": "ईश्वर के प्रति प्रेम भरा समर्पण।" },
+    { "term": "Jnana", "termHindi": "ज्ञान", "english": "Knowledge, especially the knowledge of who you really are.", "hindi": "ज्ञान, विशेष रूप से यह जानना कि आप वास्तव में कौन हैं।" },
+    { "term": "Guna", "termHindi": "गुण", "english": "The three qualities found in all nature: sattva (clarity), rajas (restless activity) and tamas (dullness).", "hindi": "प्रकृति के तीन गुण: सत्त्व (स्पष्टता), रजस् (बेचैन सक्रियता) और तमस् (जड़ता)।" },
+    { "term": "Moksha", "termHindi": "मोक्ष", "english": "Freedom from the cycle of birth and death; complete inner freedom.", "hindi": "जन्म और मृत्यु के चक्र से छुटकारा; पूर्ण आंतरिक स्वतंत्रता।" },
+    { "term": "Yajna", "termHindi": "यज्ञ", "english": "An offering. In the Gita, any work done selflessly can be an offering.", "hindi": "अर्पण। गीता में, निःस्वार्थ भाव से किया गया हर काम यज्ञ हो सकता है।" },
+    { "term": "Sannyasa", "termHindi": "संन्यास", "english": "Renunciation. The Gita teaches that the real renunciation is giving up selfish desire, not giving up work.", "hindi": "त्याग। गीता सिखाती है कि असली त्याग स्वार्थ भरी इच्छा छोड़ना है, काम छोड़ना नहीं।" },
+    { "term": "Kurukshetra", "termHindi": "कुरुक्षेत्र", "english": "The plain in north India where the great war was fought; today a town in Haryana.", "hindi": "उत्तर भारत का वह मैदान जहाँ महायुद्ध हुआ था; आज हरियाणा का एक नगर।" }
+  ]
+}
