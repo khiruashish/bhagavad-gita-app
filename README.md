@@ -18,7 +18,7 @@ All content is free of third-party copyright:
 
 See [content/README.md](content/README.md).
 
-> **Status:** 469 of 701 verses have draft translations (Chapters 1–11).
+> **Status:** 489 of 701 verses have draft translations (Chapters 1–12).
 > All translations need scholar review before release. See [docs/GUIDE.md](docs/GUIDE.md).
 
 ## Documents
