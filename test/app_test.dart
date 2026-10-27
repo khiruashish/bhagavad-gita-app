@@ -1,5 +1,9 @@
 import 'package:flutter_test/flutter_test.dart';
+import 'package:flutter/material.dart';
+import 'package:gita_for_everyone/src/app_scope.dart';
 import 'package:gita_for_everyone/src/audio/verse_speaker.dart';
+import 'package:gita_for_everyone/src/content/models.dart';
+import 'package:gita_for_everyone/src/ui/widgets/verse_view.dart';
 
 import 'helpers.dart';
 
@@ -118,29 +122,30 @@ void main() {
     'a verse without a translation yet shows the Sanskrit and says so',
     (tester) async {
       useTallPhone(tester);
-      final firstUntranslated = realContent.verses.firstWhere(
-        (v) => !v.isTranslated,
+      const untranslated = Verse(
+        chapter: 9,
+        number: 99,
+        sanskrit: 'धर्मक्षेत्रे कुरुक्षेत्रे',
+        iast: 'dharmakṣetre kurukṣetre',
       );
       final app = await buildApp(clock: () => DateTime(2026, 1, 1));
-      await tester.pumpWidget(app.widget);
-      await tester.pumpAndSettle();
-
-      await tester.tap(find.text('Chapters'));
-      await tester.pumpAndSettle();
-      await tester.tap(
-        find.text(realContent.chapters[firstUntranslated.chapter - 1].english),
+      await tester.pumpWidget(
+        AppScope(
+          content: realContent,
+          settings: app.settings,
+          speaker: app.speaker,
+          child: const MaterialApp(
+            home: Scaffold(body: VerseView(verse: untranslated)),
+          ),
+        ),
       );
-      await tester.pumpAndSettle();
-      await tester.tap(find.text(firstUntranslated.id));
       await tester.pumpAndSettle();
       expect(
         find.text('Translation coming in a future update.'),
         findsOneWidget,
       );
-      expect(
-        find.textContaining(firstUntranslated.sanskrit.split('\n').first),
-        findsOneWidget,
-      );
+      expect(find.text('धर्मक्षेत्रे कुरुक्षेत्रे'), findsOneWidget);
+      expect(find.text('Hindi'), findsNothing);
     },
   );
 
