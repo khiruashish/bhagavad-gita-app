@@ -151,9 +151,14 @@ At 10 verses a batch this is about 0 batches.
    - natural Hindi and English;
    - simple meanings that are correct and neutral;
    - nothing that sounds like a published translation.
-4. After review, set each verse to `"status": "reviewed", "reviewedBy": "<name>"`. The
+4. The reviewer also checks the **Sanskrit** of each verse against a standard printed
+   edition (e.g. Gita Press). The digital source had typos and words split by stray
+   spaces. About 65 have been fixed in `tool/import_sanskrit.py`; add any
+   others the reviewer finds there and re-run the import, never edit
+   `content/sanskrit.json` by hand.
+5. After review, set each verse to `"status": "reviewed", "reviewedBy": "<name>"`. The
    build script refuses a reviewed verse without a reviewer name.
-5. Pace: about 25–30 verses a day, so about 5–6 working weeks for 701 verses.
+6. Pace: about 25–30 verses a day, so about 5–6 working weeks for 701 verses.
 
 **Release builds include only reviewed verses** (`python3 tool/build_content.py --reviewed-only`).
 

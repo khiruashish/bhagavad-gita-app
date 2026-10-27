@@ -3,7 +3,7 @@ import unittest
 
 import build_content
 from iast import to_iast
-from import_sanskrit import clean
+from import_sanskrit import TYPO_FIXES, clean
 
 
 class IastTest(unittest.TestCase):
@@ -31,6 +31,23 @@ class ImportCleanTest(unittest.TestCase):
         speaker, text = clean("श्री भगवानुवाच अशोच्यानन्वशोचस्त्वं प्रज्ञावादांश्च भाषसे।\n\nगतासूनगतासूंश्च नानुशोचन्ति पण्डिताः।।2.11।।")
         self.assertEqual(speaker, "श्री भगवानुवाच")
         self.assertTrue(text.startswith("अशोच्यान"))
+
+    def test_vowel_sign_misplaced_inside_a_conjunct_is_fixed(self):
+        _, text = clean("श्रद्धया परया तप्तं तपस्तत्ति्रविधं नरैः।।17.17।।")
+        self.assertIn("तपस्तत्त्रिविधं", text)
+
+    def test_verse_marker_with_single_closing_danda_is_removed(self):
+        _, text = clean("तत्र श्रीर्विजयो भूतिर्ध्रुवा नीतिर्मतिर्मम।।18.78।")
+        self.assertEqual(text, "तत्र श्रीर्विजयो भूतिर्ध्रुवा नीतिर्मतिर्मम॥")
+
+    def test_every_typo_fix_applies_to_the_imported_text(self):
+        import json
+        import pathlib
+        data = json.loads((pathlib.Path(__file__).resolve().parent.parent / "content" / "sanskrit.json").read_text(encoding="utf-8"))
+        text = {(v["chapter"], v["verse"]): v["sanskrit"] for v in data["verses"]}
+        for key, fixes in TYPO_FIXES.items():
+            for _, right in fixes:
+                self.assertIn(right, text[key], key)
 
     def test_misplaced_vowel_sign_is_fixed(self):
         _, text = clean("यच्छ्रेयः स्यान्निश्िचतं ब्रूहि।।2.7।।")
