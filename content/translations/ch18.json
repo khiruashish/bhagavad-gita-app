@@ -1,0 +1,629 @@
+{
+  "chapter": 18,
+  "verses": [
+    {
+      "number": 1,
+      "english": "Strong-armed one, Hrishikesha, slayer of Keshi, I want to know the real meaning of renunciation, and of relinquishment, and how the two differ.",
+      "hindi": "हे महाबाहु, हृषीकेश, केशी का वध करने वाले, मैं संन्यास का असली अर्थ जानना चाहता हूँ, और त्याग का भी, और यह भी कि दोनों में क्या अंतर है।",
+      "simpleEnglish": "The final chapter begins with Arjuna's question about two kinds of giving up. Chapter 18 gathers the whole Gita together.",
+      "simpleHindi": "अंतिम अध्याय अर्जुन के इस प्रश्न से शुरू होता है कि छोड़ने के दो प्रकार क्या हैं। अठारहवाँ अध्याय पूरी गीता को एक साथ समेटता है।",
+      "status": "draft"
+    },
+    {
+      "number": 2,
+      "english": "The wise understand renunciation as setting aside acts done out of desire. The discerning call relinquishment the letting go of the fruit of every act.",
+      "hindi": "ज्ञानी कामना से किए जाने वाले कर्मों को छोड़ने को संन्यास समझते हैं। विवेकी लोग हर कर्म के फल को छोड़ देने को त्याग कहते हैं।",
+      "simpleEnglish": "Renunciation means dropping selfish actions; relinquishment means dropping attachment to results.",
+      "simpleHindi": "संन्यास का अर्थ है स्वार्थ भरे कर्म छोड़ना; त्याग का अर्थ है परिणाम की आसक्ति छोड़ना।",
+      "status": "draft"
+    },
+    {
+      "number": 3,
+      "english": "Some thinkers say that all action should be given up as flawed. Others say that acts of offering, giving and discipline should never be given up.",
+      "hindi": "कुछ समझदार लोगों का मत है कि हर काम में दोष छिपा है, इसलिए काम ही छोड़ दो। दूसरों का मत है कि यज्ञ, दान और तप वाले काम कभी त्यागने नहीं चाहिए।",
+      "simpleEnglish": "There are different opinions about whether to give up action altogether.",
+      "simpleHindi": "कर्म को पूरी तरह छोड़ने के बारे में अलग-अलग मत हैं।",
+      "status": "draft"
+    },
+    {
+      "number": 4,
+      "english": "Hear what I have settled on regarding relinquishment, best of Bharatas. It has been described, tiger among men, as being of three sorts.",
+      "hindi": "भरतश्रेष्ठ, त्याग के बारे में मैंने जो तय किया है, वह सुनो। हे पुरुषों में सिंह, त्याग को तीन तरह का बताया गया है।",
+      "simpleEnglish": "Krishna gives his own clear view.",
+      "simpleHindi": "कृष्ण अपना साफ़ मत देते हैं।",
+      "status": "draft"
+    },
+    {
+      "number": 5,
+      "english": "Offering, giving and discipline are not things to abandon; they must be carried out. They are what make even the wise pure.",
+      "hindi": "यज्ञ, दान और तप के कर्म नहीं छोड़ने चाहिए; उन्हें करना ही चाहिए। यज्ञ, दान और तप ज्ञानियों को भी शुद्ध करते हैं।",
+      "simpleEnglish": "Worship, generosity and self-discipline are good for everyone, even the wise.",
+      "simpleHindi": "पूजा, उदारता और संयम सबके लिए अच्छे हैं, ज्ञानियों के लिए भी।",
+      "status": "draft"
+    },
+    {
+      "number": 6,
+      "english": "But even these acts are to be done without clinging and without an eye on what they bring. That, Partha, is my considered view and the best one.",
+      "hindi": "पर पार्थ, ये कर्म भी आसक्ति और फल को छोड़कर करने चाहिए। यही मेरा निश्चित और सबसे ऊँचा मत है।",
+      "simpleEnglish": "Even good deeds should be done without clinging to rewards.",
+      "simpleHindi": "अच्छे काम भी इनाम से चिपके बिना करने चाहिए।",
+      "status": "draft"
+    },
+    {
+      "number": 7,
+      "english": "It is not right to renounce the work that one is bound to do. Abandoning it out of delusion is called relinquishment of tamas.",
+      "hindi": "जो कर्म करना ही है, उसे छोड़ना उचित नहीं। मोह के कारण उसे छोड़ देना तामसिक त्याग कहलाता है।",
+      "simpleEnglish": "Giving up your duty out of confusion or laziness is the lowest kind of giving up.",
+      "simpleHindi": "उलझन या आलस्य के कारण अपना कर्तव्य छोड़ देना सबसे नीचे तरह का त्याग है।",
+      "status": "draft"
+    },
+    {
+      "number": 8,
+      "english": "Whoever gives up an act just because it is painful, from fear of bodily hardship, practises relinquishment of rajas and does not gain its fruit.",
+      "hindi": "जो किसी कर्म को केवल इसलिए छोड़ देता है कि वह कष्टदायक है, शरीर के कष्ट के डर से, वह राजसिक त्याग करता है और त्याग का फल नहीं पाता।",
+      "simpleEnglish": "Avoiding hard work because it is uncomfortable is not real renunciation.",
+      "simpleHindi": "कठिन काम से इसलिए बचना कि वह असुविधाजनक है, सच्चा त्याग नहीं है।",
+      "status": "draft"
+    },
+    {
+      "number": 9,
+      "english": "Arjuna, if someone carries out a required task purely because it is theirs to do, laying aside both clinging and the hope of gain, their relinquishment is one of sattva.",
+      "hindi": "अर्जुन, जब कोई नियत कर्म केवल इसलिए किया जाए कि उसे करना चाहिए, आसक्ति और फल को छोड़कर, तो उस त्याग को सात्त्विक माना जाता है।",
+      "simpleEnglish": "The best kind of giving up: doing your duty fully, but letting go of attachment and results.",
+      "simpleHindi": "सबसे अच्छा त्याग: अपना कर्तव्य पूरी तरह करना, पर आसक्ति और परिणाम को छोड़ देना।",
+      "status": "draft"
+    },
+    {
+      "number": 10,
+      "english": "Someone who has given up in the right way, filled with sattva, clear-headed and rid of doubt, neither shrinks from disagreeable work nor gets attached to agreeable work.",
+      "hindi": "सच्चा त्यागी, सत्त्व से भरा, बुद्धिमान और संदेह से मुक्त, न अप्रिय काम से द्वेष करता है, न प्रिय काम से चिपकता है।",
+      "simpleEnglish": "A wise person does both pleasant and unpleasant tasks with the same calm.",
+      "simpleHindi": "ज्ञानी व्यक्ति सुखद और कठिन, दोनों तरह के काम एक-सी शांति से करता है।",
+      "status": "draft"
+    },
+    {
+      "number": 11,
+      "english": "No embodied being can give up action entirely. But whoever gives up the fruit of action is called one who has relinquished.",
+      "hindi": "कोई भी देहधारी कर्म को पूरी तरह नहीं छोड़ सकता। पर जो कर्मफल को छोड़ देता है, उसे त्यागी कहा जाता है।",
+      "simpleEnglish": "We can never stop acting completely, but we can stop clinging to results.",
+      "simpleHindi": "हम कभी कर्म पूरी तरह बंद नहीं कर सकते, पर परिणाम से चिपकना बंद कर सकते हैं।",
+      "status": "draft"
+    },
+    {
+      "number": 12,
+      "english": "For those who have not let go, action yields three kinds of fruit after death: the unwelcome, the welcome, and a blend of both. For those who have renounced, it yields none at all.",
+      "hindi": "अनचाहा, चाहा हुआ और मिला-जुला: ये कर्म के तीन तरह के फल हैं जो मृत्यु के बाद उन्हें मिलते हैं जिन्होंने त्याग नहीं किया, पर संन्यासियों को कभी नहीं।",
+      "simpleEnglish": "Those who let go of results are free from the consequences that bind others.",
+      "simpleHindi": "जो परिणाम छोड़ देते हैं, वे उन परिणामों से मुक्त रहते हैं जो दूसरों को बाँधते हैं।",
+      "status": "draft"
+    },
+    {
+      "number": 13,
+      "english": "Strong-armed one, let me tell you of the five factors that the Sankhya doctrine names as needed for any action to come to completion.",
+      "hindi": "महाबाहु, मुझसे हर कर्म के पूरा होने के पाँच कारण सीखो, जैसा सांख्य के सिद्धांत में बताया गया है।",
+      "simpleEnglish": "Krishna explains that many factors, not just 'I', are involved in any action.",
+      "simpleHindi": "कृष्ण समझाते हैं कि किसी भी कर्म में केवल 'मैं' नहीं, कई कारण शामिल होते हैं।",
+      "status": "draft"
+    },
+    {
+      "number": 14,
+      "english": "They are: the seat of action, which is the body; the agent; the many sorts of instrument; the many distinct kinds of effort; and, fifth, providence.",
+      "hindi": "शरीर, करने वाला, तरह-तरह के साधन, अनेक अलग-अलग प्रयास, और पाँचवाँ, दैव।",
+      "simpleEnglish": "Every action depends on the body, the person, the tools, the effort, and forces beyond our control.",
+      "simpleHindi": "हर कर्म शरीर, व्यक्ति, साधनों, प्रयास और हमारे वश से बाहर की शक्तियों पर निर्भर करता है।",
+      "status": "draft"
+    },
+    {
+      "number": 15,
+      "english": "Every act a person sets out to do, with body or with words or with the mind, fair or foul, has these five behind it.",
+      "hindi": "मनुष्य शरीर से, बोलकर या मन में जो भी काम शुरू करता है, चाहे वह उचित हो या अनुचित, उसके पीछे ये पाँचों होते हैं।",
+      "simpleEnglish": "Everything we do, by body, word or thought, has these five causes behind it.",
+      "simpleHindi": "हम शरीर, वाणी या विचार से जो कुछ भी करते हैं, उसके पीछे ये पाँच कारण होते हैं।",
+      "status": "draft"
+    },
+    {
+      "number": 16,
+      "english": "That being so, whoever sees the Self alone as the doer, through untrained understanding, does not see, being wrong-minded.",
+      "hindi": "ऐसा होने पर भी जो अपरिपक्व बुद्धि के कारण केवल आत्मा को ही करने वाला देखता है, वह गलत सोच वाला सही नहीं देखता।",
+      "simpleEnglish": "Thinking 'I alone did this' ignores everything else that made it happen.",
+      "simpleHindi": "यह सोचना कि 'यह मैंने अकेले किया' उन सब चीज़ों को अनदेखा करना है जिनसे वह हुआ।",
+      "status": "draft"
+    },
+    {
+      "number": 17,
+      "english": "If there is no 'I did it' in someone, and their understanding stays unsoiled, then even if they slay these people they are not a slayer, nor are they bound.",
+      "hindi": "जिसमें 'मैं करने वाला हूँ' का भाव नहीं, और जिसकी बुद्धि मैली नहीं, वह इन लोगों को मारकर भी नहीं मारता, और नहीं बँधता।",
+      "simpleEnglish": "A difficult verse. Acting without ego, purely as duty, does not create bondage. It is not a licence to harm.",
+      "simpleHindi": "एक कठिन श्लोक। बिना अहंकार के, केवल कर्तव्य के रूप में किया गया कर्म बंधन नहीं बनाता। यह नुकसान पहुँचाने की छूट नहीं है।",
+      "status": "draft"
+    },
+    {
+      "number": 18,
+      "english": "Three things set action going: knowing, the thing known, and the one who knows. Three things make up action: the means, the deed, and the doer.",
+      "hindi": "ज्ञान, जानी जाने वाली वस्तु और जानने वाला कर्म की तीन तरह की प्रेरणा हैं। साधन, कर्म और करने वाला कर्म के तीन आधार हैं।",
+      "simpleEnglish": "Krishna breaks down how any action begins and is carried out.",
+      "simpleHindi": "कृष्ण समझाते हैं कि कोई भी कर्म कैसे शुरू होता है और कैसे पूरा होता है।",
+      "status": "draft"
+    },
+    {
+      "number": 19,
+      "english": "In the teaching about the qualities, knowledge, action and the agent are each said to come in three forms, depending on the quality. Listen to these as well, as they really are.",
+      "hindi": "गुणों के सिद्धांत में ज्ञान, कर्म और करने वाले को गुणों के अनुसार तीन प्रकार का बताया गया है। इन्हें भी ठीक-ठीक सुनो।",
+      "simpleEnglish": "Next, Krishna applies the three qualities to knowledge, action and the person acting.",
+      "simpleHindi": "अब कृष्ण तीन गुणों को ज्ञान, कर्म और करने वाले पर लागू करते हैं।",
+      "status": "draft"
+    },
+    {
+      "number": 20,
+      "english": "Know that knowledge to be of sattva which sees one undying reality in every creature, whole and undivided within all that appears divided.",
+      "hindi": "जिस ज्ञान से मनुष्य सब प्राणियों में एक अविनाशी सत्ता को देखता है, बँटे हुओं में बिना बँटी, उसे सात्त्विक जानो।",
+      "simpleEnglish": "The best kind of understanding sees the same reality in everyone.",
+      "simpleHindi": "सबसे अच्छी समझ हर किसी में एक ही सत्य देखती है।",
+      "status": "draft"
+    },
+    {
+      "number": 21,
+      "english": "But the knowledge that sees, in all beings, many different realities, each separate from the rest, know that to be of rajas.",
+      "hindi": "पर जो ज्ञान सब प्राणियों में अनेक अलग-अलग सत्ताएँ देखता है, हर एक बाकी से अलग, उसे राजसिक जानो।",
+      "simpleEnglish": "Seeing only differences, and missing what unites us, is a lesser kind of understanding.",
+      "simpleHindi": "केवल अंतर देखना, और जो हमें जोड़ता है उसे न देख पाना, कम दर्जे की समझ है।",
+      "status": "draft"
+    },
+    {
+      "number": 22,
+      "english": "Knowledge that fastens on one small thing as though it were the whole, without good reason, missing the truth, and petty, is described as of tamas.",
+      "hindi": "और जो ज्ञान किसी एक चीज़ को ही सब कुछ मानकर उससे चिपका रहता है, बिना कारण, बिना सत्य की समझ के, और संकीर्ण होता है, उसे तामसिक कहते हैं।",
+      "simpleEnglish": "Narrow, stubborn thinking that mistakes a small part for the whole is the lowest kind.",
+      "simpleHindi": "संकीर्ण और ज़िद्दी सोच, जो छोटे हिस्से को पूरा मान लेती है, सबसे नीचे दर्जे की है।",
+      "status": "draft"
+    },
+    {
+      "number": 23,
+      "english": "When a required deed is carried out free of clinging, without attraction or aversion, by someone who is not after a reward, that deed is said to be of sattva.",
+      "hindi": "जो कर्म नियत हो, आसक्ति के बिना, राग या द्वेष के बिना, फल न चाहने वाले व्यक्ति द्वारा किया जाए, उसे सात्त्विक कहते हैं।",
+      "simpleEnglish": "The best action is done because it is right, with no selfish strings attached.",
+      "simpleHindi": "सबसे अच्छा कर्म वह है जो सही होने के कारण किया जाए, बिना किसी स्वार्थ के।",
+      "status": "draft"
+    },
+    {
+      "number": 24,
+      "english": "But action done with great strain by someone who wants their desires fulfilled, or who is full of ego, is called of rajas.",
+      "hindi": "पर जो कर्म अपनी इच्छाएँ पूरी करना चाहने वाले, या अहंकार से भरे व्यक्ति द्वारा बहुत तनाव के साथ किया जाए, उसे राजसिक कहते हैं।",
+      "simpleEnglish": "Stressful work driven by ego and desire is restless action.",
+      "simpleHindi": "अहंकार और इच्छा से प्रेरित तनाव भरा काम बेचैन कर्म है।",
+      "status": "draft"
+    },
+    {
+      "number": 25,
+      "english": "Action begun out of delusion, without regard for consequences, loss, harm to others or one's own ability, is called of tamas.",
+      "hindi": "जो कर्म मोह के कारण शुरू किया जाए, परिणाम, नुकसान, दूसरों को होने वाली हानि या अपनी क्षमता की परवाह किए बिना, उसे तामसिक कहते हैं।",
+      "simpleEnglish": "Reckless action that ignores consequences and harm is the worst kind.",
+      "simpleHindi": "परिणाम और नुकसान को अनदेखा करने वाला लापरवाह कर्म सबसे बुरा है।",
+      "status": "draft"
+    },
+    {
+      "number": 26,
+      "english": "A doer who is free of attachment, does not boast, is full of resolve and energy, and is unchanged by success or failure, is called of sattva.",
+      "hindi": "जो करने वाला आसक्ति से मुक्त है, डींग नहीं मारता, संकल्प और उत्साह से भरा है, और सफलता या असफलता में नहीं बदलता, उसे सात्त्विक कहते हैं।",
+      "simpleEnglish": "The ideal worker is humble, determined, enthusiastic and steady whatever the result.",
+      "simpleHindi": "आदर्श काम करने वाला विनम्र, दृढ़, उत्साही और परिणाम कुछ भी हो, स्थिर रहता है।",
+      "status": "draft"
+    },
+    {
+      "number": 27,
+      "english": "A doer who is passionate, eager for the fruits of action, greedy, violent, impure and tossed between joy and grief is declared to be of rajas.",
+      "hindi": "जो करने वाला आसक्ति से भरा, कर्मफल का लालची, लोभी, हिंसक, अशुद्ध और खुशी और शोक में डोलता रहता है, उसे राजसिक कहा गया है।",
+      "simpleEnglish": "A restless, greedy worker swings between highs and lows.",
+      "simpleHindi": "बेचैन और लालची काम करने वाला ऊँच-नीच के बीच झूलता रहता है।",
+      "status": "draft"
+    },
+    {
+      "number": 28,
+      "english": "A doer who is undisciplined, crude, obstinate, deceitful, malicious, lazy, gloomy and given to putting things off is called of tamas.",
+      "hindi": "जो करने वाला अनुशासनहीन, गँवार, ज़िद्दी, धोखेबाज़, द्वेषी, आलसी, उदास और टालमटोल करने वाला है, उसे तामसिक कहते हैं।",
+      "simpleEnglish": "Laziness, dishonesty and endless delay mark the lowest kind of worker.",
+      "simpleHindi": "आलस्य, बेईमानी और अंतहीन टालमटोल सबसे नीचे दर्जे के काम करने वाले की पहचान है।",
+      "status": "draft"
+    },
+    {
+      "number": 29,
+      "english": "Dhananjaya, hear now, fully and one by one, the threefold division of understanding and of steadfastness, according to the qualities.",
+      "hindi": "धनंजय, अब गुणों के अनुसार बुद्धि और धृति के तीन-तीन भेदों को पूरी तरह और एक-एक करके सुनो।",
+      "simpleEnglish": "Krishna now applies the three qualities to our judgement and our determination.",
+      "simpleHindi": "अब कृष्ण तीन गुणों को हमारी समझ और हमारे दृढ़ निश्चय पर लागू करते हैं।",
+      "status": "draft"
+    },
+    {
+      "number": 30,
+      "english": "Partha, the understanding that knows when to act and when to hold back, what should and should not be done, what to fear and what not to fear, what binds and what frees, is of sattva.",
+      "hindi": "पार्थ, जो बुद्धि जानती है कि कब कर्म करना है और कब रुकना है, क्या करना चाहिए और क्या नहीं, किससे डरना है और किससे नहीं, क्या बाँधता है और क्या मुक्त करता है, वह सात्त्विक है।",
+      "simpleEnglish": "Good judgement knows when to act and when to stop, and what leads to freedom.",
+      "simpleHindi": "अच्छी समझ जानती है कब करना है और कब रुकना है, और क्या मुक्ति की ओर ले जाता है।",
+      "status": "draft"
+    },
+    {
+      "number": 31,
+      "english": "Partha, the understanding that grasps dharma and adharma, and what should and should not be done, in a distorted way, is of rajas.",
+      "hindi": "पार्थ, जो बुद्धि धर्म और अधर्म को, और क्या करना चाहिए और क्या नहीं, को टेढ़े-मेढ़े ढंग से समझती है, वह राजसिक है।",
+      "simpleEnglish": "Muddled judgement confuses right and wrong.",
+      "simpleHindi": "उलझी हुई समझ सही और गलत को आपस में मिला देती है।",
+      "status": "draft"
+    },
+    {
+      "number": 32,
+      "english": "Partha, the understanding that, wrapped in darkness, takes adharma for dharma and sees everything the wrong way round, is of tamas.",
+      "hindi": "पार्थ, जो बुद्धि अँधेरे में लिपटी होकर अधर्म को धर्म मान लेती है और हर चीज़ को उलटा देखती है, वह तामसिक है।",
+      "simpleEnglish": "The worst judgement calls wrong right and right wrong.",
+      "simpleHindi": "सबसे बुरी समझ गलत को सही और सही को गलत कहती है।",
+      "status": "draft"
+    },
+    {
+      "number": 33,
+      "english": "Partha, the firmness that, through unbroken yoga, keeps a hold on the movements of mind, breath and senses is the firmness of sattva.",
+      "hindi": "पार्थ, जिस धृति से मनुष्य अडिग योग द्वारा मन, प्राण और इन्द्रियों के कामों को वश में रखता है, वह सात्त्विक है।",
+      "simpleEnglish": "True determination keeps the mind, breath and senses steady.",
+      "simpleHindi": "सच्चा दृढ़ निश्चय मन, साँस और इन्द्रियों को स्थिर रखता है।",
+      "status": "draft"
+    },
+    {
+      "number": 34,
+      "english": "Arjuna, firmness that clings to duty, pleasure and gain, hungry for their returns because of attachment, is, Partha, the firmness of rajas.",
+      "hindi": "पर अर्जुन, जिस धृति से मनुष्य आसक्ति के कारण उनके फलों की लालसा करते हुए धर्म, काम और अर्थ को पकड़े रहता है, पार्थ, वह राजसिक है।",
+      "simpleEnglish": "Determination driven by greed for rewards is restless.",
+      "simpleHindi": "इनाम के लालच से प्रेरित दृढ़ता बेचैन होती है।",
+      "status": "draft"
+    },
+    {
+      "number": 35,
+      "english": "Partha, the stubbornness of a dull mind that will not loosen its grip on sleep, fear, sorrow, gloom and conceit is the firmness of tamas.",
+      "hindi": "पार्थ, जिस धृति से मूर्ख व्यक्ति नींद, डर, शोक, निराशा और घमंड को नहीं छोड़ता, वह तामसिक है।",
+      "simpleEnglish": "Stubbornly holding on to bad habits is the wrong kind of determination.",
+      "simpleHindi": "बुरी आदतों से ज़िद करके चिपके रहना गलत तरह का दृढ़ निश्चय है।",
+      "status": "draft"
+    },
+    {
+      "number": 36,
+      "english": "And now hear from me, best of the Bharatas, about the three kinds of happiness: the happiness in which one comes to delight through practice and finds an end to sorrow,",
+      "hindi": "और भरतश्रेष्ठ, अब मुझसे तीन तरह के सुख के बारे में सुनो: वह सुख जिसमें मनुष्य अभ्यास से आनंद पाने लगता है और दुःख का अंत पाता है,",
+      "simpleEnglish": "Finally Krishna applies the three qualities to happiness itself.",
+      "simpleHindi": "अंत में कृष्ण तीन गुणों को स्वयं सुख पर लागू करते हैं।",
+      "status": "draft"
+    },
+    {
+      "number": 37,
+      "english": "Happiness that tastes bitter as poison at the start and sweet as nectar in the end, and that grows from the calm clarity of one's own mind, is called happiness of sattva.",
+      "hindi": "जो शुरू में ज़हर जैसा पर अंत में अमृत जैसा होता है, जो अपनी बुद्धि की निर्मलता से पैदा होता है: उस सुख को सात्त्विक कहते हैं।",
+      "simpleEnglish": "A famous teaching: real happiness often starts hard, like learning a skill or keeping a discipline, but becomes sweet over time.",
+      "simpleHindi": "एक प्रसिद्ध शिक्षा: सच्चा सुख अक्सर कठिन लगकर शुरू होता है, जैसे कोई हुनर सीखना या अनुशासन रखना, पर समय के साथ मीठा हो जाता है।",
+      "status": "draft"
+    },
+    {
+      "number": 38,
+      "english": "Happiness that comes when the senses touch their objects, sweet as nectar to begin with and bitter as poison in the end, is known as happiness of rajas.",
+      "hindi": "जो सुख इन्द्रियों के विषयों से मिलने पर आता है, जो शुरू में अमृत जैसा पर अंत में ज़हर जैसा होता है, उसे राजसिक माना जाता है।",
+      "simpleEnglish": "Pleasures that feel great at first but leave us worse off are the opposite.",
+      "simpleHindi": "जो सुख शुरू में बहुत अच्छे लगते हैं पर बाद में हमें बुरी हालत में छोड़ जाते हैं, वे इसके उलट हैं।",
+      "status": "draft"
+    },
+    {
+      "number": 39,
+      "english": "Happiness that deludes the self from beginning to end, arising from sleep, laziness and carelessness, is called of tamas.",
+      "hindi": "जो सुख शुरू से अंत तक मन को भ्रम में रखता है, जो नींद, आलस्य और लापरवाही से पैदा होता है, उसे तामसिक कहते हैं।",
+      "simpleEnglish": "The 'pleasure' of laziness and numbness keeps us stuck from start to finish.",
+      "simpleHindi": "आलस्य और बेसुधी का 'सुख' हमें शुरू से अंत तक अटकाए रखता है।",
+      "status": "draft"
+    },
+    {
+      "number": 40,
+      "english": "Look on earth, look in heaven, look among the gods themselves: no creature anywhere stands outside the three qualities that nature produces.",
+      "hindi": "धरती पर हो या स्वर्ग में, या देवताओं के बीच, ऐसा एक भी प्राणी नहीं जो प्रकृति से उपजे इन तीन गुणों से छूटा हुआ हो।",
+      "simpleEnglish": "Everyone, even the gods, is shaped by these three qualities.",
+      "simpleHindi": "हर कोई, देवता भी, इन तीन गुणों से बना है।",
+      "status": "draft"
+    },
+    {
+      "number": 41,
+      "english": "Parantapa, the work of brahmins, of kshatriyas, of vaishyas, and of shudras as well, is divided up according to the qualities that come from each one's own nature.",
+      "hindi": "परंतप, ब्राह्मणों का, क्षत्रियों का, वैश्यों का, और शूद्रों का भी काम, हर एक के अपने स्वभाव से उपजे गुणों के हिसाब से बाँटा गया है।",
+      "simpleEnglish": "Verses 41 to 44 describe the four traditional social roles. The Gita links them to a person's nature and qualities. Their meaning, and whether they depend on birth, has long been debated.",
+      "simpleHindi": "श्लोक 41 से 44 चार पारंपरिक सामाजिक भूमिकाओं का वर्णन करते हैं। गीता इन्हें व्यक्ति के स्वभाव और गुणों से जोड़ती है। इनका अर्थ, और यह कि क्या ये जन्म पर निर्भर हैं, लंबे समय से बहस का विषय रहा है।",
+      "status": "draft"
+    },
+    {
+      "number": 42,
+      "english": "Peace of mind and self-control, austerity and purity, forbearance and straightness, knowledge, insight and faith: such is the work natural to a brahmin.",
+      "hindi": "शांति, संयम, तप, शुद्धता, धैर्य और सरलता, ज्ञान, विज्ञान और आस्था: ये ब्राह्मण के स्वाभाविक कर्म हैं, जो उसके स्वभाव से पैदा होते हैं।",
+      "simpleEnglish": "The brahmin role is described as one of learning, teaching and spiritual life.",
+      "simpleHindi": "ब्राह्मण की भूमिका सीखने, सिखाने और आध्यात्मिक जीवन की बताई गई है।",
+      "status": "draft"
+    },
+    {
+      "number": 43,
+      "english": "Bravery, spirit, steadiness, resourcefulness, not fleeing in battle, open-handedness and the bearing of a ruler: such is the work natural to a kshatriya.",
+      "hindi": "शौर्य, तेज, धैर्य और कुशलता, युद्ध से न भागना, उदारता और नेतृत्व: ये क्षत्रिय के स्वाभाविक कर्म हैं, जो उसके स्वभाव से पैदा होते हैं।",
+      "simpleEnglish": "The kshatriya role is one of protection and leadership. This is Arjuna's role.",
+      "simpleHindi": "क्षत्रिय की भूमिका रक्षा और नेतृत्व की है। यही अर्जुन की भूमिका है।",
+      "status": "draft"
+    },
+    {
+      "number": 44,
+      "english": "Tilling the land, caring for cattle and trading are the work natural to a vaishya. Work that consists of service is the work natural to a shudra.",
+      "hindi": "खेती, पशुपालन और व्यापार वैश्य के स्वाभाविक कर्म हैं, जो उसके स्वभाव से पैदा होते हैं। और सेवा के रूप वाला काम शूद्र का स्वाभाविक कर्म है, जो उसके स्वभाव से पैदा होता है।",
+      "simpleEnglish": "Every kind of work, whether farming, trade or service, has its place and dignity.",
+      "simpleHindi": "हर तरह का काम, चाहे खेती हो, व्यापार हो या सेवा, उसका अपना स्थान और सम्मान है।",
+      "status": "draft"
+    },
+    {
+      "number": 45,
+      "english": "When people give themselves to their own proper work, they come to perfection. Listen to how this happens.",
+      "hindi": "हर व्यक्ति अपने काम में लगा रहकर सिद्धि पाता है। सुनो कि अपने काम में लगा रहने वाला वह सिद्धि कैसे पाता है।",
+      "simpleEnglish": "The key point: any honest work, done well and with devotion, can lead to the highest goal.",
+      "simpleHindi": "मुख्य बात: कोई भी ईमानदार काम, अच्छी तरह और भक्ति से किया जाए, सबसे ऊँचे लक्ष्य तक ले जा सकता है।",
+      "status": "draft"
+    },
+    {
+      "number": 46,
+      "english": "From whom all creatures arise, and who is spread through all that is: by honouring that One through their own work, people find perfection.",
+      "hindi": "जिससे सब प्राणी उत्पन्न होते हैं और जिससे यह सब व्याप्त है, उसकी अपने काम के द्वारा पूजा करके मनुष्य सिद्धि पाता है।",
+      "simpleEnglish": "A beautiful idea: your daily work itself can be your worship.",
+      "simpleHindi": "एक सुंदर विचार: तुम्हारा रोज़ का काम ही तुम्हारी पूजा बन सकता है।",
+      "status": "draft"
+    },
+    {
+      "number": 47,
+      "english": "Better your own dharma, even imperfectly done, than another's dharma done well. Doing the work that suits your own nature, you incur no wrong.",
+      "hindi": "दूसरे का धर्म अच्छी तरह निभाने से अपना धर्म, कमियों के साथ भी, बेहतर है। अपने स्वभाव के अनुरूप काम करते हुए तुम्हें कोई पाप नहीं लगता।",
+      "simpleEnglish": "Be yourself. Doing what fits your nature, even imperfectly, is better than imitating someone else.",
+      "simpleHindi": "अपने जैसे रहो। अपने स्वभाव के अनुरूप काम करना, कमियों के साथ भी, किसी और की नकल करने से बेहतर है।",
+      "status": "draft"
+    },
+    {
+      "number": 48,
+      "english": "Kaunteya, do not give up the work you were born to, even if it has faults. Every undertaking is clouded by some fault, as fire is by smoke.",
+      "hindi": "कौन्तेय, जिस काम के लिए तुम जन्मे हो, उसे कमियों के बावजूद मत छोड़ो। हर काम में कोई न कोई दोष होता है, जैसे आग में धुआँ।",
+      "simpleEnglish": "No job is perfect. Every kind of work has some downside, just as fire always has some smoke.",
+      "simpleHindi": "कोई भी काम पूरी तरह दोषरहित नहीं। हर काम की कोई न कोई कमी होती है, जैसे आग के साथ हमेशा थोड़ा धुआँ रहता है।",
+      "status": "draft"
+    },
+    {
+      "number": 49,
+      "english": "With understanding unattached everywhere, self-mastered, free from craving, a person reaches through renunciation the supreme perfection of freedom from action.",
+      "hindi": "हर जगह अनासक्त बुद्धि के साथ, अपने को जीतकर, लालसा से मुक्त होकर, मनुष्य संन्यास के द्वारा कर्म से मुक्ति की सबसे ऊँची सिद्धि पाता है।",
+      "simpleEnglish": "When we let go of attachment, we reach a freedom where action no longer binds us.",
+      "simpleHindi": "जब हम आसक्ति छोड़ देते हैं, तो ऐसी मुक्ति पाते हैं जहाँ कर्म हमें बाँधता नहीं।",
+      "status": "draft"
+    },
+    {
+      "number": 50,
+      "english": "Kaunteya, let me tell you briefly how someone who has reached perfection goes on to reach Brahman, which is the summit of knowledge.",
+      "hindi": "कौन्तेय, मुझसे संक्षेप में सीखो कि सिद्धि पा चुका व्यक्ति ब्रह्म तक, ज्ञान की सबसे ऊँची अवस्था तक, कैसे पहुँचता है।",
+      "simpleEnglish": "Krishna now describes the final steps of the spiritual path.",
+      "simpleHindi": "अब कृष्ण आध्यात्मिक मार्ग के अंतिम कदमों का वर्णन करते हैं।",
+      "status": "draft"
+    },
+    {
+      "number": 51,
+      "english": "Endowed with clear understanding, reining the self in with resolve, setting aside sound and the other sense objects, and casting off attraction and aversion,",
+      "hindi": "शुद्ध बुद्धि से जुड़कर, दृढ़ता से अपने को वश में रखकर, शब्द और इन्द्रियों के दूसरे विषयों से मुँह मोड़कर, और राग-द्वेष को एक ओर रखकर,",
+      "simpleEnglish": "Verses 51 to 53 describe a calm, simple, disciplined life.",
+      "simpleHindi": "श्लोक 51 से 53 एक शांत, सरल और अनुशासित जीवन का वर्णन करते हैं।",
+      "status": "draft"
+    },
+    {
+      "number": 52,
+      "english": "keeping to lonely places, eating little, holding speech, body and mind in check, ever given to meditation, and resting in detachment,",
+      "hindi": "एकांत में रहते हुए, हल्का भोजन करते हुए, वाणी, शरीर और मन को संयम में रखते हुए, सदा ध्यान-योग में लगे रहकर, वैराग्य को पकड़े हुए,",
+      "simpleEnglish": "Quiet, moderation and regular meditation support the inner life.",
+      "simpleHindi": "शांति, संयम और नियमित ध्यान भीतर के जीवन को सहारा देते हैं।",
+      "status": "draft"
+    },
+    {
+      "number": 53,
+      "english": "letting go of ego, force, arrogance, desire, anger and possessiveness, free of 'mine' and at peace, one becomes fit to be one with Brahman.",
+      "hindi": "अहंकार, बल, घमंड, काम, क्रोध और संग्रह की आदत को छोड़कर, 'मेरा' के भाव से मुक्त और शांत होकर, मनुष्य ब्रह्म से एक होने के योग्य हो जाता है।",
+      "simpleEnglish": "Dropping ego and possessiveness brings deep peace.",
+      "simpleHindi": "अहंकार और 'मेरा-मेरा' छोड़ने से गहरी शांति मिलती है।",
+      "status": "draft"
+    },
+    {
+      "number": 54,
+      "english": "One who has become Brahman is clear and calm within, mourns nothing and wants nothing. Seeing all creatures alike, such a person finds supreme devotion to me.",
+      "hindi": "ब्रह्म से एक होकर, भीतर से प्रसन्न रहकर, मनुष्य न शोक करता है, न लालसा। सब प्राणियों के प्रति एक-सा होकर वह मेरी सबसे ऊँची भक्ति पाता है।",
+      "simpleEnglish": "At the height of wisdom comes the deepest love for the Divine.",
+      "simpleHindi": "ज्ञान की ऊँचाई पर ईश्वर के प्रति सबसे गहरा प्रेम आता है।",
+      "status": "draft"
+    },
+    {
+      "number": 55,
+      "english": "Through devotion a person comes to recognise me as I really am, in all my greatness. Having known me so, they enter into me immediately.",
+      "hindi": "भक्ति से मनुष्य मुझे जान लेता है, कि मैं कितना बड़ा हूँ और वास्तव में कौन हूँ। फिर मुझे वैसा जानकर जैसा मैं हूँ, वह तुरंत मुझमें प्रवेश कर जाता है।",
+      "simpleEnglish": "Love leads to real knowledge of God, and that knowledge leads to union.",
+      "simpleHindi": "प्रेम ईश्वर के सच्चे ज्ञान तक ले जाता है, और वह ज्ञान मिलन तक।",
+      "status": "draft"
+    },
+    {
+      "number": 56,
+      "english": "Even while always doing all kinds of work, one who takes refuge in me reaches by my grace the eternal, unchanging home.",
+      "hindi": "हर तरह के काम सदा करते हुए भी, जो मेरी शरण लेता है, वह मेरी कृपा से सनातन, अविनाशी धाम पा लेता है।",
+      "simpleEnglish": "You do not have to give up your work. With trust in God, everyday life itself leads home.",
+      "simpleHindi": "तुम्हें अपना काम छोड़ने की ज़रूरत नहीं। ईश्वर पर भरोसे के साथ रोज़ का जीवन ही घर तक ले जाता है।",
+      "status": "draft"
+    },
+    {
+      "number": 57,
+      "english": "In your heart, give all your actions over to me, hold me as your goal, take refuge in the yoga of understanding, and keep your mind always on me.",
+      "hindi": "मन से अपने सब कर्म मुझे सौंप दो, मुझे अपना लक्ष्य मानो, बुद्धियोग का सहारा लो, और अपना मन सदा मुझमें लगाए रखो।",
+      "simpleEnglish": "Krishna's advice in a nutshell: offer everything, aim for God, think clearly, remember God always.",
+      "simpleHindi": "कृष्ण की सलाह का सार: सब कुछ अर्पित करो, ईश्वर को लक्ष्य बनाओ, साफ़ सोचो, ईश्वर को सदा याद रखो।",
+      "status": "draft"
+    },
+    {
+      "number": 58,
+      "english": "If your mind rests in me, my grace will carry you over every obstacle. But if pride stops you from listening, you will come to ruin.",
+      "hindi": "मन मुझमें लगाकर तुम मेरी कृपा से हर कठिनाई पार कर लोगे। पर यदि अहंकार के कारण तुम नहीं सुनोगे, तो नष्ट हो जाओगे.",
+      "simpleEnglish": "Trusting God helps us through every hardship; pride makes us stumble.",
+      "simpleHindi": "ईश्वर पर भरोसा हर कठिनाई से निकाल ले जाता है; घमंड हमें गिरा देता है।",
+      "status": "draft"
+    },
+    {
+      "number": 59,
+      "english": "Leaning on your ego, you have decided, 'I will not fight.' That decision will not hold. Your own nature will push you into the fight.",
+      "hindi": "यदि अहंकार को पकड़कर तुम सोचते हो 'मैं नहीं लड़ूँगा', तो तुम्हारा यह निश्चय खोखला है। तुम्हारा अपना स्वभाव तुम्हें इसमें लगा देगा।",
+      "simpleEnglish": "Arjuna cannot escape his warrior nature by simply refusing.",
+      "simpleHindi": "अर्जुन केवल इनकार करके अपने योद्धा स्वभाव से बच नहीं सकते।",
+      "status": "draft"
+    },
+    {
+      "number": 60,
+      "english": "Kaunteya, bound by your own work, which comes from your nature, you will do even what you do not want to do out of delusion, whether you like it or not.",
+      "hindi": "कौन्तेय, अपने स्वभाव से पैदा हुए अपने कर्म से बँधे होकर, जो तुम मोह के कारण नहीं करना चाहते, वह भी तुम विवश होकर करोगे।",
+      "simpleEnglish": "Our nature is powerful. It is wiser to work with it than against it.",
+      "simpleHindi": "हमारा स्वभाव बहुत प्रबल है। उसके विरुद्ध नहीं, उसके साथ काम करना समझदारी है।",
+      "status": "draft"
+    },
+    {
+      "number": 61,
+      "english": "Arjuna, the Lord sits within the heart of every creature and, by his power, keeps them all turning, as though they were figures riding on a wheel.",
+      "hindi": "अर्जुन, ईश्वर हर प्राणी के हृदय में रहते हैं, और अपनी माया से सब प्राणियों को ऐसे घुमाते हैं मानो वे किसी यंत्र पर चढ़े हों।",
+      "simpleEnglish": "The Divine is in every heart, guiding the whole of life.",
+      "simpleHindi": "ईश्वर हर हृदय में हैं, और पूरे जीवन को चला रहे हैं।",
+      "status": "draft"
+    },
+    {
+      "number": 62,
+      "english": "Bharata, go to him for shelter with everything you are. Through his grace you will find peace beyond all peace, and a home that lasts for ever.",
+      "hindi": "भारत, पूरे मन से केवल उन्हीं की शरण लो। उनकी कृपा से तुम परम शांति और सनातन धाम पाओगे।",
+      "simpleEnglish": "Surrendering to the Divine with all your heart brings lasting peace.",
+      "simpleHindi": "पूरे मन से ईश्वर को समर्पित होना स्थायी शांति लाता है।",
+      "status": "draft"
+    },
+    {
+      "number": 63,
+      "english": "There: I have laid before you a wisdom more hidden than anything hidden. Think it over completely, and then act as you see fit.",
+      "hindi": "इस तरह मैंने तुम्हें यह ज्ञान दिया है, जो हर रहस्य से भी गहरा रहस्य है। इस पर पूरी तरह विचार करो, और फिर जैसा चाहो वैसा करो।",
+      "simpleEnglish": "A remarkable verse: after all the teaching, Krishna gives Arjuna freedom to decide. Real faith is chosen, not forced.",
+      "simpleHindi": "एक अद्भुत श्लोक: सारा उपदेश देने के बाद कृष्ण अर्जुन को निर्णय की स्वतंत्रता देते हैं। सच्ची श्रद्धा चुनी जाती है, थोपी नहीं जाती।",
+      "status": "draft"
+    },
+    {
+      "number": 64,
+      "english": "Hear from me again what matters most of all, the deepest of secrets. Because I love you so much, I am going to say what is good for you.",
+      "hindi": "एक बार फिर मेरी सबसे ऊँची बात सुनो, जो सबसे गुप्त है। तुम मुझे बहुत प्रिय हो, इसलिए मैं तुम्हें वह बताऊँगा जो तुम्हारे भले का है।",
+      "simpleEnglish": "Krishna shares his final, most personal message out of love.",
+      "simpleHindi": "कृष्ण प्रेम के कारण अपना अंतिम, सबसे निजी संदेश देते हैं।",
+      "status": "draft"
+    },
+    {
+      "number": 65,
+      "english": "Let your thoughts dwell on me. Give me your love and your worship, and bow down. Then it is to me that you will come. I give you my word on it, because I love you.",
+      "hindi": "अपना मन मुझमें लगाओ, मेरे भक्त बनो, मेरी पूजा करो, मुझे नमन करो। तुम मेरे पास आओगे; मैं तुमसे सच्चा वचन देता हूँ, क्योंकि तुम मुझे प्रिय हो।",
+      "simpleEnglish": "Krishna makes a personal promise of love to Arjuna, and through him to every reader.",
+      "simpleHindi": "कृष्ण अर्जुन को, और उनके द्वारा हर पाठक को, प्रेम का एक निजी वचन देते हैं।",
+      "status": "draft"
+    },
+    {
+      "number": 66,
+      "english": "Let go of every dharma and come to me alone for shelter. From every wrong you have done, I will set you free. Do not be afraid.",
+      "hindi": "हर धर्म को एक ओर रखकर बस मेरी शरण में आ जाओ। मैं तुम्हें हर पाप से छुड़ा दूँगा। दुःख मत करो।",
+      "simpleEnglish": "Often called the final teaching of the Gita: let go of every worry and trust the Divine completely. Readers understand 'all dharmas' in different ways, for example as all other duties or all other supports.",
+      "simpleHindi": "इसे अक्सर गीता का अंतिम उपदेश कहा जाता है: हर चिंता छोड़कर पूरी तरह ईश्वर पर भरोसा करो। 'सब धर्मों' को पाठक अलग-अलग ढंग से समझते हैं, जैसे बाकी सब कर्तव्य या बाकी सब सहारे।",
+      "status": "draft"
+    },
+    {
+      "number": 67,
+      "english": "This should never be told to anyone who lacks discipline, who has no devotion, who does not want to listen, or who finds fault with me.",
+      "hindi": "यह उपदेश कभी ऐसे व्यक्ति को नहीं बताना चाहिए जिसमें संयम न हो, जिसमें भक्ति न हो, जो सुनना न चाहे, या जो मुझमें दोष निकालता हो।",
+      "simpleEnglish": "Deep teachings are best shared with those who are open and ready to receive them.",
+      "simpleHindi": "गहरे उपदेश उन्हीं के साथ बाँटने चाहिए जो खुले मन से उन्हें ग्रहण करने को तैयार हों।",
+      "status": "draft"
+    },
+    {
+      "number": 68,
+      "english": "Whoever shares this supreme secret with my devotees, showing the highest devotion to me, will without doubt come to me.",
+      "hindi": "जो इस परम रहस्य को मेरे भक्तों के साथ बाँटता है, मेरे प्रति सबसे ऊँची भक्ति दिखाते हुए, वह निःसंदेह मेरे पास आएगा।",
+      "simpleEnglish": "Sharing the Gita's wisdom with sincere people is itself a great act of devotion.",
+      "simpleHindi": "गीता का ज्ञान सच्चे लोगों के साथ बाँटना अपने-आप में भक्ति का बड़ा काम है।",
+      "status": "draft"
+    },
+    {
+      "number": 69,
+      "english": "Among all people, no one serves me in a way I love more than that person does, and no one in the world will be closer to my heart.",
+      "hindi": "मनुष्यों में ऐसे व्यक्ति से बढ़कर मेरी प्रिय सेवा कोई नहीं करता, और धरती पर उससे अधिक प्रिय मुझे कोई नहीं होगा।",
+      "simpleEnglish": "Teaching others about the Divine is the work God loves most.",
+      "simpleHindi": "दूसरों को ईश्वर के बारे में सिखाना वह काम है जो ईश्वर को सबसे प्रिय है।",
+      "status": "draft"
+    },
+    {
+      "number": 70,
+      "english": "And anyone who studies this conversation of ours, which is full of dharma, offers me worship through the sacrifice of knowledge. So I hold.",
+      "hindi": "और जो हमारे इस पवित्र संवाद का अध्ययन करता है, वह ज्ञान-यज्ञ से मेरी पूजा करता है। यही मेरा मत है।",
+      "simpleEnglish": "Simply studying the Gita is a form of worship.",
+      "simpleHindi": "केवल गीता का अध्ययन करना भी पूजा का एक रूप है।",
+      "status": "draft"
+    },
+    {
+      "number": 71,
+      "english": "And even someone who simply listens with faith, without finding fault, is set free and reaches the happy worlds of those who do good.",
+      "hindi": "और जो व्यक्ति केवल श्रद्धा से, दोष निकाले बिना, सुनता भी है, वह मुक्त होकर पुण्य करने वालों के सुखद लोकों को पाता है।",
+      "simpleEnglish": "Even listening to the Gita with an open heart brings great benefit.",
+      "simpleHindi": "खुले मन से गीता को सुनना भी बहुत लाभ देता है।",
+      "status": "draft"
+    },
+    {
+      "number": 72,
+      "english": "Partha, did you take all this in with your whole attention? Dhananjaya, has the confusion that ignorance caused you now been cleared away?",
+      "hindi": "पार्थ, क्या तुमने इसे एकाग्र मन से सुना? धनंजय, क्या अज्ञान से पैदा हुआ तुम्हारा मोह नष्ट हो गया?",
+      "simpleEnglish": "After the whole teaching, Krishna gently checks whether Arjuna has understood.",
+      "simpleHindi": "पूरे उपदेश के बाद कृष्ण प्रेम से पूछते हैं कि क्या अर्जुन समझ गए।",
+      "status": "draft"
+    },
+    {
+      "number": 73,
+      "english": "Achyuta, my confusion is gone. By your grace I have remembered who I am. I stand firm, my doubts are gone, and I will do as you say.",
+      "hindi": "अच्युत, मेरा मोह दूर हो गया। आपकी कृपा से मुझे याद आ गया कि मैं कौन हूँ। मैं दृढ़ हूँ, मेरे संदेह मिट गए हैं, और मैं वही करूँगा जो आप कहते हैं।",
+      "simpleEnglish": "The turning point: Arjuna's despair from Chapter 1 is gone. He is clear, steady and ready to act.",
+      "simpleHindi": "निर्णायक क्षण: पहले अध्याय वाला अर्जुन का विषाद मिट गया है। वे साफ़, स्थिर और कर्म के लिए तैयार हैं।",
+      "status": "draft"
+    },
+    {
+      "number": 74,
+      "english": "That is how I came to hear this extraordinary conversation between Vasudeva and great-hearted Partha. It sends a shiver through me.",
+      "hindi": "इस तरह मैंने वासुदेव और महात्मा पार्थ का यह अद्भुत संवाद सुना, जिसने मुझे रोमांचित कर दिया है।",
+      "simpleEnglish": "Sanjaya, who has been narrating the whole time, shares how deeply the conversation moved him.",
+      "simpleHindi": "संजय, जो पूरे समय कथा सुना रहे थे, बताते हैं कि इस संवाद ने उन्हें कितना गहराई से छुआ।",
+      "status": "draft"
+    },
+    {
+      "number": 75,
+      "english": "It was Vyasa's grace that let me hear this highest, hidden yoga from Krishna, master of yoga, who was speaking it himself, right before me.",
+      "hindi": "व्यास की कृपा से मैंने यह परम रहस्य, यह योग, स्वयं योगेश्वर कृष्ण से, उनके अपने मुख से सुना।",
+      "simpleEnglish": "Sanjaya credits the sage Vyasa for the gift of seeing and hearing all this from afar.",
+      "simpleHindi": "संजय दूर से यह सब देखने-सुनने की शक्ति के लिए ऋषि व्यास को श्रेय देते हैं।",
+      "status": "draft"
+    },
+    {
+      "number": 76,
+      "english": "O King, as I call to mind again and again this holy and marvellous exchange between Keshava and Arjuna, my joy keeps returning.",
+      "hindi": "राजन्, केशव और अर्जुन की इस पवित्र और अनोखी बातचीत को मैं जितनी बार याद करता हूँ, उतनी बार मेरा मन खुशी से भर उठता है।",
+      "simpleEnglish": "The memory of the teaching brings joy every time.",
+      "simpleHindi": "उपदेश की याद हर बार आनंद देती है।",
+      "status": "draft"
+    },
+    {
+      "number": 77,
+      "english": "And whenever, O King, the memory returns of Hari's wondrous form, astonishment overwhelms me, and I am glad all over again.",
+      "hindi": "और राजन्, जब-जब हरि के उस अत्यंत अद्भुत रूप को याद करता हूँ, मेरा विस्मय बहुत बढ़ जाता है, और मैं बार-बार आनंदित होता हूँ।",
+      "simpleEnglish": "Sanjaya is still amazed by the cosmic form he saw in Chapter 11.",
+      "simpleHindi": "संजय ग्यारहवें अध्याय में देखे विश्वरूप से अब भी चकित हैं।",
+      "status": "draft"
+    },
+    {
+      "number": 78,
+      "english": "Where Krishna, master of yoga, is, and where Partha, holder of the bow, is, there fortune and triumph, well-being and wise rule will surely be found. This I firmly believe.",
+      "hindi": "जहाँ योग के स्वामी कृष्ण हों, और जहाँ धनुष थामे पार्थ हों, वहाँ लक्ष्मी, जीत, खुशहाली और सच्ची नीति ज़रूर होगी। मेरा यही पक्का मानना है।",
+      "simpleEnglish": "The Gita ends with hope: where divine wisdom and human effort come together, success and goodness follow.",
+      "simpleHindi": "गीता आशा के साथ समाप्त होती है: जहाँ दिव्य ज्ञान और मानव प्रयास मिलते हैं, वहाँ सफलता और अच्छाई आती है।",
+      "status": "draft"
+    }
+  ]
+}
