@@ -186,6 +186,45 @@ void main() {
     },
   );
 
+  testWidgets('the Quotes tab groups well-known verses by chapter', (
+    tester,
+  ) async {
+    useTallPhone(tester);
+    final app = await buildApp(clock: () => DateTime(2026, 1, 1));
+    await tester.pumpWidget(app.widget);
+    await tester.pumpAndSettle();
+
+    await tester.tap(find.text('Quotes'));
+    await tester.pumpAndSettle();
+    expect(find.text('Where the story begins'), findsOneWidget);
+
+    // Filter to chapter 2, then open a quote in the reader.
+    await tester.tap(find.widgetWithText(ChoiceChip, '2'));
+    await tester.pumpAndSettle();
+    expect(find.text('Where the story begins'), findsNothing);
+    await tester.scrollUntilVisible(
+      find.text('Do the work, let go of the result'),
+      300,
+      scrollable: find.byWidgetPredicate(
+        (w) => w is Scrollable && w.axisDirection == AxisDirection.down,
+      ),
+    );
+    expect(
+      find.textContaining('Your concern is with the doing alone'),
+      findsOneWidget,
+    );
+    final card = find.ancestor(
+      of: find.text('Do the work, let go of the result'),
+      matching: find.byType(Card),
+    );
+    final read = find.descendant(of: card, matching: find.text('Read verse'));
+    await tester.ensureVisible(read);
+    await tester.pumpAndSettle();
+    await tester.tap(read);
+    await tester.pumpAndSettle();
+    expect(find.text('Chapter 2 · Verse 47'), findsOneWidget);
+  });
+
   testWidgets(
     'a verse without a translation yet shows the Sanskrit and says so',
     (tester) async {

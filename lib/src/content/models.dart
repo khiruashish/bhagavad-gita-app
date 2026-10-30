@@ -142,6 +142,19 @@ class GlossaryEntry {
   );
 }
 
+/// A well-known verse picked for the Quotes tab, with a short topic line.
+class Quote {
+  const Quote({
+    required this.verse,
+    required this.topicEnglish,
+    required this.topicHindi,
+  });
+
+  final Verse verse;
+  final String topicEnglish;
+  final String topicHindi;
+}
+
 /// Everything the app shows, parsed from the bundled `assets/content/gita.json`.
 class GitaContent {
   GitaContent({
@@ -149,6 +162,7 @@ class GitaContent {
     required this.verses,
     required this.learn,
     required this.glossary,
+    this.quotes = const [],
   }) : dailyVerses = [
          for (final v in verses)
            if (v.isTranslated) v,
@@ -166,6 +180,9 @@ class GitaContent {
   final List<Verse> dailyVerses;
   final List<LearnSection> learn;
   final List<GlossaryEntry> glossary;
+
+  /// Well-known verses in reading order, for the Quotes tab.
+  final List<Quote> quotes;
   final Map<String, Verse> _byId;
 
   Verse? verseById(String id) => _byId[id];
@@ -178,15 +195,17 @@ class GitaContent {
   factory GitaContent.parse(String source) {
     final j = jsonDecode(source) as Map<String, dynamic>;
     final learn = j['learn'] as Map<String, dynamic>;
+    final verses = [
+      for (final v in j['verses'] as List)
+        Verse.fromJson(v as Map<String, dynamic>),
+    ];
+    final byId = {for (final v in verses) v.id: v};
     return GitaContent(
       chapters: [
         for (final c in j['chapters'] as List)
           Chapter.fromJson(c as Map<String, dynamic>),
       ],
-      verses: [
-        for (final v in j['verses'] as List)
-          Verse.fromJson(v as Map<String, dynamic>),
-      ],
+      verses: verses,
       learn: [
         for (final s in learn['sections'] as List)
           LearnSection.fromJson(s as Map<String, dynamic>),
@@ -194,6 +213,15 @@ class GitaContent {
       glossary: [
         for (final g in learn['glossary'] as List)
           GlossaryEntry.fromJson(g as Map<String, dynamic>),
+      ],
+      quotes: [
+        for (final q in (j['quotes'] as List?) ?? const [])
+          if (byId[(q as Map<String, dynamic>)['id']] case final verse?)
+            Quote(
+              verse: verse,
+              topicEnglish: q['topicEnglish'] as String,
+              topicHindi: q['topicHindi'] as String,
+            ),
       ],
     );
   }

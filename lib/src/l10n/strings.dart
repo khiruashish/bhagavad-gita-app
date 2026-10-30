@@ -17,6 +17,10 @@ class Strings {
   String get appTitle => _t('Gita for Everyone', 'सबके लिए गीता');
   String get today => _t('Today', 'आज');
   String get chapters => _t('Chapters', 'अध्याय');
+  String get quotes => _t('Quotes', 'अनमोल वचन');
+  String get allChapters => _t('All', 'सभी');
+  String quoteCount(int n) => _t('$n quotes', '$n वचन');
+  String get openVerse => _t('Read verse', 'श्लोक पढ़ें');
   String get learn => _t('Start here', 'शुरुआत');
   String get settings => _t('Settings', 'सेटिंग्स');
   String day(int n) => _t('Day $n', 'दिन $n');

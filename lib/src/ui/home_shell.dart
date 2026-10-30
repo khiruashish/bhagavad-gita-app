@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../app_scope.dart';
 import 'chapters_screen.dart';
 import 'learn_screen.dart';
+import 'quotes_screen.dart';
 import 'settings_screen.dart';
 import 'today_screen.dart';
 
@@ -19,6 +20,7 @@ class _HomeShellState extends State<HomeShell> {
   static const _tabs = [
     TodayScreen(),
     ChaptersScreen(),
+    QuotesScreen(),
     LearnScreen(),
     SettingsScreen(),
   ];
@@ -44,6 +46,11 @@ class _HomeShellState extends State<HomeShell> {
             icon: const Icon(Icons.menu_book_outlined),
             selectedIcon: const Icon(Icons.menu_book),
             label: s.chapters,
+          ),
+          NavigationDestination(
+            icon: const Icon(Icons.format_quote_outlined),
+            selectedIcon: const Icon(Icons.format_quote),
+            label: s.quotes,
           ),
           NavigationDestination(
             icon: const Icon(Icons.school_outlined),

@@ -1,11 +1,11 @@
 # UI layout
 
-The app has four tabs (Today, Chapters, Start here, Settings) and one reader. Every
+The app has five tabs (Today, Chapters, Quotes, Start here, Settings) and one reader. Every
 screen follows the same few rules so it feels calm and is easy for first-time readers.
 
-| Today | Chapters | Chapter | Reader |
-|---|---|---|---|
-| ![Today](screenshots/today.png) | ![Chapters](screenshots/chapters.png) | ![Chapter](screenshots/chapter.png) | ![Reader](screenshots/reader.png) |
+| Today | Chapters | Chapter | Reader | Quotes |
+|---|---|---|---|---|
+| ![Today](screenshots/today.png) | ![Chapters](screenshots/chapters.png) | ![Chapter](screenshots/chapter.png) | ![Reader](screenshots/reader.png) | ![Quotes](screenshots/quotes.png) |
 
 ## Screens
 
@@ -18,6 +18,11 @@ Each card shows the number, the plain-language title, the Sanskrit name and the 
 **Chapter**: a header card (title, Sanskrit name, summary, *Start reading*), the verse
 list with a short preview of each, and a bottom bar with **← Chapter N-1** and
 **Chapter N+1 →**.
+
+**Quotes**: 58 well-known verses, at least one from every chapter, grouped by chapter.
+Chips at the top filter to one chapter. Each card has a short topic line, the translation
+in the app's language, the first Sanskrit line, a copy button and *Read verse*. The list
+lives in `content/quotes.json`; the build checks that every pick is a complete sentence.
 
 **Reader**: reads the whole Gita as one sequence.
 - Top bar: chapter number and title, with **⏮ previous chapter** and **⏭ next chapter**.

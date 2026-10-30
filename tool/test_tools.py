@@ -64,6 +64,13 @@ class BuildTest(unittest.TestCase):
     def test_reviewed_only_drops_drafts(self):
         out, _ = build_content.build(reviewed_only=True)
         self.assertTrue(all(v.get("status", "reviewed") == "reviewed" for v in out["verses"]))
+        translated = {f"{v['chapter']}.{v['verse']}" for v in out["verses"] if "english" in v}
+        self.assertTrue(all(q["id"] in translated for q in out["quotes"]))
+
+    def test_quotes_cover_every_chapter(self):
+        out, _ = build_content.build(reviewed_only=False)
+        chapters = {int(q["id"].split(".")[0]) for q in out["quotes"]}
+        self.assertEqual(chapters, set(range(1, 19)))
 
 
 if __name__ == "__main__":

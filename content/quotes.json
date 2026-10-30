@@ -1,0 +1,295 @@
+{
+  "_comment": "Well-known verses shown in the Quotes tab, in reading order. Topics are original to this project.",
+  "quotes": [
+    {
+      "id": "1.1",
+      "topicEnglish": "Where the story begins",
+      "topicHindi": "जहाँ से कथा शुरू होती है"
+    },
+    {
+      "id": "1.31",
+      "topicEnglish": "When nothing feels right",
+      "topicHindi": "जब कुछ भी ठीक न लगे"
+    },
+    {
+      "id": "1.47",
+      "topicEnglish": "Too sad to act",
+      "topicHindi": "दुःख में हिम्मत टूटना"
+    },
+    {
+      "id": "2.7",
+      "topicEnglish": "Asking for guidance",
+      "topicHindi": "मार्गदर्शन माँगना"
+    },
+    {
+      "id": "2.14",
+      "topicEnglish": "Bear what comes and goes",
+      "topicHindi": "आने-जाने वाले को सहना"
+    },
+    {
+      "id": "2.20",
+      "topicEnglish": "The Self never dies",
+      "topicHindi": "आत्मा कभी नहीं मरती"
+    },
+    {
+      "id": "2.22",
+      "topicEnglish": "Like changing clothes",
+      "topicHindi": "जैसे कपड़े बदलना"
+    },
+    {
+      "id": "2.47",
+      "topicEnglish": "Do the work, let go of the result",
+      "topicHindi": "कर्म करो, फल की चिंता छोड़ो"
+    },
+    {
+      "id": "2.48",
+      "topicEnglish": "Balance is yoga",
+      "topicHindi": "समता ही योग है"
+    },
+    {
+      "id": "2.62",
+      "topicEnglish": "How desire grows into anger",
+      "topicHindi": "इच्छा क्रोध कैसे बनती है"
+    },
+    {
+      "id": "2.70",
+      "topicEnglish": "Calm like the ocean",
+      "topicHindi": "सागर जैसी शांति"
+    },
+    {
+      "id": "3.8",
+      "topicEnglish": "Action is better than doing nothing",
+      "topicHindi": "कुछ न करने से कर्म अच्छा"
+    },
+    {
+      "id": "3.21",
+      "topicEnglish": "Others follow your example",
+      "topicHindi": "लोग आपके उदाहरण पर चलते हैं"
+    },
+    {
+      "id": "3.35",
+      "topicEnglish": "Walk your own path",
+      "topicHindi": "अपना मार्ग अपनाओ"
+    },
+    {
+      "id": "3.37",
+      "topicEnglish": "Desire is the enemy",
+      "topicHindi": "कामना ही शत्रु है"
+    },
+    {
+      "id": "4.7",
+      "topicEnglish": "Whenever goodness fades",
+      "topicHindi": "जब भी धर्म घटता है"
+    },
+    {
+      "id": "4.8",
+      "topicEnglish": "Protecting the good",
+      "topicHindi": "सज्जनों की रक्षा"
+    },
+    {
+      "id": "4.34",
+      "topicEnglish": "Learn with humility",
+      "topicHindi": "विनम्रता से सीखो"
+    },
+    {
+      "id": "4.38",
+      "topicEnglish": "Nothing purifies like knowledge",
+      "topicHindi": "ज्ञान जैसा पवित्र कुछ नहीं"
+    },
+    {
+      "id": "5.10",
+      "topicEnglish": "Like a lotus leaf on water",
+      "topicHindi": "पानी में कमल के पत्ते जैसा"
+    },
+    {
+      "id": "5.18",
+      "topicEnglish": "Seeing all as equal",
+      "topicHindi": "सबको समान देखना"
+    },
+    {
+      "id": "6.5",
+      "topicEnglish": "Lift yourself up",
+      "topicHindi": "अपने को ऊपर उठाओ"
+    },
+    {
+      "id": "6.17",
+      "topicEnglish": "Moderation in everything",
+      "topicHindi": "हर चीज़ में संतुलन"
+    },
+    {
+      "id": "6.19",
+      "topicEnglish": "A lamp in a windless place",
+      "topicHindi": "बिना हवा का दीपक"
+    },
+    {
+      "id": "6.35",
+      "topicEnglish": "Practice and letting go",
+      "topicHindi": "अभ्यास और वैराग्य"
+    },
+    {
+      "id": "7.7",
+      "topicEnglish": "Like pearls on a thread",
+      "topicHindi": "धागे में मोती"
+    },
+    {
+      "id": "7.8",
+      "topicEnglish": "The taste of water",
+      "topicHindi": "पानी का स्वाद"
+    },
+    {
+      "id": "8.7",
+      "topicEnglish": "Remember me and act",
+      "topicHindi": "याद रखो और कर्म करो"
+    },
+    {
+      "id": "9.22",
+      "topicEnglish": "I carry what you need",
+      "topicHindi": "तुम्हारी ज़रूरत मैं उठाता हूँ"
+    },
+    {
+      "id": "9.26",
+      "topicEnglish": "A leaf, a flower, a fruit",
+      "topicHindi": "पत्ता, फूल, फल"
+    },
+    {
+      "id": "9.27",
+      "topicEnglish": "Offer everything you do",
+      "topicHindi": "हर काम अर्पित करो"
+    },
+    {
+      "id": "9.29",
+      "topicEnglish": "Equal to all",
+      "topicHindi": "सबके लिए समान"
+    },
+    {
+      "id": "10.8",
+      "topicEnglish": "The source of everything",
+      "topicHindi": "सबका स्रोत"
+    },
+    {
+      "id": "10.20",
+      "topicEnglish": "Within every heart",
+      "topicHindi": "हर हृदय में"
+    },
+    {
+      "id": "10.41",
+      "topicEnglish": "Every glory is a spark",
+      "topicHindi": "हर महिमा एक अंश"
+    },
+    {
+      "id": "11.12",
+      "topicEnglish": "Brighter than a thousand suns",
+      "topicHindi": "हज़ार सूर्यों से अधिक तेज"
+    },
+    {
+      "id": "11.32",
+      "topicEnglish": "I am Time",
+      "topicHindi": "मैं काल हूँ"
+    },
+    {
+      "id": "11.33",
+      "topicEnglish": "Be only the instrument",
+      "topicHindi": "केवल निमित्त बनो"
+    },
+    {
+      "id": "11.55",
+      "topicEnglish": "The way to reach me",
+      "topicHindi": "मुझ तक पहुँचने का मार्ग"
+    },
+    {
+      "id": "12.8",
+      "topicEnglish": "Rest your mind in me",
+      "topicHindi": "मन मुझमें लगाओ"
+    },
+    {
+      "id": "12.15",
+      "topicEnglish": "No one fears them",
+      "topicHindi": "जिससे कोई नहीं डरता"
+    },
+    {
+      "id": "12.17",
+      "topicEnglish": "Beyond joy and sorrow",
+      "topicHindi": "हर्ष और शोक से परे"
+    },
+    {
+      "id": "13.28",
+      "topicEnglish": "The same Lord in all",
+      "topicHindi": "सबमें एक ही ईश्वर"
+    },
+    {
+      "id": "13.34",
+      "topicEnglish": "Like the sun lighting the world",
+      "topicHindi": "संसार को रोशन करता सूर्य"
+    },
+    {
+      "id": "14.5",
+      "topicEnglish": "The three qualities",
+      "topicHindi": "तीन गुण"
+    },
+    {
+      "id": "14.26",
+      "topicEnglish": "Devotion carries you across",
+      "topicHindi": "भक्ति पार लगाती है"
+    },
+    {
+      "id": "15.7",
+      "topicEnglish": "A part of me",
+      "topicHindi": "मेरा ही अंश"
+    },
+    {
+      "id": "15.15",
+      "topicEnglish": "I live in every heart",
+      "topicHindi": "मैं हर हृदय में हूँ"
+    },
+    {
+      "id": "16.21",
+      "topicEnglish": "Three gates to darkness",
+      "topicHindi": "अंधकार के तीन द्वार"
+    },
+    {
+      "id": "16.23",
+      "topicEnglish": "Do not live on impulse",
+      "topicHindi": "मनमानी से न जिएँ"
+    },
+    {
+      "id": "17.3",
+      "topicEnglish": "You are your faith",
+      "topicHindi": "जैसी श्रद्धा, वैसे आप"
+    },
+    {
+      "id": "17.15",
+      "topicEnglish": "Speech that heals",
+      "topicHindi": "हितकारी वाणी"
+    },
+    {
+      "id": "17.20",
+      "topicEnglish": "The right way to give",
+      "topicHindi": "दान का सही ढंग"
+    },
+    {
+      "id": "18.47",
+      "topicEnglish": "Your own duty",
+      "topicHindi": "अपना धर्म"
+    },
+    {
+      "id": "18.63",
+      "topicEnglish": "Think, then choose",
+      "topicHindi": "सोचो, फिर चुनो"
+    },
+    {
+      "id": "18.65",
+      "topicEnglish": "Come to me",
+      "topicHindi": "मेरे पास आओ"
+    },
+    {
+      "id": "18.66",
+      "topicEnglish": "Do not grieve",
+      "topicHindi": "शोक मत करो"
+    },
+    {
+      "id": "18.78",
+      "topicEnglish": "Where Krishna and Arjuna stand",
+      "topicHindi": "जहाँ कृष्ण और अर्जुन हैं"
+    }
+  ]
+}

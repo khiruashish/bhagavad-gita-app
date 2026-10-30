@@ -5,6 +5,7 @@ Inputs (all in content/):
   sanskrit.json          Sanskrit + generated IAST for all 701 verses (public domain)
   chapters.json          chapter titles and summaries (original to this project)
   learn.json             speaker labels, "Start here" sections, glossary (original)
+  quotes.json            verses picked for the Quotes tab, with short topics (original)
   translations/chNN.json translations and simple meanings (original to this project)
 
 Usage:
@@ -100,11 +101,36 @@ def build(reviewed_only):
             item["status"] = t["status"]
         verses.append(item)
 
+    by_id = {f"{v['chapter']}.{v['verse']}": v for v in verses}
+    quotes, last = [], (0, 0)
+    for q in load(CONTENT / "quotes.json")["quotes"]:
+        where = f"quotes.json {q.get('id')}"
+        v = by_id.get(q.get("id"))
+        if v is None:
+            errors.append(f"{where}: no such verse")
+            continue
+        if (v["chapter"], v["verse"]) <= last:
+            errors.append(f"{where}: quotes must be in reading order without repeats")
+        last = (v["chapter"], v["verse"])
+        for k in ("topicEnglish", "topicHindi"):
+            if not q.get(k, "").strip():
+                errors.append(f"{where}: missing {k}")
+        m = BANNED.search(q.get("topicEnglish", ""))
+        if m:
+            errors.append(f"{where}: banned word '{m.group(0)}' in topicEnglish")
+        text = translations.get((v["chapter"], v["verse"]), {}).get("english", "").strip()
+        if text and (text[0].islower() or text[-1] in ",;:"):
+            errors.append(f"{where}: verse is not a complete sentence on its own")
+        # A store build leaves out quotes whose translation is not reviewed yet.
+        if "english" in v:
+            quotes.append(q)
+
     out = {
         "format": 1,
         "chapters": [{**c, "verseCount": CHAPTER_VERSES[c["number"] - 1]} for c in chapters],
         "verses": verses,
         "learn": {"sections": learn["sections"], "glossary": learn["glossary"]},
+        "quotes": quotes,
     }
     return out, errors
 
