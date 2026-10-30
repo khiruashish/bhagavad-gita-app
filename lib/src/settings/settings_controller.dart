@@ -31,6 +31,9 @@ class SettingsController extends ChangeNotifier {
   bool get showTransliteration => _prefs.getBool('showTransliteration') ?? true;
   bool get slowSpeech => _prefs.getBool('slowSpeech') ?? true;
 
+  /// The verse last opened in the reader, such as "2.47", or null.
+  String? get lastReadId => _prefs.getString('lastRead');
+
   Future<void> setLanguage(AppLanguage v) =>
       _update(() => _prefs.setInt('language', v.index));
   Future<void> setThemeMode(ThemeMode v) =>
@@ -45,6 +48,10 @@ class SettingsController extends ChangeNotifier {
       _update(() => _prefs.setBool('showTransliteration', v));
   Future<void> setSlowSpeech(bool v) =>
       _update(() => _prefs.setBool('slowSpeech', v));
+
+  Future<void> setLastRead(String id) => id == lastReadId
+      ? Future.value()
+      : _update(() => _prefs.setString('lastRead', id));
 
   /// Makes today Day 1 again.
   Future<void> restartFromDayOne() => _update(() => _saveStart(_clock()));

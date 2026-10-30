@@ -119,6 +119,74 @@ void main() {
   });
 
   testWidgets(
+    'Next continues into the next chapter, and chapter buttons jump a chapter',
+    (tester) async {
+      useTallPhone(tester);
+      final app = await buildApp(clock: () => DateTime(2026, 1, 1));
+      await tester.pumpWidget(app.widget);
+      await tester.pumpAndSettle();
+
+      await tester.tap(find.text('Chapters'));
+      await tester.pumpAndSettle();
+      await tester.tap(find.text("Arjuna's Despair"));
+      await tester.pumpAndSettle();
+      await tester.scrollUntilVisible(find.text('1.47'), 300);
+      await tester.tap(find.text('1.47'));
+      await tester.pumpAndSettle();
+      expect(find.text('47 / 47'), findsOneWidget);
+
+      // At the last verse of a chapter, Next is labelled with the next chapter.
+      await tester.tap(find.text('Chapter 2'));
+      await tester.pumpAndSettle();
+      expect(find.text('Chapter 2 · Verse 1'), findsOneWidget);
+
+      await tester.tap(find.byTooltip('Next chapter'));
+      await tester.pumpAndSettle();
+      expect(find.text('Chapter 3 · Verse 1'), findsOneWidget);
+
+      await tester.tap(find.byTooltip('Previous chapter'));
+      await tester.pumpAndSettle();
+      expect(find.text('Chapter 2 · Verse 1'), findsOneWidget);
+
+      await tester.tap(find.text('Previous'));
+      await tester.pumpAndSettle();
+      expect(find.text('Chapter 1 · Verse 47'), findsOneWidget);
+      expect(app.settings.lastReadId, '1.47');
+    },
+  );
+
+  testWidgets(
+    'a chapter page moves to the next chapter and offers to continue reading',
+    (tester) async {
+      useTallPhone(tester);
+      final app = await buildApp(
+        prefs: {'lastRead': '2.47'},
+        clock: () => DateTime(2026, 1, 1),
+      );
+      await tester.pumpWidget(app.widget);
+      await tester.pumpAndSettle();
+
+      await tester.tap(find.text('Chapters'));
+      await tester.pumpAndSettle();
+      expect(find.text('Continue reading'), findsOneWidget);
+      await tester.tap(find.text('Continue reading'));
+      await tester.pumpAndSettle();
+      expect(find.text('Chapter 2 · Verse 47'), findsOneWidget);
+      await tester.pageBack();
+      await tester.pumpAndSettle();
+
+      await tester.tap(find.text('Knowledge of the Self'));
+      await tester.pumpAndSettle();
+      await tester.tap(find.text('Chapter 3'));
+      await tester.pumpAndSettle();
+      expect(find.text('The Path of Action'), findsOneWidget);
+      await tester.tap(find.text('Start reading'));
+      await tester.pumpAndSettle();
+      expect(find.text('Chapter 3 · Verse 1'), findsOneWidget);
+    },
+  );
+
+  testWidgets(
     'a verse without a translation yet shows the Sanskrit and says so',
     (tester) async {
       useTallPhone(tester);

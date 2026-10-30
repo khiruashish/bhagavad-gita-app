@@ -47,6 +47,15 @@ class Strings {
   String get copied => _t('Verse copied', 'श्लोक कॉपी हो गया');
   String get previous => _t('Previous', 'पिछला');
   String get next => _t('Next', 'अगला');
+  String get previousChapter => _t('Previous chapter', 'पिछला अध्याय');
+  String get nextChapter => _t('Next chapter', 'अगला अध्याय');
+  String get startReading => _t('Start reading', 'पढ़ना शुरू करें');
+  String get continueReading => _t('Continue reading', 'पढ़ना जारी रखें');
+  String get readChapter => _t('Read this chapter', 'यह अध्याय पढ़ें');
+  String get verses => _t('Verses', 'श्लोक');
+  String verseProgress(int n, int total) =>
+      _t('Verse $n of $total', 'श्लोक $n / $total');
+  String get endOfGita => _t('End of the Gita', 'गीता समाप्त');
   String get summary => _t('About this chapter', 'इस अध्याय के बारे में');
   String get glossary => _t('Key words', 'मुख्य शब्द');
   String get appLanguage => _t('App language', 'ऐप की भाषा');
