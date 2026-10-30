@@ -2,7 +2,8 @@
 
 Everything that must be true before the app goes to Google Play and the App Store.
 Tick items as they are done. The step-by-step "how" for most items is in
-[GUIDE.md](GUIDE.md); this file is the "what", in one place.
+[GUIDE.md](GUIDE.md); this file is the "what", in one place. For a shorter list of
+what is left, in order, see [TODO.md](TODO.md).
 
 **Who:** 👤 = you (owner) · 🎓 = scholar · 🎨 = designer (or you) · 🤖 = can be done in
 the repo with an AI coding assistant.

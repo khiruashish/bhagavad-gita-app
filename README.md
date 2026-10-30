@@ -31,6 +31,7 @@ See [content/README.md](content/README.md).
 
 | | |
 |---|---|
+| [docs/TODO.md](docs/TODO.md) | What is left to do before release, in order, and who does it |
 | [docs/RELEASE_CHECKLIST.md](docs/RELEASE_CHECKLIST.md) | Everything required for release, as a checklist: owner info, accounts, assets, store forms, testing |
 | [docs/UI_LAYOUT.md](docs/UI_LAYOUT.md) | Screen layout, navigation and design rules, with screenshots |
 | [docs/GUIDE.md](docs/GUIDE.md) | Every step to the app stores: legal, content, design, security, release, timeline, costs |

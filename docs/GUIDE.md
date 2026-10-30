@@ -11,18 +11,20 @@ it and roughly how long it takes.
 
 ## Where things stand today
 
-For a single tick-box list of everything needed to release, see
-[RELEASE_CHECKLIST.md](RELEASE_CHECKLIST.md).
+For what is left to do, in order, see [TODO.md](TODO.md). For the full tick-box list
+with sizes and limits, see [RELEASE_CHECKLIST.md](RELEASE_CHECKLIST.md).
 
 | Area | Status |
 |---|---|
-| App code (Android + iOS, Flutter) | Done: daily verse, chapters, reader with chapter navigation, Quotes, Gita for my situation, share as image, Sanskrit/Hindi/English, simple meanings, audio, Hindi/English interface, settings, offline, no data collection |
+| App code (Android + iOS, Flutter) | Done: daily verse, chapters, reader with chapter navigation, Quotes, Gita for my situation, share as image, saved verses and notes, search, reading progress, reflection questions, About & credits, Android widget, Sanskrit/Hindi/English, simple meanings, audio, Hindi/English interface, settings, offline, no data collection |
 | Automated tests | 34 app tests (including an accessibility check) + 12 content-tool tests, run in CI on every push |
 | Sanskrit text, all 701 verses | Done (public domain) + our own generated pronunciation (IAST) |
 | Original translations + simple meanings | **701 of 701 verses drafted** (all 18 chapters); none reviewed yet |
 | Chapter summaries (18), "Start here" guide, glossary | Done (original) |
 | Human scholar review | Not started; **required before launch** |
-| App icon, store screenshots, store listings | Not started |
+| App icon, splash screen | Done (Krishna and Arjuna on the chariot) |
+| Store screenshots, feature graphic, store listings | Not started |
+| Licences, credits, contact details | Waiting on owner (`TODO(owner)` in `lib/src/release_info.dart`) |
 | Developer accounts, signing keys | Not started |
 | Human audio recordings | Optional, planned for v1.1 (v1 uses the phone's own voices) |
 
