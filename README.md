@@ -28,6 +28,7 @@ See [content/README.md](content/README.md).
 
 | | |
 |---|---|
+| [docs/RELEASE_CHECKLIST.md](docs/RELEASE_CHECKLIST.md) | Everything required for release, as a checklist: owner info, accounts, assets, store forms, testing |
 | [docs/UI_LAYOUT.md](docs/UI_LAYOUT.md) | Screen layout, navigation and design rules, with screenshots |
 | [docs/GUIDE.md](docs/GUIDE.md) | Every step to the app stores: legal, content, design, security, release, timeline, costs |
 | [docs/MASTER_CONTENT_PROMPT.md](docs/MASTER_CONTENT_PROMPT.md) | Prompts for drafting original translations and simple meanings |

@@ -11,10 +11,13 @@ it and roughly how long it takes.
 
 ## Where things stand today
 
+For a single tick-box list of everything needed to release, see
+[RELEASE_CHECKLIST.md](RELEASE_CHECKLIST.md).
+
 | Area | Status |
 |---|---|
-| App code (Android + iOS, Flutter) | Done: daily verse, chapters, Sanskrit/Hindi/English, simple meanings, audio, Hindi/English interface, settings, offline, no data collection |
-| Automated tests | 17 app tests + 7 content-tool tests, run in CI on every push |
+| App code (Android + iOS, Flutter) | Done: daily verse, chapters, reader with chapter navigation, Quotes, Gita for my situation, share as image, Sanskrit/Hindi/English, simple meanings, audio, Hindi/English interface, settings, offline, no data collection |
+| Automated tests | 22 app tests + 12 content-tool tests, run in CI on every push |
 | Sanskrit text, all 701 verses | Done (public domain) + our own generated pronunciation (IAST) |
 | Original translations + simple meanings | **701 of 701 verses drafted** (all 18 chapters); none reviewed yet |
 | Chapter summaries (18), "Start here" guide, glossary | Done (original) |
