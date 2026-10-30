@@ -66,13 +66,15 @@ class BuildTest(unittest.TestCase):
         self.assertTrue(all(v.get("status", "reviewed") == "reviewed" for v in out["verses"]))
         translated = {f"{v['chapter']}.{v['verse']}" for v in out["verses"] if "english" in v}
         self.assertTrue(all(q["id"] in translated for q in out["quotes"]))
+        self.assertEqual(out["emotions"], [])
 
-    def test_situations_list_existing_translated_verses(self):
+    def test_emotions_quote_existing_translated_verses(self):
         out, _ = build_content.build(reviewed_only=False)
-        self.assertGreaterEqual(len(out["situations"]), 10)
+        self.assertGreaterEqual(len(out["emotions"]), 15)
+        self.assertEqual({e["group"] for e in out["emotions"]}, {"hard", "grow"})
         translated = {f"{v['chapter']}.{v['verse']}" for v in out["verses"] if "english" in v}
-        for sit in out["situations"]:
-            self.assertTrue(set(sit["verses"]) <= translated, sit["id"])
+        for emo in out["emotions"]:
+            self.assertTrue({q["verse"] for q in emo["quotes"]} <= translated, emo["id"])
 
     def test_quotes_cover_every_chapter(self):
         out, _ = build_content.build(reviewed_only=False)

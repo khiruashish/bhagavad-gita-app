@@ -37,19 +37,25 @@ Future<void> _shareWithPlatform(
 ImageSharer imageSharer = _shareWithPlatform;
 
 /// Opens a preview of the verse as a picture card, with a Share button.
-Future<void> showShareSheet(BuildContext context, Verse verse) {
+/// With [quote], the card shows that short line instead of the full translation.
+Future<void> showShareSheet(
+  BuildContext context,
+  Verse verse, {
+  EmotionQuote? quote,
+}) {
   return showModalBottomSheet<void>(
     context: context,
     isScrollControlled: true,
     showDragHandle: true,
-    builder: (_) => _ShareSheet(verse: verse),
+    builder: (_) => _ShareSheet(verse: verse, quote: quote),
   );
 }
 
 class _ShareSheet extends StatefulWidget {
-  const _ShareSheet({required this.verse});
+  const _ShareSheet({required this.verse, this.quote});
 
   final Verse verse;
+  final EmotionQuote? quote;
 
   @override
   State<_ShareSheet> createState() => _ShareSheetState();
@@ -72,7 +78,10 @@ class _ShareSheetState extends State<_ShareSheet> {
       final bytes = await image.toByteData(format: ui.ImageByteFormat.png);
       image.dispose();
       final verse = widget.verse;
-      final text = _hindi! ? verse.hindi! : verse.english!;
+      final quote = widget.quote;
+      final text = quote == null
+          ? (_hindi! ? verse.hindi! : verse.english!)
+          : (_hindi! ? quote.hindi : quote.english);
       await imageSharer(
         bytes!.buffer.asUint8List(),
         'bhagavad-gita-${verse.chapter}-${verse.number}.png',
@@ -126,7 +135,11 @@ class _ShareSheetState extends State<_ShareSheet> {
                     child: FittedBox(
                       child: RepaintBoundary(
                         key: _cardKey,
-                        child: ShareCard(verse: widget.verse, hindi: _hindi!),
+                        child: ShareCard(
+                          verse: widget.verse,
+                          hindi: _hindi!,
+                          quote: widget.quote,
+                        ),
                       ),
                     ),
                   ),
@@ -160,13 +173,21 @@ class _ShareSheetState extends State<_ShareSheet> {
 
 /// The picture that gets shared: 4:5, the shape WhatsApp and Instagram show best.
 class ShareCard extends StatelessWidget {
-  const ShareCard({super.key, required this.verse, required this.hindi});
+  const ShareCard({
+    super.key,
+    required this.verse,
+    required this.hindi,
+    this.quote,
+  });
 
   /// Logical size; captured at 3x, this is 1080 x 1350 pixels.
   static const size = Size(360, 450);
 
   final Verse verse;
   final bool hindi;
+
+  /// A short line to show instead of the full translation.
+  final EmotionQuote? quote;
 
   @override
   Widget build(BuildContext context) {
@@ -227,14 +248,20 @@ class ShareCard extends StatelessWidget {
                               ),
                             ),
                             Text(
-                              speaker == null
+                              quote != null
+                                  ? '“${hindi ? quote!.hindi : quote!.english}”'
+                                  : speaker == null
                                   ? translation
                                   : '${hindi ? speaker.hindi : speaker.english}: $translation',
                               textAlign: TextAlign.center,
-                              style: base.bodyLarge?.copyWith(
-                                color: Colors.white,
-                                height: 1.5,
-                              ),
+                              style:
+                                  (quote != null
+                                          ? base.titleLarge
+                                          : base.bodyLarge)
+                                      ?.copyWith(
+                                        color: Colors.white,
+                                        height: 1.5,
+                                      ),
                             ),
                           ],
                         ),

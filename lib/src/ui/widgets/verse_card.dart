@@ -153,3 +153,99 @@ class VerseCard extends StatelessWidget {
     }
   }
 }
+
+/// A short quote line from the Feelings tab, with its verse reference.
+class EmotionQuoteCard extends StatelessWidget {
+  const EmotionQuoteCard({super.key, required this.quote});
+
+  final EmotionQuote quote;
+
+  @override
+  Widget build(BuildContext context) {
+    final hindiUi = AppScope.settingsOf(context).language == AppLanguage.hindi;
+    final theme = Theme.of(context);
+    final scheme = theme.colorScheme;
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 12),
+      child: Card(
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(18, 16, 8, 8),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Icon(Icons.format_quote_rounded, color: scheme.primary),
+                  const SizedBox(width: 8),
+                  Expanded(
+                    child: Padding(
+                      padding: const EdgeInsets.only(right: 10),
+                      child: Text(
+                        hindiUi ? quote.hindi : quote.english,
+                        style: theme.textTheme.titleMedium?.copyWith(
+                          height: 1.45,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 8),
+              Padding(
+                padding: const EdgeInsets.only(left: 32, right: 10),
+                child: Text(
+                  quote.verse.sanskrit.split('\n').first,
+                  style: sanskritStyle(theme.textTheme.bodyMedium)
+                      ?.copyWith(color: scheme.onSurfaceVariant, height: 1.6),
+                ),
+              ),
+              QuoteActions(quote: quote),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+/// Verse reference with save, share-as-image and "Read verse" for a quote line.
+class QuoteActions extends StatelessWidget {
+  const QuoteActions({super.key, required this.quote, this.color});
+
+  final EmotionQuote quote;
+  final Color? color;
+
+  @override
+  Widget build(BuildContext context) {
+    final s = AppScope.stringsOf(context);
+    final theme = Theme.of(context);
+    final verse = quote.verse;
+    return Row(
+      children: [
+        Expanded(
+          child: Text(
+            '— ${s.verseOf(verse.chapter, verse.number)}',
+            style: theme.textTheme.labelMedium?.copyWith(
+              color: color ?? theme.colorScheme.onSurfaceVariant,
+            ),
+          ),
+        ),
+        BookmarkButton(verseId: verse.id, size: 20),
+        IconButton(
+          tooltip: s.share,
+          icon: Icon(Icons.share_rounded, size: 20, color: color),
+          onPressed: () => showShareSheet(context, verse, quote: quote),
+        ),
+        TextButton(
+          onPressed: () => Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (_) => VerseReaderScreen(initialVerseId: verse.id),
+            ),
+          ),
+          child: Text(s.openVerse),
+        ),
+      ],
+    );
+  }
+}

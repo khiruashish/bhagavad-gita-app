@@ -16,7 +16,7 @@ with sizes and limits, see [RELEASE_CHECKLIST.md](RELEASE_CHECKLIST.md).
 
 | Area | Status |
 |---|---|
-| App code (Android + iOS, Flutter) | Done: daily verse, chapters, reader with chapter navigation, Quotes, Gita for my situation, share as image, saved verses and notes, search, reading progress, reflection questions, About & credits, Android widget, Sanskrit/Hindi/English, simple meanings, audio, Hindi/English interface, settings, offline, no data collection |
+| App code (Android + iOS, Flutter) | Done: daily verse, chapters, reader with chapter navigation, Feelings (quotes by emotion), Quotes, share as image, saved verses and notes, search, reading progress, reflection questions, About & credits, Android widget, Sanskrit/Hindi/English, simple meanings, audio, Hindi/English interface, settings, offline, no data collection |
 | Automated tests | 34 app tests (including an accessibility check) + 12 content-tool tests, run in CI on every push |
 | Sanskrit text, all 701 verses | Done (public domain) + our own generated pronunciation (IAST) |
 | Original translations + simple meanings | **701 of 701 verses drafted** (all 18 chapters); none reviewed yet |

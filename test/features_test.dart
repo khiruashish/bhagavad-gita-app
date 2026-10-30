@@ -155,7 +155,7 @@ void main() {
     tester,
   ) async {
     await _start(tester);
-    await tester.tap(find.text('Settings'));
+    await tester.tap(find.byTooltip('Settings'));
     await tester.pumpAndSettle();
     await tester.scrollUntilVisible(find.text('About & credits'), 200);
     await tester.tap(find.text('About & credits'));
@@ -214,7 +214,13 @@ void main() {
   testWidgets('main screens meet accessibility guidelines', (tester) async {
     final handle = tester.ensureSemantics();
     await _start(tester);
-    for (final tab in ['Today', 'Chapters', 'Quotes', 'Settings']) {
+    for (final tab in [
+      'Today',
+      'Chapters',
+      'Feelings',
+      'Quotes',
+      'Start here',
+    ]) {
       await tester.tap(find.text(tab).last);
       await tester.pumpAndSettle();
       await expectLater(tester, meetsGuideline(androidTapTargetGuideline));

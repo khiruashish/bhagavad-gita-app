@@ -155,23 +155,42 @@ class Quote {
   final String topicHindi;
 }
 
-/// A feeling or life situation with verses that speak to it.
-class Situation {
-  const Situation({
+/// A short, memorable line written from one verse, for the Feelings tab.
+class EmotionQuote {
+  const EmotionQuote({
+    required this.verse,
+    required this.english,
+    required this.hindi,
+  });
+
+  final Verse verse;
+  final String english;
+  final String hindi;
+}
+
+/// A human emotion with the verses that speak to it most.
+class Emotion {
+  const Emotion({
     required this.id,
+    required this.emoji,
+    required this.isHard,
     required this.titleEnglish,
     required this.titleHindi,
     required this.introEnglish,
     required this.introHindi,
-    required this.verses,
+    required this.quotes,
   });
 
   final String id;
+  final String emoji;
+
+  /// True for difficult feelings; false for those a reader wants to grow.
+  final bool isHard;
   final String titleEnglish;
   final String titleHindi;
   final String introEnglish;
   final String introHindi;
-  final List<Verse> verses;
+  final List<EmotionQuote> quotes;
 }
 
 /// A question to think about after reading a verse.
@@ -190,7 +209,7 @@ class GitaContent {
     required this.learn,
     required this.glossary,
     this.quotes = const [],
-    this.situations = const [],
+    this.emotions = const [],
     this.reflections = const {},
   }) : dailyVerses = [
          for (final v in verses)
@@ -213,8 +232,8 @@ class GitaContent {
   /// Well-known verses in reading order, for the Quotes tab.
   final List<Quote> quotes;
 
-  /// "Gita for my situation": feelings with matching verses.
-  final List<Situation> situations;
+  /// The Feelings tab: emotions with their best quotes.
+  final List<Emotion> emotions;
 
   /// Reflection questions by chapter number.
   final Map<int, List<Reflection>> reflections;
@@ -266,16 +285,27 @@ class GitaContent {
               topicHindi: q['topicHindi'] as String,
             ),
       ],
-      situations: [
-        for (final x in (j['situations'] as List?) ?? const [])
+      emotions: [
+        for (final x in (j['emotions'] as List?) ?? const [])
           if (x case final Map<String, dynamic> m)
-            Situation(
+            Emotion(
               id: m['id'] as String,
+              emoji: m['emoji'] as String,
+              isHard: m['group'] == 'hard',
               titleEnglish: m['titleEnglish'] as String,
               titleHindi: m['titleHindi'] as String,
               introEnglish: m['introEnglish'] as String,
               introHindi: m['introHindi'] as String,
-              verses: [for (final id in m['verses'] as List) ?byId[id]],
+              quotes: [
+                for (final q in m['quotes'] as List)
+                  if (byId[(q as Map<String, dynamic>)['verse']]
+                      case final verse?)
+                    EmotionQuote(
+                      verse: verse,
+                      english: q['english'] as String,
+                      hindi: q['hindi'] as String,
+                    ),
+              ],
             ),
       ],
       reflections: {

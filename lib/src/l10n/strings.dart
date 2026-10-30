@@ -21,14 +21,18 @@ class Strings {
   String get allChapters => _t('All', 'सभी');
   String quoteCount(int n) => _t('$n quotes', '$n वचन');
   String get openVerse => _t('Read verse', 'श्लोक पढ़ें');
-  String get forMySituation => _t('For my situation', 'मेरी स्थिति के लिए');
-  String get byChapter => _t('By chapter', 'अध्याय अनुसार');
-  String get howAreYouFeeling =>
-      _t('How are you feeling today?', 'आज आप कैसा महसूस कर रहे हैं?');
-  String get situationHint => _t(
-    'Pick what is on your mind, and read a few verses that speak to it.',
-    'जो बात मन में है उसे चुनें, और उससे जुड़े कुछ श्लोक पढ़ें।',
+  String get feelings => _t('Feelings', 'भावनाएँ');
+  String get feelingsHint => _t(
+    'Pick what is on your mind and read the verses that speak to it.',
+    'जो मन में है उसे चुनें, और उससे जुड़े श्लोक पढ़ें।',
   );
+  String get whenItIsHard => _t("When it's hard", 'जब मन भारी हो');
+  String get whenYouWantToGrow =>
+      _t('When you want to grow', 'जब आगे बढ़ना चाहें');
+  String get thoughtForYou => _t('A thought for you', 'आपके लिए एक विचार');
+  String get anotherThought => _t('Another', 'और एक');
+  String get howAreYouFeeling =>
+      _t('How are you feeling right now?', 'अभी आप कैसा महसूस कर रहे हैं?');
   String get share => _t('Share', 'शेयर करें');
   String get shareAsImage => _t('Share as image', 'चित्र के रूप में शेयर करें');
   String get shareFailed => _t(
@@ -98,8 +102,8 @@ class Strings {
     'उच्चारण (रोमन अक्षरों में): इसी परियोजना द्वारा बनाया गया।',
   );
   String get creditTranslations => _t(
-    'Translations, simple meanings, summaries, quotes, situations and reflections: written for this project from the Sanskrit, drafted with AI assistance and checked by human reviewers.',
-    'अनुवाद, सरल अर्थ, सारांश, वचन, स्थितियाँ और प्रश्न: इसी परियोजना के लिए संस्कृत से लिखे गए, AI की सहायता से तैयार और मनुष्यों द्वारा जाँचे गए।',
+    'Translations, simple meanings, summaries, quotes, feelings and reflections: written for this project from the Sanskrit, drafted with AI assistance and checked by human reviewers.',
+    'अनुवाद, सरल अर्थ, सारांश, वचन, भावनाएँ और प्रश्न: इसी परियोजना के लिए संस्कृत से लिखे गए, AI की सहायता से तैयार और मनुष्यों द्वारा जाँचे गए।',
   );
   String get creditReviewers => _t('Reviewed by', 'समीक्षक');
   String get creditContributors => _t('With thanks to', 'आभार');

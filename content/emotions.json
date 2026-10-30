@@ -1,0 +1,625 @@
+{
+  "_comment": "Feelings tab: emotions and the best verses for each. Titles, intros and short quote lines are original to this project, written from the verses; the full verse opens with 'Read verse'.",
+  "emotions": [
+    {
+      "id": "anxious",
+      "emoji": "😟",
+      "group": "hard",
+      "titleEnglish": "Anxious or worried",
+      "titleHindi": "चिंता या घबराहट",
+      "introEnglish": "Feelings come and go. Do your part and let the rest go.",
+      "introHindi": "भावनाएँ आती-जाती हैं। अपना काम करो, बाकी छोड़ दो।",
+      "quotes": [
+        {
+          "verse": "2.14",
+          "english": "Heat and cold, comfort and pain arrive and leave again. Learn to let them pass.",
+          "hindi": "सर्दी-गर्मी, सुख-दुःख आते हैं और चले जाते हैं। उन्हें धीरज से गुज़र जाने दो।"
+        },
+        {
+          "verse": "2.47",
+          "english": "Your part is the work, never what comes of it.",
+          "hindi": "तुम्हारे हाथ में केवल काम है, उसका फल नहीं।"
+        },
+        {
+          "verse": "9.22",
+          "english": "Think of me with your whole heart, and I will carry what you need.",
+          "hindi": "पूरे मन से मुझे याद करो, तुम्हें जो चाहिए वह मैं सँभालूँगा।"
+        },
+        {
+          "verse": "18.66",
+          "english": "Come to me for shelter. Do not grieve.",
+          "hindi": "मेरी शरण में आ जाओ। दुःख मत करो।"
+        }
+      ]
+    },
+    {
+      "id": "angry",
+      "emoji": "😠",
+      "group": "hard",
+      "titleEnglish": "Angry",
+      "titleHindi": "गुस्सा",
+      "introEnglish": "See where anger starts, and stop it early.",
+      "introHindi": "देखो गुस्सा कहाँ से शुरू होता है, और उसे जल्दी रोको।",
+      "quotes": [
+        {
+          "verse": "2.62",
+          "english": "Dwell on a thing and you cling to it; clinging turns to desire, and desire to anger.",
+          "hindi": "किसी चीज़ का बार-बार चिंतन लगाव बनता है, लगाव कामना, और कामना क्रोध।"
+        },
+        {
+          "verse": "2.63",
+          "english": "Anger clouds the mind, the mind forgets, and judgement falls.",
+          "hindi": "क्रोध मन को धुंधला करता है, स्मृति भटकती है, और विवेक गिर जाता है।"
+        },
+        {
+          "verse": "5.23",
+          "english": "Whoever can bear the rush of desire and anger, here in this life, is a happy person.",
+          "hindi": "जो इसी जीवन में काम और क्रोध के वेग को सह ले, वही सुखी मनुष्य है।"
+        },
+        {
+          "verse": "16.21",
+          "english": "Desire, anger and greed: three doors to darkness. Close all three.",
+          "hindi": "काम, क्रोध और लोभ: अंधकार के तीन द्वार। तीनों बंद करो।"
+        }
+      ]
+    },
+    {
+      "id": "sad",
+      "emoji": "😢",
+      "group": "hard",
+      "titleEnglish": "Sad or grieving",
+      "titleHindi": "उदासी या शोक",
+      "introEnglish": "What you love most in a person does not die.",
+      "introHindi": "जिसे आप किसी व्यक्ति में सबसे ज़्यादा प्रेम करते हैं, वह नहीं मरता।",
+      "quotes": [
+        {
+          "verse": "2.11",
+          "english": "The wise do not grieve for those who have gone, nor for those who stay.",
+          "hindi": "ज्ञानी न जाने वालों का शोक करते हैं, न रहने वालों का।"
+        },
+        {
+          "verse": "2.20",
+          "english": "The Self is never born and never dies; it lives on when the body perishes.",
+          "hindi": "आत्मा न जन्म लेती है, न मरती है। शरीर के मिटने पर भी वह नहीं मिटती।"
+        },
+        {
+          "verse": "2.22",
+          "english": "As we change old clothes for new, the soul moves on to a new body.",
+          "hindi": "जैसे हम पुराने कपड़े बदलते हैं, वैसे ही आत्मा नया शरीर अपनाती है।"
+        },
+        {
+          "verse": "2.28",
+          "english": "We come from the unseen and return to it. Why mourn the middle?",
+          "hindi": "हम अदृश्य से आते हैं और उसी में लौटते हैं। बीच के हिस्से पर रोना कैसा?"
+        }
+      ]
+    },
+    {
+      "id": "afraid",
+      "emoji": "😨",
+      "group": "hard",
+      "titleEnglish": "Afraid",
+      "titleHindi": "डर",
+      "introEnglish": "The real you cannot be harmed. Take shelter and be at peace.",
+      "introHindi": "असली आप को कोई हानि नहीं पहुँचा सकता। शरण लो और शांत रहो।",
+      "quotes": [
+        {
+          "verse": "2.23",
+          "english": "No weapon can cut it, no fire burn it, no water wet it, no wind dry it.",
+          "hindi": "इसे न हथियार काट सकते हैं, न आग जला सकती है, न पानी भिगो सकता है, न हवा सुखा सकती है।"
+        },
+        {
+          "verse": "2.40",
+          "english": "Even a little of this practice saves you from great fear.",
+          "hindi": "इस मार्ग का थोड़ा-सा पालन भी बड़े भय से बचा लेता है।"
+        },
+        {
+          "verse": "4.10",
+          "english": "Free of fear and anger, many have found their way to me.",
+          "hindi": "भय और क्रोध से मुक्त होकर बहुत-से लोग मुझ तक पहुँचे हैं।"
+        },
+        {
+          "verse": "12.15",
+          "english": "Be someone the world need not fear, and who does not fear the world.",
+          "hindi": "ऐसे बनो कि संसार तुमसे न डरे, और तुम संसार से न डरो।"
+        }
+      ]
+    },
+    {
+      "id": "lonely",
+      "emoji": "🫂",
+      "group": "hard",
+      "titleEnglish": "Lonely",
+      "titleHindi": "अकेलापन",
+      "introEnglish": "You are never outside the care of the Divine.",
+      "introHindi": "आप कभी ईश्वर की देखभाल से बाहर नहीं हैं।",
+      "quotes": [
+        {
+          "verse": "6.30",
+          "english": "Whoever sees me everywhere is never lost to me, and I am never lost to them.",
+          "hindi": "जो मुझे हर जगह देखता है, वह मुझसे कभी दूर नहीं होता, और मैं उससे।"
+        },
+        {
+          "verse": "9.29",
+          "english": "I hate no one and favour no one, yet those who love me live in me.",
+          "hindi": "मैं न किसी से बैर रखता हूँ, न किसी का पक्ष लेता हूँ; फिर भी जो मुझसे प्रेम करते हैं, वे मुझमें रहते हैं।"
+        },
+        {
+          "verse": "10.20",
+          "english": "I am the Self that lives in the heart of every being.",
+          "hindi": "मैं हर प्राणी के हृदय में रहने वाली आत्मा हूँ।"
+        },
+        {
+          "verse": "18.65",
+          "english": "Keep your mind on me and you will reach me. I give you my word: you are dear to me.",
+          "hindi": "मुझे मन में रखो, तुम मुझ तक पहुँचोगे। यह मेरा वचन है, क्योंकि तुम मुझे प्रिय हो।"
+        }
+      ]
+    },
+    {
+      "id": "stressed",
+      "emoji": "😩",
+      "group": "hard",
+      "titleEnglish": "Stressed or under pressure",
+      "titleHindi": "तनाव या दबाव",
+      "introEnglish": "Give your full effort; the result is not in your hands alone.",
+      "introHindi": "पूरा प्रयास करो; परिणाम केवल आपके हाथ में नहीं।",
+      "quotes": [
+        {
+          "verse": "2.48",
+          "english": "Stay the same in success and failure. That balance is yoga.",
+          "hindi": "सफलता और असफलता में एक-से रहो। यही संतुलन योग है।"
+        },
+        {
+          "verse": "2.50",
+          "english": "Yoga is skill in action.",
+          "hindi": "कर्म में कुशलता ही योग है।"
+        },
+        {
+          "verse": "6.17",
+          "english": "Measured eating, rest, work and sleep: that is how yoga removes sorrow.",
+          "hindi": "संतुलित भोजन, विश्राम, काम और नींद से योग दुःख मिटाता है।"
+        },
+        {
+          "verse": "3.8",
+          "english": "Do the work in front of you; action is better than doing nothing.",
+          "hindi": "सामने का काम करो; कुछ न करने से कर्म करना बेहतर है।"
+        }
+      ]
+    },
+    {
+      "id": "disappointed",
+      "emoji": "😞",
+      "group": "hard",
+      "titleEnglish": "Disappointed or failed",
+      "titleHindi": "निराशा या असफलता",
+      "introEnglish": "No honest effort is wasted. Get up and try again.",
+      "introHindi": "कोई भी सच्चा प्रयास बेकार नहीं जाता। उठो और फिर कोशिश करो।",
+      "quotes": [
+        {
+          "verse": "2.40",
+          "english": "On this path no effort is ever lost.",
+          "hindi": "इस मार्ग पर कोई प्रयास कभी व्यर्थ नहीं जाता।"
+        },
+        {
+          "verse": "6.40",
+          "english": "Nobody who does good ever ends up lost.",
+          "hindi": "भला करने वाले का कभी बुरा अंत नहीं होता।"
+        },
+        {
+          "verse": "6.5",
+          "english": "Lift yourself up by your own effort; do not let yourself sink.",
+          "hindi": "अपने प्रयास से अपने को ऊपर उठाओ; खुद को गिरने मत दो।"
+        },
+        {
+          "verse": "2.3",
+          "english": "Shake off this weakness of heart and stand up.",
+          "hindi": "मन की इस कमज़ोरी को छोड़ो और उठ खड़े हो।"
+        }
+      ]
+    },
+    {
+      "id": "confused",
+      "emoji": "🤔",
+      "group": "hard",
+      "titleEnglish": "Confused about what to do",
+      "titleHindi": "क्या करूँ, समझ नहीं आता",
+      "introEnglish": "Ask for guidance, then think it through and choose.",
+      "introHindi": "मार्गदर्शन माँगो, फिर सोचकर चुनो।",
+      "quotes": [
+        {
+          "verse": "2.7",
+          "english": "I am your student. Tell me clearly what is best.",
+          "hindi": "मैं आपका शिष्य हूँ। साफ़-साफ़ बताइए कि क्या भला है।"
+        },
+        {
+          "verse": "4.34",
+          "english": "Learn by humbly asking and serving those who know.",
+          "hindi": "जानने वालों से विनम्रता से पूछकर और सेवा करके सीखो।"
+        },
+        {
+          "verse": "3.35",
+          "english": "Your own path, even imperfect, is better than someone else's done well.",
+          "hindi": "अपना मार्ग, कमियों के साथ भी, दूसरे के अच्छी तरह निभाए मार्ग से बेहतर है।"
+        },
+        {
+          "verse": "18.63",
+          "english": "Think it over fully, then do as you choose.",
+          "hindi": "इस पर पूरा विचार करो, फिर जैसा चाहो वैसा करो।"
+        }
+      ]
+    },
+    {
+      "id": "jealous",
+      "emoji": "😒",
+      "group": "hard",
+      "titleEnglish": "Jealous or comparing",
+      "titleHindi": "ईर्ष्या या तुलना",
+      "introEnglish": "Your own path, walked honestly, is the right one for you.",
+      "introHindi": "अपना मार्ग, ईमानदारी से चला जाए, तो वही आपके लिए सही है।",
+      "quotes": [
+        {
+          "verse": "18.47",
+          "english": "Better your own duty done imperfectly than another's done well.",
+          "hindi": "दूसरे का धर्म अच्छी तरह निभाने से अपना धर्म अधूरा भी बेहतर है।"
+        },
+        {
+          "verse": "4.22",
+          "english": "Content with what comes, free of envy, one is not bound.",
+          "hindi": "जो मिले उसमें संतुष्ट और ईर्ष्या से मुक्त व्यक्ति नहीं बँधता।"
+        },
+        {
+          "verse": "5.18",
+          "english": "The wise see the same light in everyone.",
+          "hindi": "ज्ञानी सबमें एक ही प्रकाश देखते हैं।"
+        },
+        {
+          "verse": "12.13",
+          "english": "Bear ill will to none; be a friend to all, and kind.",
+          "hindi": "किसी से द्वेष मत रखो; सबके मित्र बनो, और दयालु।"
+        }
+      ]
+    },
+    {
+      "id": "guilty",
+      "emoji": "😔",
+      "group": "hard",
+      "titleEnglish": "Guilty or ashamed",
+      "titleHindi": "अपराध-बोध या शर्म",
+      "introEnglish": "Your past does not decide your future. Turn around now.",
+      "introHindi": "आपका अतीत आपका भविष्य तय नहीं करता। अभी से मुड़ जाओ।",
+      "quotes": [
+        {
+          "verse": "4.36",
+          "english": "Even the worst wrongdoer can cross over on the boat of knowledge.",
+          "hindi": "सबसे बड़ा पापी भी ज्ञान की नाव से पार हो सकता है।"
+        },
+        {
+          "verse": "9.30",
+          "english": "Even someone who has done great wrong, once they turn to me with all their heart, should be counted as good.",
+          "hindi": "बहुत बुरा करने वाला भी, यदि पूरे मन से मेरी ओर मुड़ जाए, तो उसे भला ही मानो।"
+        },
+        {
+          "verse": "9.31",
+          "english": "Such a person soon becomes good and finds lasting peace.",
+          "hindi": "ऐसा व्यक्ति जल्दी ही धर्मात्मा बनकर स्थायी शांति पाता है।"
+        },
+        {
+          "verse": "18.66",
+          "english": "I will free you from every wrong. Do not grieve.",
+          "hindi": "मैं तुम्हें हर पाप से मुक्त कर दूँगा। दुःख मत करो।"
+        }
+      ]
+    },
+    {
+      "id": "restless",
+      "emoji": "🌀",
+      "group": "hard",
+      "titleEnglish": "Restless or can't focus",
+      "titleHindi": "बेचैनी या मन न लगना",
+      "introEnglish": "The mind wanders for everyone. Bring it back, gently, again and again.",
+      "introHindi": "मन सबका भटकता है। उसे धीरे-धीरे, बार-बार वापस लाओ।",
+      "quotes": [
+        {
+          "verse": "6.34",
+          "english": "The mind is restless and strong; holding it is like holding the wind.",
+          "hindi": "मन चंचल और बलवान है; उसे रोकना हवा को रोकने जैसा है।"
+        },
+        {
+          "verse": "6.35",
+          "english": "Yet with practice and letting go, it can be held.",
+          "hindi": "फिर भी अभ्यास और वैराग्य से उसे वश में किया जा सकता है।"
+        },
+        {
+          "verse": "6.26",
+          "english": "Wherever the mind wanders, gently bring it back.",
+          "hindi": "मन जहाँ भी भटके, उसे धीरे से वापस लाओ।"
+        },
+        {
+          "verse": "6.19",
+          "english": "A steady mind is like a flame where no wind blows.",
+          "hindi": "स्थिर मन बिना हवा वाली जगह के दीपक जैसा है।"
+        }
+      ]
+    },
+    {
+      "id": "lazy",
+      "emoji": "😴",
+      "group": "hard",
+      "titleEnglish": "Lazy or unmotivated",
+      "titleHindi": "आलस्य या उत्साह की कमी",
+      "introEnglish": "Doing something is better than doing nothing. Start small.",
+      "introHindi": "कुछ न करने से कुछ करना अच्छा है। छोटे से शुरू करो।",
+      "quotes": [
+        {
+          "verse": "3.8",
+          "english": "Action is better than inaction.",
+          "hindi": "कर्म न करने से कर्म करना बेहतर है।"
+        },
+        {
+          "verse": "3.19",
+          "english": "Keep doing what needs doing, without clinging.",
+          "hindi": "जो करना ज़रूरी है, उसे बिना आसक्ति के करते रहो।"
+        },
+        {
+          "verse": "6.5",
+          "english": "You are your own friend, and you can be your own enemy.",
+          "hindi": "तुम ही अपने मित्र हो, और तुम ही अपने शत्रु बन सकते हो।"
+        },
+        {
+          "verse": "18.48",
+          "english": "Do not give up your work because it has faults; every fire has some smoke.",
+          "hindi": "कमियों के कारण अपना काम मत छोड़ो; हर आग में कुछ धुआँ होता है।"
+        }
+      ]
+    },
+    {
+      "id": "proud",
+      "emoji": "😤",
+      "group": "hard",
+      "titleEnglish": "Proud or full of ego",
+      "titleHindi": "घमंड या अहंकार",
+      "introEnglish": "Stay the same in success and failure; you are not the only doer.",
+      "introHindi": "सफलता और असफलता में एक-से रहो; करने वाले केवल आप नहीं हैं।",
+      "quotes": [
+        {
+          "verse": "3.27",
+          "english": "Nature does the work; only the ego says, 'I did this.'",
+          "hindi": "काम प्रकृति करती है; अहंकार ही कहता है, 'मैंने किया।'"
+        },
+        {
+          "verse": "13.8",
+          "english": "Humility comes first among the marks of wisdom.",
+          "hindi": "ज्ञान के लक्षणों में सबसे पहले विनम्रता आती है।"
+        },
+        {
+          "verse": "16.4",
+          "english": "Hypocrisy, arrogance and pride are marks of the demonic nature.",
+          "hindi": "पाखंड, घमंड और अभिमान आसुरी स्वभाव के लक्षण हैं।"
+        },
+        {
+          "verse": "2.71",
+          "english": "Whoever lets go of 'me' and 'mine' finds peace.",
+          "hindi": "जो 'मैं' और 'मेरा' छोड़ देता है, वह शांति पाता है।"
+        }
+      ]
+    },
+    {
+      "id": "tempted",
+      "emoji": "🍫",
+      "group": "hard",
+      "titleEnglish": "Tempted or craving",
+      "titleHindi": "लालच या तृष्णा",
+      "introEnglish": "Cravings grow when fed. Starve them gently and find a deeper joy.",
+      "introHindi": "तृष्णा खिलाने से बढ़ती है। उसे धीरे-धीरे छोड़ो और गहरा आनंद पाओ।",
+      "quotes": [
+        {
+          "verse": "3.37",
+          "english": "Desire is the enemy here; its hunger never ends.",
+          "hindi": "कामना ही यहाँ शत्रु है; उसकी भूख कभी नहीं मिटती।"
+        },
+        {
+          "verse": "3.39",
+          "english": "Desire is a fire that is never satisfied.",
+          "hindi": "कामना ऐसी आग है जो कभी तृप्त नहीं होती।"
+        },
+        {
+          "verse": "2.59",
+          "english": "The taste for things fades once something higher is found.",
+          "hindi": "कुछ ऊँचा मिल जाने पर चीज़ों का स्वाद भी छूट जाता है।"
+        },
+        {
+          "verse": "5.22",
+          "english": "Pleasures of the senses begin and end, and bring sorrow; the wise do not rest in them.",
+          "hindi": "इन्द्रियों के सुख आते-जाते हैं और दुःख लाते हैं; ज्ञानी उनमें नहीं रमते।"
+        }
+      ]
+    },
+    {
+      "id": "peace",
+      "emoji": "🕊️",
+      "group": "grow",
+      "titleEnglish": "Looking for peace",
+      "titleHindi": "शांति की तलाश",
+      "introEnglish": "Peace is not found outside. It grows when wanting quiets down.",
+      "introHindi": "शांति बाहर नहीं मिलती। वह तब आती है जब चाह शांत होती है।",
+      "quotes": [
+        {
+          "verse": "2.70",
+          "english": "Like the ocean, full yet still as rivers pour in: such a person finds peace.",
+          "hindi": "जैसे नदियाँ आती रहें फिर भी सागर शांत रहे, वैसा व्यक्ति शांति पाता है।"
+        },
+        {
+          "verse": "2.66",
+          "english": "Without peace, where can happiness come from?",
+          "hindi": "शांति के बिना सुख कहाँ से आएगा?"
+        },
+        {
+          "verse": "5.29",
+          "english": "Knowing me as the friend of all beings, one finds peace.",
+          "hindi": "मुझे सब प्राणियों का मित्र जानकर मनुष्य शांति पाता है।"
+        },
+        {
+          "verse": "12.12",
+          "english": "Letting go of the fruit of action brings peace at once.",
+          "hindi": "कर्मफल छोड़ते ही शांति आ जाती है।"
+        }
+      ]
+    },
+    {
+      "id": "grateful",
+      "emoji": "🙏",
+      "group": "grow",
+      "titleEnglish": "Grateful",
+      "titleHindi": "कृतज्ञता",
+      "introEnglish": "Everything good is a gift. Notice it, and give back.",
+      "introHindi": "हर अच्छी चीज़ एक उपहार है। उसे पहचानो, और लौटाओ।",
+      "quotes": [
+        {
+          "verse": "7.8",
+          "english": "I am the taste in water and the light of the sun and moon.",
+          "hindi": "पानी का स्वाद और सूरज-चाँद की रोशनी मैं हूँ।"
+        },
+        {
+          "verse": "10.41",
+          "english": "Whatever is beautiful or strong comes from a spark of my glory.",
+          "hindi": "जो कुछ सुंदर या शक्तिशाली है, वह मेरे तेज के एक अंश से है।"
+        },
+        {
+          "verse": "3.11",
+          "english": "Nourish one another, and together you will reach the highest good.",
+          "hindi": "एक-दूसरे को पोषित करो, और मिलकर परम कल्याण पाओगे।"
+        },
+        {
+          "verse": "9.26",
+          "english": "Even a single leaf or flower, some fruit or water, offered with love, I gladly accept.",
+          "hindi": "पत्ता, फूल, फल या थोड़ा जल: प्रेम से दिया हो, तो मैं स्वीकार करता हूँ।"
+        }
+      ]
+    },
+    {
+      "id": "courage",
+      "emoji": "💪",
+      "group": "grow",
+      "titleEnglish": "Need courage",
+      "titleHindi": "हिम्मत चाहिए",
+      "introEnglish": "You are stronger than this moment. Stand up and act.",
+      "introHindi": "आप इस पल से ज़्यादा मज़बूत हैं। उठो और कर्म करो।",
+      "quotes": [
+        {
+          "verse": "2.3",
+          "english": "Do not give in to weakness. Shake it off and rise.",
+          "hindi": "कमज़ोरी के आगे मत झुको। उसे झटककर उठो।"
+        },
+        {
+          "verse": "2.37",
+          "english": "Rise, with your mind made up.",
+          "hindi": "उठो, पक्के निश्चय के साथ।"
+        },
+        {
+          "verse": "11.33",
+          "english": "Rise and win your glory; be only my instrument.",
+          "hindi": "उठो और यश पाओ; बस मेरे निमित्त बनो।"
+        },
+        {
+          "verse": "18.73",
+          "english": "My confusion is gone. I stand firm, and I will act.",
+          "hindi": "मेरा मोह दूर हो गया। मैं दृढ़ हूँ, और मैं करूँगा।"
+        }
+      ]
+    },
+    {
+      "id": "hopeful",
+      "emoji": "🌅",
+      "group": "grow",
+      "titleEnglish": "Need hope",
+      "titleHindi": "आशा चाहिए",
+      "introEnglish": "Goodness always returns. You are not alone in the dark.",
+      "introHindi": "अच्छाई हमेशा लौटती है। अँधेरे में आप अकेले नहीं हैं।",
+      "quotes": [
+        {
+          "verse": "4.7",
+          "english": "Whenever goodness grows weak, I come.",
+          "hindi": "जब भी धर्म कमज़ोर पड़ता है, मैं आता हूँ।"
+        },
+        {
+          "verse": "4.8",
+          "english": "In every age I come to protect the good.",
+          "hindi": "हर युग में मैं सज्जनों की रक्षा के लिए आता हूँ।"
+        },
+        {
+          "verse": "9.31",
+          "english": "My devotee never perishes.",
+          "hindi": "मेरा भक्त कभी नष्ट नहीं होता।"
+        },
+        {
+          "verse": "18.78",
+          "english": "Where Krishna and Arjuna stand together, there is victory and good fortune.",
+          "hindi": "जहाँ कृष्ण और अर्जुन साथ हैं, वहाँ विजय और समृद्धि है।"
+        }
+      ]
+    },
+    {
+      "id": "love",
+      "emoji": "❤️",
+      "group": "grow",
+      "titleEnglish": "Full of love",
+      "titleHindi": "प्रेम से भरा मन",
+      "introEnglish": "Love is the simplest way to the Divine.",
+      "introHindi": "प्रेम ईश्वर तक पहुँचने का सबसे सरल मार्ग है।",
+      "quotes": [
+        {
+          "verse": "9.26",
+          "english": "Offer even a leaf with love, and I accept it.",
+          "hindi": "प्रेम से एक पत्ता भी दो, तो मैं उसे स्वीकार करता हूँ।"
+        },
+        {
+          "verse": "9.34",
+          "english": "Fill your mind with me, love me, and you will come to me.",
+          "hindi": "अपना मन मुझमें लगाओ, मुझसे प्रेम करो, और तुम मुझ तक पहुँचोगे।"
+        },
+        {
+          "verse": "12.13",
+          "english": "Be friendly and kind to every being.",
+          "hindi": "हर प्राणी के प्रति मित्रता और दया रखो।"
+        },
+        {
+          "verse": "18.64",
+          "english": "You are very dear to me, so I tell you what is best for you.",
+          "hindi": "तुम मुझे बहुत प्रिय हो, इसलिए मैं तुम्हारे भले की बात कहता हूँ।"
+        }
+      ]
+    },
+    {
+      "id": "joyful",
+      "emoji": "😊",
+      "group": "grow",
+      "titleEnglish": "Happy and content",
+      "titleHindi": "खुशी और संतोष",
+      "introEnglish": "Real joy comes from within and does not run out.",
+      "introHindi": "सच्ची खुशी भीतर से आती है और कभी खत्म नहीं होती।",
+      "quotes": [
+        {
+          "verse": "5.21",
+          "english": "Not leaning on outside pleasures, one finds a joy within that never ends.",
+          "hindi": "बाहरी सुखों पर न टिककर मनुष्य भीतर का कभी न खत्म होने वाला सुख पाता है।"
+        },
+        {
+          "verse": "2.55",
+          "english": "Whoever is content in the Self alone has steady wisdom.",
+          "hindi": "जो अपने भीतर ही संतुष्ट है, उसकी बुद्धि स्थिर है।"
+        },
+        {
+          "verse": "6.27",
+          "english": "A calm mind knows the highest happiness.",
+          "hindi": "शांत मन सबसे ऊँचा सुख जानता है।"
+        },
+        {
+          "verse": "18.37",
+          "english": "True happiness may taste bitter at first, but turns to nectar.",
+          "hindi": "सच्चा सुख शुरू में कड़वा लग सकता है, पर अंत में अमृत बन जाता है।"
+        }
+      ]
+    }
+  ]
+}

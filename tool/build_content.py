@@ -6,7 +6,7 @@ Inputs (all in content/):
   chapters.json          chapter titles and summaries (original to this project)
   learn.json             speaker labels, "Start here" sections, glossary (original)
   quotes.json            verses picked for the Quotes tab, with short topics (original)
-  situations.json        "Gita for my situation": feelings and matching verses (original)
+  emotions.json          Feelings tab: emotions with short quote lines and their verses (original)
   reflections.json       reflection questions for the daily verse, three per chapter (original)
   translations/chNN.json translations and simple meanings (original to this project)
 
@@ -138,21 +138,37 @@ def build(reviewed_only):
         if "english" in v:
             quotes.append(q)
 
-    situations, seen = [], set()
-    for sit in load(CONTENT / "situations.json")["situations"]:
-        where = f"situations.json {sit.get('id')}"
-        if sit.get("id") in seen:
+    emotions, seen = [], set()
+    for emo in load(CONTENT / "emotions.json")["emotions"]:
+        where = f"emotions.json {emo.get('id')}"
+        if emo.get("id") in seen:
             errors.append(f"{where}: duplicate id")
-        seen.add(sit.get("id"))
-        check_text(where, sit, ("titleEnglish", "titleHindi", "introEnglish", "introHindi"))
-        if not 3 <= len(sit.get("verses", [])) <= 6:
-            errors.append(f"{where}: list 3 to 6 verses")
-        if len(set(sit.get("verses", []))) != len(sit.get("verses", [])):
+        seen.add(emo.get("id"))
+        if emo.get("group") not in ("hard", "grow"):
+            errors.append(f"{where}: group must be 'hard' or 'grow'")
+        check_text(where, emo, ("emoji", "titleEnglish", "titleHindi", "introEnglish", "introHindi"))
+        quotes_in = emo.get("quotes", [])
+        if not 3 <= len(quotes_in) <= 6:
+            errors.append(f"{where}: list 3 to 6 quotes")
+        if len({q.get("verse") for q in quotes_in}) != len(quotes_in):
             errors.append(f"{where}: repeated verse")
-        ids = [i for i in sit.get("verses", []) if (v := standalone(where, i)) and "english" in v]
-        # A store build shows a situation only once at least two of its verses are reviewed.
-        if len(ids) >= 2:
-            situations.append({**sit, "verses": ids})
+        kept = []
+        for q in quotes_in:
+            qwhere = f"{where} {q.get('verse')}"
+            v = by_id.get(q.get("verse"))
+            if v is None:
+                errors.append(f"{qwhere}: no such verse")
+                continue
+            check_text(qwhere, q, ("english", "hindi"))
+            for k in ("english", "hindi"):
+                if len(q.get(k, "")) > 160:
+                    errors.append(f"{qwhere}: {k} quote longer than 160 characters")
+            # A store build keeps only quotes whose verse translation is reviewed.
+            if "english" in v:
+                kept.append(q)
+        # ...and shows an emotion only once at least two of its quotes remain.
+        if len(kept) >= 2:
+            emotions.append({**emo, "quotes": kept})
 
     reflections = load(CONTENT / "reflections.json")["chapters"]
     if [r.get("chapter") for r in reflections] != list(range(1, 19)):
@@ -169,7 +185,7 @@ def build(reviewed_only):
         "verses": verses,
         "learn": {"sections": learn["sections"], "glossary": learn["glossary"]},
         "quotes": quotes,
-        "situations": situations,
+        "emotions": emotions,
         "reflections": {str(r["chapter"]): r["questions"] for r in reflections},
     }
     return out, errors

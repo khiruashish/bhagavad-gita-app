@@ -4,6 +4,7 @@ import 'package:url_launcher/url_launcher.dart';
 import '../../app_scope.dart';
 import '../saved_screen.dart';
 import '../search_screen.dart';
+import '../settings_screen.dart';
 
 /// Font family bundled for Sanskrit, so conjuncts render the same on every phone.
 const sanskritFont = 'NotoSerifDevanagari';
@@ -100,7 +101,7 @@ class _NoteDialogState extends State<_NoteDialog> {
   }
 }
 
-/// Search and "My verses" buttons for the top bar of the main tabs.
+/// Search, "My verses" and Settings buttons for the top bar of the main tabs.
 List<Widget> mainActions(BuildContext context) {
   final s = AppScope.stringsOf(context);
   return [
@@ -117,6 +118,13 @@ List<Widget> mainActions(BuildContext context) {
       onPressed: () =>
           Navigator.of(context)
               .push(MaterialPageRoute(builder: (_) => const SavedScreen())),
+    ),
+    IconButton(
+      tooltip: s.settings,
+      icon: const Icon(Icons.settings_outlined),
+      onPressed: () =>
+          Navigator.of(context)
+              .push(MaterialPageRoute(builder: (_) => const SettingsScreen())),
     ),
     const SizedBox(width: 4),
   ];

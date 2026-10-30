@@ -86,12 +86,15 @@ void main() {
     await tester.pumpWidget(app.widget);
     await tester.pumpAndSettle();
 
-    await tester.tap(find.text('Settings'));
+    await tester.tap(find.byTooltip('Settings'));
     await tester.pumpAndSettle();
     await tester.tap(find.text('हिन्दी'));
     await tester.pumpAndSettle();
     expect(find.text('सेटिंग्स'), findsWidgets);
 
+    await tester.pageBack();
+    await tester.pumpAndSettle();
+    expect(find.text('भावनाएँ'), findsOneWidget);
     await tester.tap(find.text('आज'));
     await tester.pumpAndSettle();
     expect(find.text('दिन 1'), findsOneWidget);
@@ -197,8 +200,6 @@ void main() {
 
     await tester.tap(find.text('Quotes'));
     await tester.pumpAndSettle();
-    await tester.tap(find.text('By chapter'));
-    await tester.pumpAndSettle();
     expect(find.text('Where the story begins'), findsOneWidget);
 
     // Filter to chapter 2, then open a quote in the reader.
@@ -228,7 +229,7 @@ void main() {
     expect(find.text('Chapter 2 · Verse 47'), findsOneWidget);
   });
 
-  testWidgets('Gita for my situation lists verses for a feeling', (
+  testWidgets('the Feelings tab gives the best quotes for an emotion', (
     tester,
   ) async {
     useTallPhone(tester);
@@ -236,18 +237,36 @@ void main() {
     await tester.pumpWidget(app.widget);
     await tester.pumpAndSettle();
 
-    await tester.tap(find.text('Quotes'));
+    await tester.tap(find.text('Feelings'));
     await tester.pumpAndSettle();
-    expect(find.text('How are you feeling today?'), findsOneWidget);
+    expect(find.text('A thought for you'), findsOneWidget);
+    expect(find.text('How are you feeling right now?'), findsOneWidget);
+    expect(find.text("When it's hard"), findsOneWidget);
+    expect(find.text('When you want to grow'), findsOneWidget);
+
     await tester.tap(find.text('Angry'));
     await tester.pumpAndSettle();
     expect(find.textContaining('See where anger starts'), findsOneWidget);
+    expect(find.textContaining('three doors to darkness'), findsOneWidget);
+
+    // Sharing a quote puts the short line on the picture, not the whole verse.
+    final card = find.ancestor(
+      of: find.textContaining('three doors to darkness'),
+      matching: find.byType(Card),
+    );
+    await tester.ensureVisible(card);
+    await tester.pumpAndSettle();
+    await tester.tap(
+      find.descendant(of: card, matching: find.byTooltip('Share')),
+    );
+    await tester.pumpAndSettle();
     expect(
-      find.textContaining('Keep thinking about the things of the senses'),
+      find.descendant(
+        of: find.byType(ShareCard),
+        matching: find.textContaining('three doors to darkness'),
+      ),
       findsOneWidget,
     );
-    // Each verse comes with its simple meaning.
-    expect(find.byIcon(Icons.lightbulb_outline_rounded), findsWidgets);
   });
 
   testWidgets('a verse can be shared as a picture', (tester) async {

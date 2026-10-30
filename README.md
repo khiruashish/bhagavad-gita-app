@@ -7,7 +7,7 @@ Gita. No ads, no account, no tracking.
 - **Sanskrit, Hindi and English** for every verse, with a pronunciation guide and a short
   "in simple words" explanation.
 - **Listen** to the Sanskrit, Hindi or English, read by your phone's own voice.
-- **Gita for my situation:** pick how you feel (anxious, angry, grieving, exam pressure…) and read verses that speak to it.
+- **Feelings:** the best Gita quotes for 20 human emotions, from anxious, angry or grieving to grateful, hopeful or in love, plus "a thought for you".
 - **Quotes:** well-known verses from every chapter, with a short topic line.
 - **Share as image:** a ready-made picture card for WhatsApp or Instagram.
 - **Save verses and write notes**, search by word or jump to a verse number ("2.47"), and see your reading progress.

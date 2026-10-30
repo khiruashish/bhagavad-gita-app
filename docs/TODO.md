@@ -35,7 +35,7 @@ Then 🤖: add `LICENSE` and `content/LICENSE` files to match your choices.
 - [ ] Find and agree terms with a Sanskrit/Gita scholar who reads Hindi and English
 - [ ] Give them an easy way to review: 🤖 can export the verses as a printable document or spreadsheet
 - [ ] Review the verses that will ship (all 701, or Chapters 1–3 for a phased launch)
-- [ ] Also review: 18 chapter summaries, "Start here" and glossary, 58 quote topics, 12 situations, 54 reflection questions
+- [ ] Also review: 18 chapter summaries, "Start here" and glossary, 58 quote topics, 20 emotions with 80 short quote lines, 54 reflection questions
 - [ ] Open questions to settle: readings of 2.5, 9.32 and 10.6; the words "outcaste" / "चाण्डाल" in 5.18
 - [ ] Check the Sanskrit against a printed edition (about 65 source typos are already fixed)
 - [ ] 🤖 Mark each approved verse `"status": "reviewed"` with `"reviewedBy"`, and keep the similarity check at 0 flags
@@ -91,8 +91,9 @@ Then 🤖: add `LICENSE` and `content/LICENSE` files to match your choices.
 
 ## Done so far
 
-- App: daily verse from Day 1; Sanskrit, Hindi and English with simple meanings; listen (phone voices); 18 chapters with summaries; reader with Previous/Next and chapter jumps; Continue reading; Quotes by chapter; Gita for my situation (12 situations); share as image; save verses and notes; search and go to verse; reading progress; reflection questions; Hindi interface; dark mode; text size; About & credits; Rate this app; Android home-screen widget
+- App: daily verse from Day 1; Sanskrit, Hindi and English with simple meanings; listen (phone voices); 18 chapters with summaries; reader with Previous/Next and chapter jumps; Continue reading; Feelings tab: best quotes for 20 emotions with "a thought for you"; Quotes by chapter; share as image; save verses and notes; search and go to verse; reading progress; reflection questions; Hindi interface; dark mode; text size; About & credits; Rate this app; Android home-screen widget
 - Content: Sanskrit for all 701 verses (public domain, typos fixed); our own pronunciation; original drafts of all 701 translations and simple meanings with 0 similarity flags; self-review of all verses done (one meaning error fixed in 11.48)
+- Navigation: tabs Today, Chapters, Feelings, Quotes, Start here; Settings, search and My verses in the top bar
 - Look: redesigned layout; Krishna and Arjuna app icon; splash screen; bundled Sanskrit font
 - Quality: 34 app tests (including accessibility) + 12 content-tool tests; CI builds Android and iOS on every push
 - Privacy: no internet, no account, no data collected, no new permissions; privacy policy written

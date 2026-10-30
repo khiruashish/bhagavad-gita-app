@@ -10,7 +10,7 @@ accurate. It is the project's record that the content is free of third-party cop
 | `translations/chNN.json` | English and Hindi translations, simple meanings, notes | Written for this project directly from the Sanskrit; AI-assisted drafts, checked with `tool/check_similarity.py`, then reviewed by a named scholar | Original to this project |
 | `chapters.json` | Chapter titles and summaries | Written for this project. The Sanskrit chapter names are the traditional colophon titles | Original / public domain |
 | `quotes.json` | Verses picked for the Quotes tab, with short topic lines | Chosen and written for this project | Original |
-| `situations.json` | "Gita for my situation": feelings, one-line thoughts and the verses for each | Chosen and written for this project | Original |
+| `emotions.json` | Feelings tab: 20 emotions, a one-line thought for each, and 80 short quote lines written from the verses (EN + HI). Checked with `tool/check_quote_similarity.py` (0 flags) | Chosen and written for this project | Original |
 | `reflections.json` | Three reflection questions per chapter, shown under the daily verse | Written for this project | Original |
 | `learn.json` | Speaker labels, "Start here" text, glossary | Written for this project | Original |
 

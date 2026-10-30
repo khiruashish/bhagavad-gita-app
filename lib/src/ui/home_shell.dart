@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 
 import '../app_scope.dart';
 import 'chapters_screen.dart';
+import 'feelings_screen.dart';
 import 'learn_screen.dart';
 import 'quotes_screen.dart';
-import 'settings_screen.dart';
 import 'today_screen.dart';
 
 class HomeShell extends StatefulWidget {
@@ -20,9 +20,9 @@ class _HomeShellState extends State<HomeShell> {
   static const _tabs = [
     TodayScreen(),
     ChaptersScreen(),
+    FeelingsScreen(),
     QuotesScreen(),
     LearnScreen(),
-    SettingsScreen(),
   ];
 
   @override
@@ -48,6 +48,11 @@ class _HomeShellState extends State<HomeShell> {
             label: s.chapters,
           ),
           NavigationDestination(
+            icon: const Icon(Icons.spa_outlined),
+            selectedIcon: const Icon(Icons.spa),
+            label: s.feelings,
+          ),
+          NavigationDestination(
             icon: const Icon(Icons.format_quote_outlined),
             selectedIcon: const Icon(Icons.format_quote),
             label: s.quotes,
@@ -56,11 +61,6 @@ class _HomeShellState extends State<HomeShell> {
             icon: const Icon(Icons.school_outlined),
             selectedIcon: const Icon(Icons.school),
             label: s.learn,
-          ),
-          NavigationDestination(
-            icon: const Icon(Icons.settings_outlined),
-            selectedIcon: const Icon(Icons.settings),
-            label: s.settings,
           ),
         ],
       ),

@@ -1,15 +1,16 @@
 # UI layout
 
-The app has five tabs (Today, Chapters, Quotes, Start here, Settings) and one reader. Every
+The app has five tabs (Today, Chapters, Feelings, Quotes, Start here) and one reader.
+Search, My verses and Settings are buttons in the top bar of every tab. Every
 screen follows the same few rules so it feels calm and is easy for first-time readers.
 
 | Today | Chapters | Chapter | Reader | Quotes |
 |---|---|---|---|---|
 | ![Today](screenshots/today.png) | ![Chapters](screenshots/chapters.png) | ![Chapter](screenshots/chapter.png) | ![Reader](screenshots/reader.png) | ![Quotes](screenshots/quotes.png) |
 
-| My situation | Situation | Share |
+| Feelings | Emotion | Share |
 |---|---|---|
-| ![Situations](screenshots/situations.png) | ![Situation](screenshots/situation.png) | ![Share](screenshots/share.png) |
+| ![Feelings](screenshots/feelings.png) | ![Emotion](screenshots/emotion.png) | ![Share](screenshots/share.png) |
 
 ## Screens
 
@@ -23,14 +24,20 @@ Each card shows the number, the plain-language title, the Sanskrit name and the 
 list with a short preview of each, and a bottom bar with **← Chapter N-1** and
 **Chapter N+1 →**.
 
-**Quotes**: two views, switched at the top.
-- *For my situation* (the default): "How are you feeling today?" and a grid of 12
-  situations (anxious, angry, grieving, exam pressure, failure, confused, can't focus,
-  lonely, comparing, afraid, proud, lazy). Each opens a page with a one-line thought and
-  4 or 5 verses, each with its simple meaning. The list is in `content/situations.json`.
-- *By chapter*: 58 well-known verses, at least one from every chapter, grouped by chapter.
+**Feelings**: the best Gita quotes for how you feel.
+- *A thought for you*: one quote (a new one each day), with **Another** for a different one.
+- *How are you feeling right now?*: 20 emotions in two groups. **When it's hard**:
+  anxious, angry, sad, afraid, lonely, stressed, disappointed, confused, jealous, guilty,
+  restless, lazy, proud, tempted. **When you want to grow**: peace, grateful, courage,
+  hope, love, joy.
+- Each emotion opens a page with a one-line thought and 4 quote cards. A quote is a short
+  line written for this project from one verse, with the first Sanskrit line, save,
+  share (the picture shows the short line) and *Read verse* for the full verse.
+- Content: `content/emotions.json`; similarity check: `tool/check_quote_similarity.py`.
+
+**Quotes**: 58 well-known verses, at least one from every chapter, grouped by chapter.
 Chips at the top filter to one chapter. Each card has a short topic line, the translation
-in the app's language, the first Sanskrit line, a copy button and *Read verse*. The list
+in the app's language, the first Sanskrit line, copy, save, share and *Read verse*. The list
 lives in `content/quotes.json`; the build checks that every pick is a complete sentence.
 
 **Reader**: reads the whole Gita as one sequence.
@@ -40,11 +47,11 @@ lives in `content/quotes.json`; the build checks that every pick is a complete s
   of a chapter, Next reads **Chapter N+1 →** and carries straight on. Swiping does the same.
 - The last verse opened is saved, for *Continue reading*.
 
-**Search** (top bar on Today, Chapters and Quotes): type a verse number like `2.47`,
+**Search** (top bar on every tab): type a verse number like `2.47`,
 `2 47` or `2:47` to jump to it, or words in English, Hindi or Roman-letter Sanskrit
 (diacritics optional). Matches in the translations and simple meanings are listed first.
 
-**My verses** (heart in the top bar, or Settings): saved verses and private notes.
+**My verses** (heart in the top bar): saved verses and private notes.
 
 **Reading progress**: a verse counts as read when shown as the daily verse or opened in
 the reader. Chapter cards show "12 of 47 read" with a bar; verse lists show a tick.

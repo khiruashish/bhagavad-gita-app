@@ -14,7 +14,7 @@ the repo with an AI coding assistant.
 
 | Area | Status |
 |---|---|
-| App features: daily verse, chapters, reader with chapter navigation, Quotes, Gita for my situation, share as image, audio, Hindi/English interface, dark mode, text size | ✅ Done |
+| App features: daily verse, chapters, reader with chapter navigation, Feelings (quotes by emotion), Quotes, share as image, audio, Hindi/English interface, dark mode, text size | ✅ Done |
 | Bookmarks, notes, search / go to verse, reading progress, reflection questions, About & credits screen, rate link, Android home-screen widget | ✅ Done |
 | App icon (Krishna and Arjuna on the chariot), splash screen, bundled Devanagari font | ✅ Done (replace the icon art any time, see section 5) |
 | Tests: 34 app tests (incl. accessibility) + 12 content-tool tests, run in CI | ✅ Passing |
@@ -40,7 +40,7 @@ These only you can provide. Send them over and the files and screens get updated
 |---|---|---|---|
 | 1.1 | Copyright holder name | "© 2026 Your Name", or a team or trust name | `LICENSE`, About screen, App Store "Copyright" field |
 | 1.2 | Licence for the **code** | **MIT** (simplest) or Apache-2.0 | `LICENSE` |
-| 1.3 | Licence for the **content** (translations, simple meanings, summaries, quotes topics, situations) | **CC BY-SA 4.0** (free to share and adapt with credit; stays open) · CC BY-NC-SA 4.0 (no commercial use) · all rights reserved | `content/LICENSE`, About screen |
+| 1.3 | Licence for the **content** (translations, simple meanings, summaries, quotes topics, feelings and quote lines, reflections) | **CC BY-SA 4.0** (free to share and adapt with credit; stays open) · CC BY-NC-SA 4.0 (no commercial use) · all rights reserved | `content/LICENSE`, About screen |
 | 1.4 | Scholar reviewer(s): name, title, how to credit, **written OK to be named** | "Reviewed by Dr. A. B., Dept. of Sanskrit, X University" | About screen, store description, `reviewedBy` in content |
 | 1.5 | Other contributors (designer, proofreader, voice artist), with written permission for their work | Name + what they did | About screen |
 | 1.6 | Public contact email (not your personal one) | gitaforeveryone@… | Privacy policy, both store listings |
@@ -60,11 +60,12 @@ These only you can provide. Send them over and the files and screens get updated
 - [ ] Scholar reviews the verses that will ship (all 701, or Chapters 1–3 for a phased launch). See GUIDE Step 5.
 - [ ] Each approved verse has `"status": "reviewed"` and `"reviewedBy": "<name>"` in `content/translations/chNN.json`.
 - [ ] Scholar also checks the Sanskrit against a printed edition (about 65 source typos are already fixed).
-- [ ] Scholar checks the extra texts: 18 chapter summaries, "Start here", glossary, 58 quote topics (`content/quotes.json`), 12 situations (`content/situations.json`).
+- [ ] Scholar checks the extra texts: 18 chapter summaries, "Start here", glossary, 58 quote topics (`content/quotes.json`), 20 emotions with 80 quote lines (`content/emotions.json`), 54 reflection questions (`content/reflections.json`).
 - [ ] Open questions flagged for the scholar: readings of 2.5, 9.32, 10.6; the words "outcaste"/"चाण्डाल" in 5.18.
 - [ ] `python3 tool/check_similarity.py <reference dir>` reports **0 flagged** after any edit.
 - [ ] `python3 tool/build_content.py --reviewed-only` passes, and the result has the verses you expect.
-- [ ] With a reviewed-only build, Today, Quotes and Situations still have content. A situation needs at least 2 reviewed verses to appear; quotes appear only once reviewed.
+- [ ] With a reviewed-only build, Today, Feelings and Quotes still have content. An emotion needs at least 2 quotes with reviewed verses to appear; quotes appear only once reviewed.
+- [ ] `python3 tool/check_quote_similarity.py <reference dir>` reports **0 flagged** after editing `content/emotions.json`.
 
 ## 3. Accounts and money 👤
 
@@ -116,7 +117,7 @@ These only you can provide. Send them over and the files and screens get updated
 Suggested screenshot set (with a short caption on each):
 1. Today: "One verse a day, from Day 1"
 2. Verse: "Sanskrit, Hindi and English, with simple meaning"
-3. Gita for my situation: "Anxious? Angry? Find a verse for how you feel"
+3. Feelings: "Anxious? Angry? Grateful? The best Gita quotes for how you feel"
 4. Share card: "Share a verse on WhatsApp"
 5. Chapters/reader: "All 18 chapters, read at your pace"
 6. Settings: "No ads · No login · Works offline"
@@ -141,7 +142,7 @@ Suggested screenshot set (with a short caption on each):
 
 - [ ] English listing written.
 - [ ] Hindi listing (strongly recommended for India).
-- [ ] Apple **review notes**: explain what makes the app distinct (original reviewed translations, beginner simple meanings, situations, offline, no data). This helps with Apple's rule against near-duplicate apps (guideline 4.3), since many Gita apps exist.
+- [ ] Apple **review notes**: explain what makes the app distinct (original reviewed translations, beginner simple meanings, quotes by emotion, offline, no data). This helps with Apple's rule against near-duplicate apps (guideline 4.3), since many Gita apps exist.
 
 ## 7. Store forms and compliance 👤
 
@@ -184,7 +185,7 @@ flutter build ipa --release --obfuscate --split-debug-info=build/symbols   # on 
 - [ ] Testers check:
   - Day 1 shows 1.1; the next calendar day shows 1.2.
   - Reader: Next/Previous, chapter skip buttons, Continue reading.
-  - Gita for my situation: every situation opens and has verses.
+  - Feelings: every emotion opens and has quotes; "Another" changes the thought; sharing a quote shows the short line on the picture.
   - Share as image works with WhatsApp and Instagram; the picture is readable.
   - Listen works in Sanskrit, Hindi and English (or shows the "no voice" message).
   - Hindi interface, dark mode, largest text size.
