@@ -6,17 +6,21 @@ import '../../audio/verse_speaker.dart';
 import '../../content/models.dart';
 import '../../settings/settings_controller.dart';
 import '../share/share_sheet.dart';
+import 'actions.dart';
 import 'layout.dart';
 import 'listen_button.dart';
 
 /// One verse: Sanskrit, pronunciation, Hindi, English and a simple explanation.
 class VerseView extends StatelessWidget {
-  const VerseView({super.key, required this.verse, this.header});
+  const VerseView({super.key, required this.verse, this.header, this.footer});
 
   final Verse verse;
 
   /// Optional widget shown above the verse (e.g. the day number).
   final Widget? header;
+
+  /// Optional widget shown below the verse (e.g. the reflection question).
+  final Widget? footer;
 
   @override
   Widget build(BuildContext context) {
@@ -63,6 +67,7 @@ class VerseView extends StatelessWidget {
                     icon: const Icon(Icons.copy_rounded),
                     onPressed: () => _copy(context),
                   ),
+                  if (verse.isTranslated) BookmarkButton(verseId: verse.id),
                   if (verse.isTranslated)
                     IconButton(
                       tooltip: s.share,
@@ -160,6 +165,7 @@ class VerseView extends StatelessWidget {
                     ),
                   ),
               ],
+              ?footer,
             ],
           ),
         ),
@@ -230,9 +236,8 @@ class _SanskritCard extends StatelessWidget {
               Text(
                 speaker.sanskrit,
                 textAlign: TextAlign.center,
-                style: theme.textTheme.titleSmall?.copyWith(
-                  color: ink.withValues(alpha: 0.8),
-                ),
+                style: sanskritStyle(theme.textTheme.titleSmall)
+                    ?.copyWith(color: ink.withValues(alpha: 0.8)),
               ),
             const SizedBox(height: 8),
             Padding(
@@ -240,7 +245,7 @@ class _SanskritCard extends StatelessWidget {
               child: SelectableText(
                 verse.sanskrit,
                 textAlign: TextAlign.center,
-                style: theme.textTheme.titleLarge?.copyWith(
+                style: sanskritStyle(theme.textTheme.titleLarge)?.copyWith(
                   height: 1.9,
                   fontWeight: FontWeight.w600,
                   color: ink,

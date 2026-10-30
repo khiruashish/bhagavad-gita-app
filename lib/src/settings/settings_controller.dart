@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -49,9 +51,67 @@ class SettingsController extends ChangeNotifier {
   Future<void> setSlowSpeech(bool v) =>
       _update(() => _prefs.setBool('slowSpeech', v));
 
+  /// Verses the reader saved with the heart button.
+  Set<String> get bookmarks => {...?_prefs.getStringList('bookmarks')};
+  bool isBookmarked(String id) => bookmarks.contains(id);
+  Future<void> toggleBookmark(String id) {
+    final ids = bookmarks;
+    if (!ids.remove(id)) ids.add(id);
+    return _update(() => _prefs.setStringList('bookmarks', _sorted(ids)));
+  }
+
+  /// Verses opened in the reader or shown as the daily verse.
+  Set<String> get readIds => {...?_prefs.getStringList('read')};
+  Future<void> markRead(String id) {
+    final ids = readIds;
+    if (!ids.add(id)) return Future.value();
+    return _update(() => _prefs.setStringList('read', _sorted(ids)));
+  }
+
+  /// Records a verse opened in the reader: last read, and counted as read.
+  Future<void> recordOpened(String id) async {
+    final ids = readIds;
+    if (id == lastReadId && ids.contains(id)) return;
+    ids.add(id);
+    await _prefs.setString('lastRead', id);
+    await _update(() => _prefs.setStringList('read', _sorted(ids)));
+  }
+
+  Future<void> clearReadingProgress() => _update(() => _prefs.remove('read'));
+
+  /// Private notes, by verse id.
+  Map<String, String> get notes {
+    final raw = _prefs.getString('notes');
+    if (raw == null) return {};
+    return (jsonDecode(raw) as Map<String, dynamic>).cast<String, String>();
+  }
+
+  Future<void> setNote(String id, String text) {
+    final all = notes;
+    if (text.trim().isEmpty) {
+      all.remove(id);
+    } else {
+      all[id] = text.trim();
+    }
+    return _update(() => _prefs.setString('notes', jsonEncode(all)));
+  }
+
+  /// Sorts verse ids like "2.47" in reading order.
+  static List<String> _sorted(Set<String> ids) => ids.toList()
+    ..sort((a, b) {
+      final x = a.split('.').map(int.parse).toList();
+      final y = b.split('.').map(int.parse).toList();
+      return x[0] != y[0] ? x[0] - y[0] : x[1] - y[1];
+    });
+
   Future<void> setLastRead(String id) => id == lastReadId
       ? Future.value()
       : _update(() => _prefs.setString('lastRead', id));
+
+  /// Data for the home-screen widget (see WidgetFeed). Written without
+  /// notifying listeners: nothing in the app shows it.
+  Future<void> setWidgetFeed(String json) =>
+      _prefs.setString('widget_days', json);
 
   /// Makes today Day 1 again.
   Future<void> restartFromDayOne() => _update(() => _saveStart(_clock()));

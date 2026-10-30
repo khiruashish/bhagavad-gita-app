@@ -10,6 +10,9 @@ Gita. No ads, no account, no tracking.
 - **Gita for my situation:** pick how you feel (anxious, angry, grieving, exam pressure…) and read verses that speak to it.
 - **Quotes:** well-known verses from every chapter, with a short topic line.
 - **Share as image:** a ready-made picture card for WhatsApp or Instagram.
+- **Save verses and write notes**, search by word or jump to a verse number ("2.47"), and see your reading progress.
+- **A question to think about** under each daily verse.
+- **Home-screen widget** with today's verse (Android; iOS planned).
 - **All 18 chapters** with plain summaries, a beginner's "Start here" guide and a glossary.
 - **Hindi or English interface**, dark mode, adjustable text size.
 - **Fully offline:** no internet permission and no data collected.

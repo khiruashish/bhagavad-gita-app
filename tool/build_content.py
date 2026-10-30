@@ -7,6 +7,7 @@ Inputs (all in content/):
   learn.json             speaker labels, "Start here" sections, glossary (original)
   quotes.json            verses picked for the Quotes tab, with short topics (original)
   situations.json        "Gita for my situation": feelings and matching verses (original)
+  reflections.json       reflection questions for the daily verse, three per chapter (original)
   translations/chNN.json translations and simple meanings (original to this project)
 
 Usage:
@@ -119,7 +120,7 @@ def build(reviewed_only):
         for k in fields:
             if not item.get(k, "").strip():
                 errors.append(f"{where}: missing {k}")
-            m = BANNED.search(item.get(k, "")) if k.endswith("English") else None
+            m = BANNED.search(item.get(k, "")) if k.lower().endswith("english") else None
             if m:
                 errors.append(f"{where}: banned word '{m.group(0)}' in {k}")
 
@@ -153,6 +154,15 @@ def build(reviewed_only):
         if len(ids) >= 2:
             situations.append({**sit, "verses": ids})
 
+    reflections = load(CONTENT / "reflections.json")["chapters"]
+    if [r.get("chapter") for r in reflections] != list(range(1, 19)):
+        errors.append("reflections.json must list chapters 1..18 in order")
+    for r in reflections:
+        if not r.get("questions"):
+            errors.append(f"reflections.json chapter {r.get('chapter')}: no questions")
+        for i, q in enumerate(r.get("questions", [])):
+            check_text(f"reflections.json {r.get('chapter')}.{i + 1}", q, ("english", "hindi"))
+
     out = {
         "format": 1,
         "chapters": [{**c, "verseCount": CHAPTER_VERSES[c["number"] - 1]} for c in chapters],
@@ -160,6 +170,7 @@ def build(reviewed_only):
         "learn": {"sections": learn["sections"], "glossary": learn["glossary"]},
         "quotes": quotes,
         "situations": situations,
+        "reflections": {str(r["chapter"]): r["questions"] for r in reflections},
     }
     return out, errors
 

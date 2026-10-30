@@ -174,6 +174,14 @@ class Situation {
   final List<Verse> verses;
 }
 
+/// A question to think about after reading a verse.
+class Reflection {
+  const Reflection({required this.english, required this.hindi});
+
+  final String english;
+  final String hindi;
+}
+
 /// Everything the app shows, parsed from the bundled `assets/content/gita.json`.
 class GitaContent {
   GitaContent({
@@ -183,6 +191,7 @@ class GitaContent {
     required this.glossary,
     this.quotes = const [],
     this.situations = const [],
+    this.reflections = const {},
   }) : dailyVerses = [
          for (final v in verses)
            if (v.isTranslated) v,
@@ -206,7 +215,18 @@ class GitaContent {
 
   /// "Gita for my situation": feelings with matching verses.
   final List<Situation> situations;
+
+  /// Reflection questions by chapter number.
+  final Map<int, List<Reflection>> reflections;
   final Map<String, Verse> _byId;
+
+  /// The reflection question shown with [verse], rotating through its chapter's
+  /// questions; null when the chapter has none.
+  Reflection? reflectionFor(Verse verse) {
+    final questions = reflections[verse.chapter];
+    if (questions == null || questions.isEmpty) return null;
+    return questions[(verse.number - 1) % questions.length];
+  }
 
   Verse? verseById(String id) => _byId[id];
 
@@ -258,6 +278,18 @@ class GitaContent {
               verses: [for (final id in m['verses'] as List) ?byId[id]],
             ),
       ],
+      reflections: {
+        for (final MapEntry(:key, :value)
+            in ((j['reflections'] as Map<String, dynamic>?) ?? const {})
+                .entries)
+          int.parse(key): [
+            for (final q in value as List)
+              Reflection(
+                english: (q as Map<String, dynamic>)['english'] as String,
+                hindi: q['hindi'] as String,
+              ),
+          ],
+      },
     );
   }
 }

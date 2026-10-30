@@ -40,15 +40,30 @@ lives in `content/quotes.json`; the build checks that every pick is a complete s
   of a chapter, Next reads **Chapter N+1 →** and carries straight on. Swiping does the same.
 - The last verse opened is saved, for *Continue reading*.
 
+**Search** (top bar on Today, Chapters and Quotes): type a verse number like `2.47`,
+`2 47` or `2:47` to jump to it, or words in English, Hindi or Roman-letter Sanskrit
+(diacritics optional). Matches in the translations and simple meanings are listed first.
+
+**My verses** (heart in the top bar, or Settings): saved verses and private notes.
+
+**Reading progress**: a verse counts as read when shown as the daily verse or opened in
+the reader. Chapter cards show "12 of 47 read" with a bar; verse lists show a tick.
+Settings → *Clear reading progress* resets it.
+
+**Think about it**: under the daily verse, one of three questions for its chapter
+(`content/reflections.json`), with *Write a note*.
+
+**Home-screen widget (Android)**: today's verse on a saffron card; tap to open the app.
+
 **Share as image**: the share icon on a verse or card opens a preview of a 4:5 picture
 (1080 x 1350, the shape WhatsApp Status and Instagram show best): Sanskrit, the
 translation in Hindi or English (switch in the sheet), the verse number and the app's
 name. *Share* opens the phone's share menu.
 
 **Verse** (used by Today and the reader), from top to bottom:
-1. Verse badge (`2.47`), "Chapter 2 · Verse 47", who is speaking, copy button.
+1. Verse badge (`2.47`), "Chapter 2 · Verse 47", who is speaking; copy, save (heart) and share buttons.
 2. A quiet draft notice while the translation is unreviewed.
-3. Sanskrit card: Devanagari, a divider, then pronunciation. Listen button.
+3. Sanskrit card: Devanagari in the bundled Noto Serif Devanagari font, a divider, then pronunciation. Listen button.
 4. Translation cards, in the app's language first, each with its own Listen button.
 5. "In simple words", in a differently coloured card.
 

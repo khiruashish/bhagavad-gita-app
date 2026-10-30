@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="widget_name">आज का श्लोक</string>
+    <string name="widget_description">आज का भगवद्गीता श्लोक</string>
+    <string name="widget_empty">आज का श्लोक देखने के लिए "सबके लिए गीता" खोलें।</string>
+</resources>

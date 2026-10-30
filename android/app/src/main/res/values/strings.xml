@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="widget_name">Today\'s verse</string>
+    <string name="widget_description">The Bhagavad Gita verse for today</string>
+    <string name="widget_empty">Open Gita for Everyone to see today\'s verse.</string>
+</resources>

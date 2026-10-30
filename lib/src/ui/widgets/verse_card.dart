@@ -6,6 +6,7 @@ import '../../content/models.dart';
 import '../../settings/settings_controller.dart';
 import '../share/share_sheet.dart';
 import '../verse_reader_screen.dart';
+import 'actions.dart';
 
 /// A compact verse for lists: optional topic line, translation, first Sanskrit
 /// line, optional simple meaning, and copy / share / read actions.
@@ -69,10 +70,8 @@ class VerseCard extends StatelessWidget {
                 padding: const EdgeInsets.only(right: 10),
                 child: Text(
                   verse.sanskrit.split('\n').first,
-                  style: theme.textTheme.bodyMedium?.copyWith(
-                    color: scheme.onSurfaceVariant,
-                    height: 1.6,
-                  ),
+                  style: sanskritStyle(theme.textTheme.bodyMedium)
+                      ?.copyWith(color: scheme.onSurfaceVariant, height: 1.6),
                 ),
               ),
               if (showSimpleMeaning && simple != null)
@@ -119,6 +118,7 @@ class VerseCard extends StatelessWidget {
                     icon: const Icon(Icons.copy_rounded, size: 20),
                     onPressed: () => _copy(context, text),
                   ),
+                  BookmarkButton(verseId: verse.id, size: 20),
                   IconButton(
                     tooltip: s.share,
                     icon: const Icon(Icons.share_rounded, size: 20),

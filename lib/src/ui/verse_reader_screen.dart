@@ -38,7 +38,7 @@ class _VerseReaderScreenState extends State<VerseReaderScreen> {
           .indexWhere((v) => v.id == widget.initialVerseId)
           .clamp(0, _verses.length - 1);
       _controller = PageController(initialPage: _index);
-      _settings.setLastRead(_verses[_index].id);
+      _settings.recordOpened(_verses[_index].id);
     }
   }
 
@@ -128,7 +128,7 @@ class _VerseReaderScreenState extends State<VerseReaderScreen> {
         onPageChanged: (i) {
           _speaker.stop();
           setState(() => _index = i);
-          _settings.setLastRead(_verses[i].id);
+          _settings.recordOpened(_verses[i].id);
         },
         itemBuilder: (context, i) => VerseView(verse: _verses[i]),
       ),

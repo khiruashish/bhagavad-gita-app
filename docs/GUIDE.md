@@ -17,7 +17,7 @@ For a single tick-box list of everything needed to release, see
 | Area | Status |
 |---|---|
 | App code (Android + iOS, Flutter) | Done: daily verse, chapters, reader with chapter navigation, Quotes, Gita for my situation, share as image, Sanskrit/Hindi/English, simple meanings, audio, Hindi/English interface, settings, offline, no data collection |
-| Automated tests | 22 app tests + 12 content-tool tests, run in CI on every push |
+| Automated tests | 34 app tests (including an accessibility check) + 12 content-tool tests, run in CI on every push |
 | Sanskrit text, all 701 verses | Done (public domain) + our own generated pronunciation (IAST) |
 | Original translations + simple meanings | **701 of 701 verses drafted** (all 18 chapters); none reviewed yet |
 | Chapter summaries (18), "Start here" guide, glossary | Done (original) |
@@ -299,7 +299,7 @@ For recorded audio:
 - [x] **Offline only.** The release build requests no permissions and has no network code.
 - [x] **No data collection.** No accounts, analytics, ads or crash-reporting SDKs. Settings
       and the Day 1 date stay on the phone.
-- [x] **Only three runtime plugins** (`shared_preferences`, `flutter_tts`, `share_plus`), all widely used. `share_plus` adds no permissions; it only opens the phone's share menu.
+- [x] **Only four runtime plugins** (`shared_preferences`, `flutter_tts`, `share_plus`, `url_launcher`), all widely used. None adds a permission: `share_plus` opens the phone's share menu and `url_launcher` opens the store, browser or email app.
       The lockfile is enforced in CI (`--enforce-lockfile`).
 - [x] **Dependabot** checks dependencies and CI actions weekly. Read the changelog before
       merging updates.

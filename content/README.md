@@ -11,6 +11,7 @@ accurate. It is the project's record that the content is free of third-party cop
 | `chapters.json` | Chapter titles and summaries | Written for this project. The Sanskrit chapter names are the traditional colophon titles | Original / public domain |
 | `quotes.json` | Verses picked for the Quotes tab, with short topic lines | Chosen and written for this project | Original |
 | `situations.json` | "Gita for my situation": feelings, one-line thoughts and the verses for each | Chosen and written for this project | Original |
+| `reflections.json` | Three reflection questions per chapter, shown under the daily verse | Written for this project | Original |
 | `learn.json` | Speaker labels, "Start here" text, glossary | Written for this project | Original |
 
 ## Rules

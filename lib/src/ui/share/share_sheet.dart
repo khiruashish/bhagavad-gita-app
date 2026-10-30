@@ -8,6 +8,7 @@ import 'package:share_plus/share_plus.dart';
 import '../../app_scope.dart';
 import '../../content/models.dart';
 import '../../settings/settings_controller.dart';
+import '../widgets/actions.dart';
 
 /// Sends a PNG and a caption to the phone's share sheet. Tests replace it.
 typedef ImageSharer = Future<void> Function(
@@ -193,9 +194,8 @@ class ShareCard extends StatelessWidget {
                 Text(
                   'ॐ',
                   textAlign: TextAlign.center,
-                  style: base.headlineSmall?.copyWith(
-                    color: cream.withValues(alpha: 0.85),
-                  ),
+                  style: sanskritStyle(base.headlineSmall)
+                      ?.copyWith(color: cream.withValues(alpha: 0.85)),
                 ),
                 const SizedBox(height: 10),
                 Expanded(
@@ -210,7 +210,7 @@ class ShareCard extends StatelessWidget {
                             Text(
                               verse.sanskrit,
                               textAlign: TextAlign.center,
-                              style: base.titleMedium?.copyWith(
+                              style: sanskritStyle(base.titleMedium)?.copyWith(
                                 color: cream,
                                 fontWeight: FontWeight.w600,
                                 height: 1.7,

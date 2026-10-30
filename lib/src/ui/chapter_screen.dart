@@ -4,6 +4,7 @@ import '../app_scope.dart';
 import '../content/models.dart';
 import '../settings/settings_controller.dart';
 import 'verse_reader_screen.dart';
+import 'widgets/actions.dart';
 import 'widgets/layout.dart';
 
 class ChapterScreen extends StatelessWidget {
@@ -31,6 +32,8 @@ class ChapterScreen extends StatelessWidget {
     final verses = content.versesOf(chapter.number);
     final theme = Theme.of(context);
     final scheme = theme.colorScheme;
+    final readIds = AppScope.settingsOf(context).readIds;
+    final read = verses.where((v) => readIds.contains(v.id)).length;
     final previous = chapter.number > 1
         ? content.chapters[chapter.number - 2]
         : null;
@@ -69,9 +72,17 @@ class ChapterScreen extends StatelessWidget {
                                     ),
                                   ),
                                   Text(
-                                    '${chapter.sanskrit} · ${s.verseCount(chapter.verseCount)}',
-                                    style: theme.textTheme.bodyMedium?.copyWith(
-                                      color: scheme.primary,
+                                    chapter.sanskrit,
+                                    style: sanskritStyle(
+                                      theme.textTheme.bodyMedium,
+                                    )?.copyWith(color: scheme.primary),
+                                  ),
+                                  Text(
+                                    read == 0
+                                        ? s.verseCount(chapter.verseCount)
+                                        : s.readCount(read, chapter.verseCount),
+                                    style: theme.textTheme.bodySmall?.copyWith(
+                                      color: scheme.onSurfaceVariant,
                                     ),
                                   ),
                                 ],
@@ -116,6 +127,14 @@ class ChapterScreen extends StatelessWidget {
                 overflow: TextOverflow.ellipsis,
                 style: theme.textTheme.bodyMedium,
               ),
+              trailing: readIds.contains(v.id)
+                  ? Icon(
+                      Icons.check_circle_rounded,
+                      size: 20,
+                      color: scheme.primary,
+                      semanticLabel: s.alreadyRead,
+                    )
+                  : null,
               onTap: () => _read(context, v.id),
             ),
           );

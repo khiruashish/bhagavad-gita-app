@@ -4,6 +4,7 @@ import '../app_scope.dart';
 import '../content/models.dart';
 import '../settings/settings_controller.dart';
 import 'situation_screen.dart';
+import 'widgets/actions.dart';
 import 'widgets/layout.dart';
 import 'widgets/verse_card.dart';
 
@@ -27,6 +28,7 @@ class _QuotesScreenState extends State<QuotesScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text(s.quotes),
+        actions: mainActions(context),
         bottom: PreferredSize(
           preferredSize: const Size.fromHeight(56),
           child: Padding(

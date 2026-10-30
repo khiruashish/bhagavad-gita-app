@@ -20,7 +20,10 @@ The app saves a few settings on your own device so it works the way you left it:
 - the date you started (to know which daily verse to show);
 - the interface language, theme and text size;
 - your audio and pronunciation preferences;
-- the last verse you opened (for "Continue reading").
+- the last verse you opened (for "Continue reading");
+- which verses you have read (the ticks and chapter progress);
+- the verses you save with the heart, and any notes you write;
+- the next few weeks of daily verses, so the home-screen widget can show today's verse.
 
 This information never leaves your phone. It is deleted when you uninstall the app. Your
 phone's own backup service (Google or iCloud) may include it in your personal device
@@ -36,6 +39,12 @@ processed by your phone's speech engine; the app sends nothing anywhere.
 When you tap Share, the app makes a picture of the verse on your phone and opens your
 phone's own share menu. Nothing is sent unless you choose an app to share it with, and
 then it goes only where you send it. The app itself does not receive or keep a copy.
+
+## Links
+
+"Rate this app", the contact email and "Source code" open your phone's app store, email
+app or browser. The app itself sends nothing; you see where the link goes before anything
+is sent.
 
 ## Children
 

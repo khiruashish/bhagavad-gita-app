@@ -4,6 +4,7 @@ import '../app_scope.dart';
 import '../settings/settings_controller.dart';
 import 'chapter_screen.dart';
 import 'verse_reader_screen.dart';
+import 'widgets/actions.dart';
 import 'widgets/layout.dart';
 
 class ChaptersScreen extends StatelessWidget {
@@ -21,9 +22,14 @@ class ChaptersScreen extends StatelessWidget {
         : content.verseById(settings.lastReadId!);
     final theme = Theme.of(context);
     final scheme = theme.colorScheme;
+    final readByChapter = <int, int>{};
+    for (final id in settings.readIds) {
+      final chapter = int.parse(id.split('.').first);
+      readByChapter[chapter] = (readByChapter[chapter] ?? 0) + 1;
+    }
 
     return Scaffold(
-      appBar: AppBar(title: Text(s.chapters)),
+      appBar: AppBar(title: Text(s.chapters), actions: mainActions(context)),
       body: ListView(
         padding: const EdgeInsets.fromLTRB(16, 4, 16, 24),
         children: [
@@ -97,16 +103,34 @@ class ChaptersScreen extends StatelessWidget {
                                 const SizedBox(height: 2),
                                 Text(
                                   c.sanskrit,
-                                  style: theme.textTheme.bodyMedium?.copyWith(
-                                    color: scheme.primary,
-                                  ),
+                                  style: sanskritStyle(
+                                    theme.textTheme.bodyMedium,
+                                  )?.copyWith(color: scheme.primary),
                                 ),
                                 Text(
-                                  s.verseCount(c.verseCount),
+                                  readByChapter[c.number] == null
+                                      ? s.verseCount(c.verseCount)
+                                      : s.readCount(
+                                          readByChapter[c.number]!,
+                                          c.verseCount,
+                                        ),
                                   style: theme.textTheme.bodySmall?.copyWith(
                                     color: scheme.onSurfaceVariant,
                                   ),
                                 ),
+                                if (readByChapter[c.number] case final n?)
+                                  Padding(
+                                    padding: const EdgeInsets.only(top: 6),
+                                    child: LinearProgressIndicator(
+                                      value: n / c.verseCount,
+                                      minHeight: 4,
+                                      borderRadius: BorderRadius.circular(2),
+                                      semanticsLabel: s.readCount(
+                                        n,
+                                        c.verseCount,
+                                      ),
+                                    ),
+                                  ),
                               ],
                             ),
                           ),
