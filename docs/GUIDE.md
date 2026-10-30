@@ -296,7 +296,7 @@ For recorded audio:
 - [x] **Offline only.** The release build requests no permissions and has no network code.
 - [x] **No data collection.** No accounts, analytics, ads or crash-reporting SDKs. Settings
       and the Day 1 date stay on the phone.
-- [x] **Only two runtime plugins** (`shared_preferences`, `flutter_tts`), both widely used.
+- [x] **Only three runtime plugins** (`shared_preferences`, `flutter_tts`, `share_plus`), all widely used. `share_plus` adds no permissions; it only opens the phone's share menu.
       The lockfile is enforced in CI (`--enforce-lockfile`).
 - [x] **Dependabot** checks dependencies and CI actions weekly. Read the changelog before
       merging updates.

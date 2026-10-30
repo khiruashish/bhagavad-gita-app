@@ -19,7 +19,8 @@ information.
 The app saves a few settings on your own device so it works the way you left it:
 - the date you started (to know which daily verse to show);
 - the interface language, theme and text size;
-- your audio and pronunciation preferences.
+- your audio and pronunciation preferences;
+- the last verse you opened (for "Continue reading").
 
 This information never leaves your phone. It is deleted when you uninstall the app. Your
 phone's own backup service (Google or iCloud) may include it in your personal device
@@ -29,6 +30,12 @@ backup, under that service's terms.
 
 The Listen buttons use the text-to-speech voices built into your phone. The text is
 processed by your phone's speech engine; the app sends nothing anywhere.
+
+## Sharing
+
+When you tap Share, the app makes a picture of the verse on your phone and opens your
+phone's own share menu. Nothing is sent unless you choose an app to share it with, and
+then it goes only where you send it. The app itself does not receive or keep a copy.
 
 ## Children
 

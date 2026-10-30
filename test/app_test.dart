@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:gita_for_everyone/src/app_scope.dart';
 import 'package:gita_for_everyone/src/audio/verse_speaker.dart';
 import 'package:gita_for_everyone/src/content/models.dart';
+import 'package:gita_for_everyone/src/ui/share/share_sheet.dart';
 import 'package:gita_for_everyone/src/ui/widgets/verse_view.dart';
 
 import 'helpers.dart';
@@ -196,6 +197,8 @@ void main() {
 
     await tester.tap(find.text('Quotes'));
     await tester.pumpAndSettle();
+    await tester.tap(find.text('By chapter'));
+    await tester.pumpAndSettle();
     expect(find.text('Where the story begins'), findsOneWidget);
 
     // Filter to chapter 2, then open a quote in the reader.
@@ -223,6 +226,56 @@ void main() {
     await tester.tap(read);
     await tester.pumpAndSettle();
     expect(find.text('Chapter 2 · Verse 47'), findsOneWidget);
+  });
+
+  testWidgets('Gita for my situation lists verses for a feeling', (
+    tester,
+  ) async {
+    useTallPhone(tester);
+    final app = await buildApp(clock: () => DateTime(2026, 1, 1));
+    await tester.pumpWidget(app.widget);
+    await tester.pumpAndSettle();
+
+    await tester.tap(find.text('Quotes'));
+    await tester.pumpAndSettle();
+    expect(find.text('How are you feeling today?'), findsOneWidget);
+    await tester.tap(find.text('Angry'));
+    await tester.pumpAndSettle();
+    expect(find.textContaining('See where anger starts'), findsOneWidget);
+    expect(
+      find.textContaining('Keep thinking about the things of the senses'),
+      findsOneWidget,
+    );
+    // Each verse comes with its simple meaning.
+    expect(find.byIcon(Icons.lightbulb_outline_rounded), findsWidgets);
+  });
+
+  testWidgets('a verse can be shared as a picture', (tester) async {
+    useTallPhone(tester);
+    final app = await buildApp(clock: () => DateTime(2026, 1, 1));
+    final shared = <(int, String, String)>[];
+    final original = imageSharer;
+    imageSharer = (png, name, caption, origin) async =>
+        shared.add((png.length, name, caption));
+    addTearDown(() => imageSharer = original);
+    await tester.pumpWidget(app.widget);
+    await tester.pumpAndSettle();
+
+    await tester.tap(find.byTooltip('Share'));
+    await tester.pumpAndSettle();
+    expect(find.text('Share as image'), findsOneWidget);
+    expect(find.byType(ShareCard), findsOneWidget);
+
+    await tester.runAsync(() async {
+      await tester.tap(find.widgetWithText(FilledButton, 'Share'));
+      await Future<void>.delayed(const Duration(seconds: 1));
+    });
+    await tester.pumpAndSettle();
+    expect(shared, hasLength(1));
+    expect(shared.single.$1, greaterThan(1000));
+    expect(shared.single.$2, 'bhagavad-gita-1-1.png');
+    expect(shared.single.$3, endsWith('— Bhagavad Gita 1.1'));
+    expect(find.byType(ShareCard), findsNothing);
   });
 
   testWidgets(

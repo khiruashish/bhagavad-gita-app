@@ -21,6 +21,20 @@ class Strings {
   String get allChapters => _t('All', 'सभी');
   String quoteCount(int n) => _t('$n quotes', '$n वचन');
   String get openVerse => _t('Read verse', 'श्लोक पढ़ें');
+  String get forMySituation => _t('For my situation', 'मेरी स्थिति के लिए');
+  String get byChapter => _t('By chapter', 'अध्याय अनुसार');
+  String get howAreYouFeeling =>
+      _t('How are you feeling today?', 'आज आप कैसा महसूस कर रहे हैं?');
+  String get situationHint => _t(
+    'Pick what is on your mind, and read a few verses that speak to it.',
+    'जो बात मन में है उसे चुनें, और उससे जुड़े कुछ श्लोक पढ़ें।',
+  );
+  String get share => _t('Share', 'शेयर करें');
+  String get shareAsImage => _t('Share as image', 'चित्र के रूप में शेयर करें');
+  String get shareFailed => _t(
+    'Could not share. Please try again.',
+    'शेयर नहीं हो सका। फिर कोशिश करें।',
+  );
   String get learn => _t('Start here', 'शुरुआत');
   String get settings => _t('Settings', 'सेटिंग्स');
   String day(int n) => _t('Day $n', 'दिन $n');

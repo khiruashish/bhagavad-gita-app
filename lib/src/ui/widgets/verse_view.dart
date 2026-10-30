@@ -5,6 +5,7 @@ import '../../app_scope.dart';
 import '../../audio/verse_speaker.dart';
 import '../../content/models.dart';
 import '../../settings/settings_controller.dart';
+import '../share/share_sheet.dart';
 import 'layout.dart';
 import 'listen_button.dart';
 
@@ -62,6 +63,12 @@ class VerseView extends StatelessWidget {
                     icon: const Icon(Icons.copy_rounded),
                     onPressed: () => _copy(context),
                   ),
+                  if (verse.isTranslated)
+                    IconButton(
+                      tooltip: s.share,
+                      icon: const Icon(Icons.share_rounded),
+                      onPressed: () => showShareSheet(context, verse),
+                    ),
                 ],
               ),
               if (verse.isDraft)

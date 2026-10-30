@@ -7,6 +7,10 @@ screen follows the same few rules so it feels calm and is easy for first-time re
 |---|---|---|---|---|
 | ![Today](screenshots/today.png) | ![Chapters](screenshots/chapters.png) | ![Chapter](screenshots/chapter.png) | ![Reader](screenshots/reader.png) | ![Quotes](screenshots/quotes.png) |
 
+| My situation | Situation | Share |
+|---|---|---|
+| ![Situations](screenshots/situations.png) | ![Situation](screenshots/situation.png) | ![Share](screenshots/share.png) |
+
 ## Screens
 
 **Today**: a "Day N" card at the top, with *Previous day* / *Back to today* and a
@@ -19,7 +23,12 @@ Each card shows the number, the plain-language title, the Sanskrit name and the 
 list with a short preview of each, and a bottom bar with **← Chapter N-1** and
 **Chapter N+1 →**.
 
-**Quotes**: 58 well-known verses, at least one from every chapter, grouped by chapter.
+**Quotes**: two views, switched at the top.
+- *For my situation* (the default): "How are you feeling today?" and a grid of 12
+  situations (anxious, angry, grieving, exam pressure, failure, confused, can't focus,
+  lonely, comparing, afraid, proud, lazy). Each opens a page with a one-line thought and
+  4 or 5 verses, each with its simple meaning. The list is in `content/situations.json`.
+- *By chapter*: 58 well-known verses, at least one from every chapter, grouped by chapter.
 Chips at the top filter to one chapter. Each card has a short topic line, the translation
 in the app's language, the first Sanskrit line, a copy button and *Read verse*. The list
 lives in `content/quotes.json`; the build checks that every pick is a complete sentence.
@@ -30,6 +39,11 @@ lives in `content/quotes.json`; the build checks that every pick is a complete s
 - Bottom bar: **← Previous**, the position (`12 / 47`) and **Next →**. On the last verse
   of a chapter, Next reads **Chapter N+1 →** and carries straight on. Swiping does the same.
 - The last verse opened is saved, for *Continue reading*.
+
+**Share as image**: the share icon on a verse or card opens a preview of a 4:5 picture
+(1080 x 1350, the shape WhatsApp Status and Instagram show best): Sanskrit, the
+translation in Hindi or English (switch in the sheet), the verse number and the app's
+name. *Share* opens the phone's share menu.
 
 **Verse** (used by Today and the reader), from top to bottom:
 1. Verse badge (`2.47`), "Chapter 2 · Verse 47", who is speaking, copy button.

@@ -67,6 +67,13 @@ class BuildTest(unittest.TestCase):
         translated = {f"{v['chapter']}.{v['verse']}" for v in out["verses"] if "english" in v}
         self.assertTrue(all(q["id"] in translated for q in out["quotes"]))
 
+    def test_situations_list_existing_translated_verses(self):
+        out, _ = build_content.build(reviewed_only=False)
+        self.assertGreaterEqual(len(out["situations"]), 10)
+        translated = {f"{v['chapter']}.{v['verse']}" for v in out["verses"] if "english" in v}
+        for sit in out["situations"]:
+            self.assertTrue(set(sit["verses"]) <= translated, sit["id"])
+
     def test_quotes_cover_every_chapter(self):
         out, _ = build_content.build(reviewed_only=False)
         chapters = {int(q["id"].split(".")[0]) for q in out["quotes"]}

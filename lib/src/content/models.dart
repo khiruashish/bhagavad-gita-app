@@ -155,6 +155,25 @@ class Quote {
   final String topicHindi;
 }
 
+/// A feeling or life situation with verses that speak to it.
+class Situation {
+  const Situation({
+    required this.id,
+    required this.titleEnglish,
+    required this.titleHindi,
+    required this.introEnglish,
+    required this.introHindi,
+    required this.verses,
+  });
+
+  final String id;
+  final String titleEnglish;
+  final String titleHindi;
+  final String introEnglish;
+  final String introHindi;
+  final List<Verse> verses;
+}
+
 /// Everything the app shows, parsed from the bundled `assets/content/gita.json`.
 class GitaContent {
   GitaContent({
@@ -163,6 +182,7 @@ class GitaContent {
     required this.learn,
     required this.glossary,
     this.quotes = const [],
+    this.situations = const [],
   }) : dailyVerses = [
          for (final v in verses)
            if (v.isTranslated) v,
@@ -183,6 +203,9 @@ class GitaContent {
 
   /// Well-known verses in reading order, for the Quotes tab.
   final List<Quote> quotes;
+
+  /// "Gita for my situation": feelings with matching verses.
+  final List<Situation> situations;
   final Map<String, Verse> _byId;
 
   Verse? verseById(String id) => _byId[id];
@@ -221,6 +244,18 @@ class GitaContent {
               verse: verse,
               topicEnglish: q['topicEnglish'] as String,
               topicHindi: q['topicHindi'] as String,
+            ),
+      ],
+      situations: [
+        for (final x in (j['situations'] as List?) ?? const [])
+          if (x case final Map<String, dynamic> m)
+            Situation(
+              id: m['id'] as String,
+              titleEnglish: m['titleEnglish'] as String,
+              titleHindi: m['titleHindi'] as String,
+              introEnglish: m['introEnglish'] as String,
+              introHindi: m['introHindi'] as String,
+              verses: [for (final id in m['verses'] as List) ?byId[id]],
             ),
       ],
     );

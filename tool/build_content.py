@@ -6,6 +6,7 @@ Inputs (all in content/):
   chapters.json          chapter titles and summaries (original to this project)
   learn.json             speaker labels, "Start here" sections, glossary (original)
   quotes.json            verses picked for the Quotes tab, with short topics (original)
+  situations.json        "Gita for my situation": feelings and matching verses (original)
   translations/chNN.json translations and simple meanings (original to this project)
 
 Usage:
@@ -102,28 +103,55 @@ def build(reviewed_only):
         verses.append(item)
 
     by_id = {f"{v['chapter']}.{v['verse']}": v for v in verses}
+
+    def standalone(where, verse_id):
+        """The verse exists and its translation reads as a complete sentence."""
+        v = by_id.get(verse_id)
+        if v is None:
+            errors.append(f"{where}: no such verse {verse_id}")
+            return None
+        text = translations.get((v["chapter"], v["verse"]), {}).get("english", "").strip()
+        if text and (text[0].islower() or text[-1] in ",;:"):
+            errors.append(f"{where}: {verse_id} is not a complete sentence on its own")
+        return v
+
+    def check_text(where, item, fields):
+        for k in fields:
+            if not item.get(k, "").strip():
+                errors.append(f"{where}: missing {k}")
+            m = BANNED.search(item.get(k, "")) if k.endswith("English") else None
+            if m:
+                errors.append(f"{where}: banned word '{m.group(0)}' in {k}")
+
     quotes, last = [], (0, 0)
     for q in load(CONTENT / "quotes.json")["quotes"]:
         where = f"quotes.json {q.get('id')}"
-        v = by_id.get(q.get("id"))
+        v = standalone(where, q.get("id"))
         if v is None:
-            errors.append(f"{where}: no such verse")
             continue
         if (v["chapter"], v["verse"]) <= last:
             errors.append(f"{where}: quotes must be in reading order without repeats")
         last = (v["chapter"], v["verse"])
-        for k in ("topicEnglish", "topicHindi"):
-            if not q.get(k, "").strip():
-                errors.append(f"{where}: missing {k}")
-        m = BANNED.search(q.get("topicEnglish", ""))
-        if m:
-            errors.append(f"{where}: banned word '{m.group(0)}' in topicEnglish")
-        text = translations.get((v["chapter"], v["verse"]), {}).get("english", "").strip()
-        if text and (text[0].islower() or text[-1] in ",;:"):
-            errors.append(f"{where}: verse is not a complete sentence on its own")
+        check_text(where, q, ("topicEnglish", "topicHindi"))
         # A store build leaves out quotes whose translation is not reviewed yet.
         if "english" in v:
             quotes.append(q)
+
+    situations, seen = [], set()
+    for sit in load(CONTENT / "situations.json")["situations"]:
+        where = f"situations.json {sit.get('id')}"
+        if sit.get("id") in seen:
+            errors.append(f"{where}: duplicate id")
+        seen.add(sit.get("id"))
+        check_text(where, sit, ("titleEnglish", "titleHindi", "introEnglish", "introHindi"))
+        if not 3 <= len(sit.get("verses", [])) <= 6:
+            errors.append(f"{where}: list 3 to 6 verses")
+        if len(set(sit.get("verses", []))) != len(sit.get("verses", [])):
+            errors.append(f"{where}: repeated verse")
+        ids = [i for i in sit.get("verses", []) if (v := standalone(where, i)) and "english" in v]
+        # A store build shows a situation only once at least two of its verses are reviewed.
+        if len(ids) >= 2:
+            situations.append({**sit, "verses": ids})
 
     out = {
         "format": 1,
@@ -131,6 +159,7 @@ def build(reviewed_only):
         "verses": verses,
         "learn": {"sections": learn["sections"], "glossary": learn["glossary"]},
         "quotes": quotes,
+        "situations": situations,
     }
     return out, errors
 

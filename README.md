@@ -7,7 +7,9 @@ Gita. No ads, no account, no tracking.
 - **Sanskrit, Hindi and English** for every verse, with a pronunciation guide and a short
   "in simple words" explanation.
 - **Listen** to the Sanskrit, Hindi or English, read by your phone's own voice.
+- **Gita for my situation:** pick how you feel (anxious, angry, grieving, exam pressure…) and read verses that speak to it.
 - **Quotes:** well-known verses from every chapter, with a short topic line.
+- **Share as image:** a ready-made picture card for WhatsApp or Instagram.
 - **All 18 chapters** with plain summaries, a beginner's "Start here" guide and a glossary.
 - **Hindi or English interface**, dark mode, adjustable text size.
 - **Fully offline:** no internet permission and no data collected.
