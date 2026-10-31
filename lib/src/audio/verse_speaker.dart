@@ -23,7 +23,18 @@ abstract class VerseSpeaker {
 class DeviceVerseSpeaker implements VerseSpeaker {
   DeviceVerseSpeaker() {
     _tts.setCompletionHandler(() => _speaking.value = null);
-    _tts.setCancelHandler(() => _speaking.value = null);
+    // Stopping one sentence to start the next makes the engine report a
+    // cancel, sometimes after the next sentence has begun. Those reports are
+    // ignored; only a cancel the app did not ask for (say, a phone call)
+    // marks the voice as silent.
+    _tts.setCancelHandler(() {
+      final ownStop = _stoppedAt;
+      if (ownStop != null &&
+          DateTime.now().difference(ownStop) < const Duration(seconds: 2)) {
+        return;
+      }
+      _speaking.value = null;
+    });
     _tts.setErrorHandler((_) => _speaking.value = null);
     if (defaultTargetPlatform == TargetPlatform.iOS) {
       _tts.setSharedInstance(true);
@@ -35,6 +46,7 @@ class DeviceVerseSpeaker implements VerseSpeaker {
 
   final FlutterTts _tts = FlutterTts();
   final ValueNotifier<String?> _speaking = ValueNotifier(null);
+  DateTime? _stoppedAt;
 
   // Sanskrit is read with a Hindi voice: both use Devanagari and most phones ship one.
   static const _locales = {
@@ -71,6 +83,7 @@ class DeviceVerseSpeaker implements VerseSpeaker {
 
   @override
   Future<void> stop() async {
+    _stoppedAt = DateTime.now();
     await _tts.stop();
     _speaking.value = null;
   }

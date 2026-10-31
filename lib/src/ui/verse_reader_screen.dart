@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../app_scope.dart';
+import '../audio/chapter_player.dart';
 import '../audio/verse_speaker.dart';
 import '../content/models.dart';
 import '../settings/settings_controller.dart';
@@ -22,6 +23,7 @@ class _VerseReaderScreenState extends State<VerseReaderScreen> {
   late PageController _controller;
   late int _index;
   late VerseSpeaker _speaker;
+  ChapterPlayer? _player;
   late SettingsController _settings;
   var _started = false;
 
@@ -30,6 +32,7 @@ class _VerseReaderScreenState extends State<VerseReaderScreen> {
     super.didChangeDependencies();
     // Looked up here, not in dispose(), where ancestors can no longer be reached.
     _speaker = AppScope.speakerOf(context);
+    _player = AppScope.maybePlayerOf(context);
     _settings = AppScope.settingsOf(context);
     if (!_started) {
       _started = true;
@@ -39,14 +42,27 @@ class _VerseReaderScreenState extends State<VerseReaderScreen> {
           .clamp(0, _verses.length - 1);
       _controller = PageController(initialPage: _index);
       _settings.recordOpened(_verses[_index].id);
+      _player?.addListener(_followPlayer);
     }
   }
 
   @override
   void dispose() {
-    _speaker.stop();
+    _player?.removeListener(_followPlayer);
+    // Chapter audio keeps playing after the reader closes.
+    if (!(_player?.isPlaying ?? false)) _speaker.stop();
     _controller.dispose();
     super.dispose();
+  }
+
+  /// Turns the page to the verse the chapter audio has moved on to.
+  void _followPlayer() {
+    final player = _player!;
+    final verse = player.currentVerse;
+    if (!player.isPlaying || verse == null || verse.id == _verses[_index].id) {
+      return;
+    }
+    _goTo(_verses.indexWhere((v) => v.id == verse.id));
   }
 
   void _goTo(int index) {
@@ -126,7 +142,20 @@ class _VerseReaderScreenState extends State<VerseReaderScreen> {
         controller: _controller,
         itemCount: _verses.length,
         onPageChanged: (i) {
-          _speaker.stop();
+          final player = _player;
+          if (player != null && player.isPlaying) {
+            // Swiping while a chapter plays moves the audio along with you.
+            final verse = _verses[i];
+            if (verse.id != player.currentVerse?.id) {
+              if (verse.chapter == player.chapter) {
+                player.goToVerse(verse.id);
+              } else {
+                player.pause();
+              }
+            }
+          } else {
+            _speaker.stop();
+          }
           setState(() => _index = i);
           _settings.recordOpened(_verses[i].id);
         },

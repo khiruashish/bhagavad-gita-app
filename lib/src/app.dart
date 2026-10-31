@@ -2,16 +2,22 @@ import 'package:flutter/material.dart';
 
 import 'app_scope.dart';
 import 'ui/home_shell.dart';
+import 'ui/verse_reader_screen.dart';
+import 'ui/widgets/player_bar.dart';
 
 const _saffron = Color(0xFFE07A1F);
 
 class GitaApp extends StatelessWidget {
   const GitaApp({super.key});
 
+  /// Lets the chapter player bar, which sits above the Navigator, open screens.
+  static final navigatorKey = GlobalKey<NavigatorState>();
+
   @override
   Widget build(BuildContext context) {
     final settings = AppScope.settingsOf(context);
     return MaterialApp(
+      navigatorKey: navigatorKey,
       title: AppScope.stringsOf(context).appTitle,
       debugShowCheckedModeBanner: false,
       themeMode: settings.themeMode,
@@ -25,7 +31,7 @@ class GitaApp extends StatelessWidget {
           data: media.copyWith(
             textScaler: TextScaler.linear(system * settings.textScale),
           ),
-          child: child!,
+          child: _WithPlayerBar(child: child!),
         );
       },
       home: const HomeShell(),
@@ -84,6 +90,46 @@ class GitaApp extends StatelessWidget {
         color: scheme.outlineVariant.withValues(alpha: 0.5),
         space: 1,
       ),
+    );
+  }
+}
+
+/// Shows the chapter player bar under every screen while a chapter is loaded.
+class _WithPlayerBar extends StatelessWidget {
+  const _WithPlayerBar({required this.child});
+
+  final Widget child;
+
+  @override
+  Widget build(BuildContext context) {
+    final player = AppScope.maybePlayerOf(context);
+    if (player == null) return child;
+    return ListenableBuilder(
+      listenable: player,
+      child: child,
+      builder: (context, child) {
+        if (!player.isOpen) return child!;
+        return Column(
+          children: [
+            Expanded(
+              // The bar takes the bottom safe-area inset instead.
+              child: MediaQuery.removePadding(
+                context: context,
+                removeBottom: true,
+                child: child!,
+              ),
+            ),
+            PlayerBar(
+              player: player,
+              onOpenVerse: (id) => GitaApp.navigatorKey.currentState?.push(
+                MaterialPageRoute(
+                  builder: (_) => VerseReaderScreen(initialVerseId: id),
+                ),
+              ),
+            ),
+          ],
+        );
+      },
     );
   }
 }

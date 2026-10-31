@@ -112,7 +112,7 @@ class _TodayScreenState extends State<TodayScreen> {
   }
 
   void _move(BuildContext context, int delta) {
-    AppScope.speakerOf(context).stop();
+    AppScope.stopVerseSpeech(context);
     setState(() => _offset += delta);
   }
 }

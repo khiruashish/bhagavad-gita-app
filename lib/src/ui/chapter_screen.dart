@@ -19,6 +19,49 @@ class ChapterScreen extends StatelessWidget {
         ),
       );
 
+  /// "Listen to chapter", or "Continue from verse N" and "Start over" when
+  /// this chapter was left part-way; pause/continue while it is loaded.
+  List<Widget> _listenButtons(BuildContext context, List<Verse> verses) {
+    final s = AppScope.stringsOf(context);
+    final player = AppScope.playerOf(context);
+    if (player.isOpen && player.chapter == chapter.number) {
+      return [
+        FilledButton.tonalIcon(
+          onPressed: player.togglePlay,
+          icon: Icon(
+            player.isPlaying ? Icons.pause_rounded : Icons.play_arrow_rounded,
+          ),
+          label: Text(player.isPlaying ? s.pause : s.play),
+        ),
+      ];
+    }
+    final saved = AppScope.settingsOf(context).audioPosition;
+    final resumeAt = saved == null
+        ? -1
+        : verses.indexWhere((v) => v.id == saved);
+    if (resumeAt > 0) {
+      return [
+        FilledButton.tonalIcon(
+          onPressed: () =>
+              player.playChapter(chapter.number, startIndex: resumeAt),
+          icon: const Icon(Icons.headphones_rounded),
+          label: Text(s.continueListening(verses[resumeAt].number)),
+        ),
+        TextButton(
+          onPressed: () => player.playChapter(chapter.number),
+          child: Text(s.startOver),
+        ),
+      ];
+    }
+    return [
+      FilledButton.tonalIcon(
+        onPressed: () => player.playChapter(chapter.number),
+        icon: const Icon(Icons.headphones_rounded),
+        label: Text(s.listenChapter),
+      ),
+    ];
+  }
+
   void _openChapter(BuildContext context, Chapter other) =>
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(builder: (_) => ChapterScreen(chapter: other)),
@@ -33,6 +76,7 @@ class ChapterScreen extends StatelessWidget {
     final theme = Theme.of(context);
     final scheme = theme.colorScheme;
     final readIds = AppScope.settingsOf(context).readIds;
+    final player = AppScope.playerOf(context);
     final read = verses.where((v) => readIds.contains(v.id)).length;
     final previous = chapter.number > 1
         ? content.chapters[chapter.number - 2]
@@ -43,102 +87,129 @@ class ChapterScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(title: Text(s.chapterN(chapter.number))),
-      body: ListView.builder(
-        padding: const EdgeInsets.fromLTRB(16, 4, 16, 24),
-        itemCount: verses.length + 1,
-        itemBuilder: (context, i) {
-          if (i == 0) {
-            return ReadableWidth(
-              child: Padding(
-                padding: const EdgeInsets.only(bottom: 16),
-                child: Card(
-                  child: Padding(
-                    padding: const EdgeInsets.all(20),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Row(
-                          children: [
-                            NumberBadge('${chapter.number}', large: true),
-                            const SizedBox(width: 16),
-                            Expanded(
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    hindiUi ? chapter.hindi : chapter.english,
-                                    style: theme.textTheme.titleLarge?.copyWith(
-                                      fontWeight: FontWeight.w600,
+      body: ListenableBuilder(
+        listenable: player,
+        builder: (context, _) => ListView.builder(
+          padding: const EdgeInsets.fromLTRB(16, 4, 16, 24),
+          itemCount: verses.length + 1,
+          itemBuilder: (context, i) {
+            if (i == 0) {
+              return ReadableWidth(
+                child: Padding(
+                  padding: const EdgeInsets.only(bottom: 16),
+                  child: Card(
+                    child: Padding(
+                      padding: const EdgeInsets.all(20),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            children: [
+                              NumberBadge('${chapter.number}', large: true),
+                              const SizedBox(width: 16),
+                              Expanded(
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      hindiUi ? chapter.hindi : chapter.english,
+                                      style: theme.textTheme.titleLarge
+                                          ?.copyWith(
+                                            fontWeight: FontWeight.w600,
+                                          ),
                                     ),
-                                  ),
-                                  Text(
-                                    chapter.sanskrit,
-                                    style: sanskritStyle(
-                                      theme.textTheme.bodyMedium,
-                                    )?.copyWith(color: scheme.primary),
-                                  ),
-                                  Text(
-                                    read == 0
-                                        ? s.verseCount(chapter.verseCount)
-                                        : s.readCount(read, chapter.verseCount),
-                                    style: theme.textTheme.bodySmall?.copyWith(
-                                      color: scheme.onSurfaceVariant,
+                                    Text(
+                                      chapter.sanskrit,
+                                      style: sanskritStyle(
+                                        theme.textTheme.bodyMedium,
+                                      )?.copyWith(color: scheme.primary),
                                     ),
-                                  ),
-                                ],
+                                    Text(
+                                      read == 0
+                                          ? s.verseCount(chapter.verseCount)
+                                          : s.readCount(
+                                              read,
+                                              chapter.verseCount,
+                                            ),
+                                      style: theme.textTheme.bodySmall
+                                          ?.copyWith(
+                                            color: scheme.onSurfaceVariant,
+                                          ),
+                                    ),
+                                  ],
+                                ),
                               ),
-                            ),
-                          ],
-                        ),
-                        const SizedBox(height: 16),
-                        SectionLabel(s.summary),
-                        const SizedBox(height: 6),
-                        Text(
-                          hindiUi
-                              ? chapter.summaryHindi
-                              : chapter.summaryEnglish,
-                          style: theme.textTheme.bodyLarge?.copyWith(
-                            height: 1.55,
+                            ],
                           ),
-                        ),
-                        const SizedBox(height: 16),
-                        FilledButton.icon(
-                          onPressed: () => _read(context, verses.first.id),
-                          icon: const Icon(Icons.auto_stories_rounded),
-                          label: Text(s.startReading),
-                        ),
-                      ],
+                          const SizedBox(height: 16),
+                          SectionLabel(s.summary),
+                          const SizedBox(height: 6),
+                          Text(
+                            hindiUi
+                                ? chapter.summaryHindi
+                                : chapter.summaryEnglish,
+                            style: theme.textTheme.bodyLarge?.copyWith(
+                              height: 1.55,
+                            ),
+                          ),
+                          const SizedBox(height: 16),
+                          Wrap(
+                            spacing: 8,
+                            runSpacing: 8,
+                            children: [
+                              FilledButton.icon(
+                                onPressed: () =>
+                                    _read(context, verses.first.id),
+                                icon: const Icon(Icons.auto_stories_rounded),
+                                label: Text(s.startReading),
+                              ),
+                              ..._listenButtons(context, verses),
+                            ],
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),
+              );
+            }
+            final v = verses[i - 1];
+            final preview =
+                (hindiUi ? v.hindi : v.english) ?? v.sanskrit.split('\n').first;
+            final playing = player.isOpen && player.currentVerse?.id == v.id;
+            return ReadableWidth(
+              child: ListTile(
+                selected: playing,
+                selectedTileColor: scheme.primaryContainer.withValues(
+                  alpha: 0.5,
+                ),
+                contentPadding: const EdgeInsets.symmetric(horizontal: 8),
+                leading: SizedBox(width: 52, child: NumberBadge(v.id)),
+                title: Text(
+                  preview,
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                  style: theme.textTheme.bodyMedium,
+                ),
+                trailing: playing
+                    ? Icon(
+                        Icons.graphic_eq_rounded,
+                        color: scheme.primary,
+                        semanticLabel: s.listenChapter,
+                      )
+                    : readIds.contains(v.id)
+                    ? Icon(
+                        Icons.check_circle_rounded,
+                        size: 20,
+                        color: scheme.primary,
+                        semanticLabel: s.alreadyRead,
+                      )
+                    : null,
+                onTap: () => _read(context, v.id),
               ),
             );
-          }
-          final v = verses[i - 1];
-          final preview =
-              (hindiUi ? v.hindi : v.english) ?? v.sanskrit.split('\n').first;
-          return ReadableWidth(
-            child: ListTile(
-              contentPadding: const EdgeInsets.symmetric(horizontal: 8),
-              leading: SizedBox(width: 52, child: NumberBadge(v.id)),
-              title: Text(
-                preview,
-                maxLines: 2,
-                overflow: TextOverflow.ellipsis,
-                style: theme.textTheme.bodyMedium,
-              ),
-              trailing: readIds.contains(v.id)
-                  ? Icon(
-                      Icons.check_circle_rounded,
-                      size: 20,
-                      color: scheme.primary,
-                      semanticLabel: s.alreadyRead,
-                    )
-                  : null,
-              onTap: () => _read(context, v.id),
-            ),
-          );
-        },
+          },
+        ),
       ),
       bottomNavigationBar: DecoratedBox(
         decoration: BoxDecoration(

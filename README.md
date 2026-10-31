@@ -6,7 +6,7 @@ Gita. No ads, no account, no tracking.
 - **One verse a day.** Day 1 is the first verse, Day 2 the next, and so on.
 - **Sanskrit, Hindi and English** for every verse, with a pronunciation guide and a short
   "in simple words" explanation.
-- **Listen** to the Sanskrit, Hindi or English, read by your phone's own voice.
+- **Listen** to the Sanskrit, Hindi or English, read by your phone's own voice, one verse or a **whole chapter** (pause and continue any time).
 - **Feelings:** the best Gita quotes for 20 human emotions, from anxious, angry or grieving to grateful, hopeful or in love, plus "a thought for you".
 - **Quotes:** well-known verses from every chapter, with a short topic line.
 - **Share as image:** a ready-made picture card for WhatsApp or Instagram.

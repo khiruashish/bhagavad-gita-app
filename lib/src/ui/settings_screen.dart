@@ -83,6 +83,28 @@ class SettingsScreen extends StatelessWidget {
             value: settings.slowSpeech,
             onChanged: settings.setSlowSpeech,
           ),
+          header(s.chapterAudio),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16),
+            child: SegmentedButton<ChapterAudioMode>(
+              segments: [
+                ButtonSegment(
+                  value: ChapterAudioMode.sanskritAndMeaning,
+                  label: Text(s.audioSanskritAndMeaning),
+                ),
+                ButtonSegment(
+                  value: ChapterAudioMode.sanskritOnly,
+                  label: Text(s.audioSanskritOnly),
+                ),
+                ButtonSegment(
+                  value: ChapterAudioMode.meaningOnly,
+                  label: Text(s.audioMeaningOnly),
+                ),
+              ],
+              selected: {settings.chapterAudioMode},
+              onSelectionChanged: (v) => settings.setChapterAudioMode(v.first),
+            ),
+          ),
           const Divider(height: 32),
           ListTile(
             leading: const Icon(Icons.restart_alt_rounded),

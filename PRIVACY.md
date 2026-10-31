@@ -20,7 +20,7 @@ The app saves a few settings on your own device so it works the way you left it:
 - the date you started (to know which daily verse to show);
 - the interface language, theme and text size;
 - your audio and pronunciation preferences;
-- the last verse you opened (for "Continue reading");
+- the last verse you opened (for "Continue reading") and where chapter audio stopped (for "Continue from verse N");
 - which verses you have read (the ticks and chapter progress);
 - the verses you save with the heart, and any notes you write;
 - the next few weeks of daily verses, so the home-screen widget can show today's verse.

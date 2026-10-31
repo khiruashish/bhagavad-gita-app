@@ -8,9 +8,9 @@ screen follows the same few rules so it feels calm and is easy for first-time re
 |---|---|---|---|---|
 | ![Today](screenshots/today.png) | ![Chapters](screenshots/chapters.png) | ![Chapter](screenshots/chapter.png) | ![Reader](screenshots/reader.png) | ![Quotes](screenshots/quotes.png) |
 
-| Feelings | Emotion | Share |
-|---|---|---|
-| ![Feelings](screenshots/feelings.png) | ![Emotion](screenshots/emotion.png) | ![Share](screenshots/share.png) |
+| Feelings | Emotion | Share | Chapter audio |
+|---|---|---|---|
+| ![Feelings](screenshots/feelings.png) | ![Emotion](screenshots/emotion.png) | ![Share](screenshots/share.png) | ![Chapter audio](screenshots/chapter-audio.png) |
 
 ## Screens
 
@@ -46,6 +46,19 @@ lives in `content/quotes.json`; the build checks that every pick is a complete s
 - Bottom bar: **← Previous**, the position (`12 / 47`) and **Next →**. On the last verse
   of a chapter, Next reads **Chapter N+1 →** and carries straight on. Swiping does the same.
 - The last verse opened is saved, for *Continue reading*.
+
+**Chapter audio**: *Listen to chapter* on a chapter page plays the whole chapter, verse
+after verse (Sanskrit, then the meaning in the app language; Settings → *Chapter audio
+reads* can choose Sanskrit only or meaning only). It keeps going until you pause or the
+chapter ends.
+- A **player bar** stays at the bottom of every screen: "Chapter 1 · Verse 5 of 47", what
+  is being read, ⏮ previous verse, ⏯ pause / continue, ⏭ next verse, ✕ stop. Tap it to open
+  the verse. When the chapter ends, ▶ plays the next chapter.
+- The verse being read is highlighted in the chapter list, and an open reader turns the
+  page with it; swiping the reader while it plays moves the audio too.
+- Where you stopped is remembered: the chapter page then offers *Continue from verse N*
+  or *Start over*. Continuing restarts the sentence that was interrupted.
+- A single verse's Listen button pauses chapter audio.
 
 **Search** (top bar on every tab): type a verse number like `2.47`,
 `2 47` or `2:47` to jump to it, or words in English, Hindi or Roman-letter Sanskrit

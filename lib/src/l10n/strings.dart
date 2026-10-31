@@ -120,6 +120,29 @@ class Strings {
       _t('Translations and texts', 'अनुवाद और लेख');
   String get couldNotOpen =>
       _t('Could not open the link.', 'लिंक नहीं खुल सका।');
+  String get listenChapter => _t('Listen to chapter', 'अध्याय सुनें');
+  String continueListening(int verse) =>
+      _t('Continue from verse $verse', 'श्लोक $verse से आगे सुनें');
+  String get startOver => _t('Start over', 'शुरू से');
+  String get play => _t('Play', 'चलाएँ');
+  String get pause => _t('Pause', 'रोकें');
+  String get paused => _t('Paused', 'रुका हुआ');
+  String get previousVerse => _t('Previous verse', 'पिछला श्लोक');
+  String get nextVerse => _t('Next verse', 'अगला श्लोक');
+  String get closePlayer => _t('Stop and close', 'बंद करें');
+  String get chapterComplete => _t('Chapter complete', 'अध्याय पूरा हुआ');
+  String get playNextChapter => _t('Play next chapter', 'अगला अध्याय चलाएँ');
+  String get noVoiceShort => _t('No voice installed', 'आवाज़ उपलब्ध नहीं');
+  String nowPlaying(int chapter, int verse, int total) => _t(
+    'Chapter $chapter · Verse $verse of $total',
+    'अध्याय $chapter · श्लोक $verse / $total',
+  );
+  String get chapterAudio =>
+      _t('Chapter audio reads', 'अध्याय सुनते समय पढ़ें');
+  String get audioSanskritAndMeaning =>
+      _t('Sanskrit + meaning', 'संस्कृत + अर्थ');
+  String get audioSanskritOnly => _t('Sanskrit', 'संस्कृत');
+  String get audioMeaningOnly => _t('Meaning', 'अर्थ');
   String get learn => _t('Start here', 'शुरुआत');
   String get settings => _t('Settings', 'सेटिंग्स');
   String day(int n) => _t('Day $n', 'दिन $n');

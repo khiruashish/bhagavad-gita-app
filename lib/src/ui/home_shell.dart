@@ -33,7 +33,7 @@ class _HomeShellState extends State<HomeShell> {
       bottomNavigationBar: NavigationBar(
         selectedIndex: _index,
         onDestinationSelected: (i) {
-          AppScope.speakerOf(context).stop();
+          AppScope.stopVerseSpeech(context);
           setState(() => _index = i);
         },
         destinations: [

@@ -5,6 +5,9 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 enum AppLanguage { english, hindi }
 
+/// What chapter audio reads for each verse.
+enum ChapterAudioMode { sanskritAndMeaning, sanskritOnly, meaningOnly }
+
 /// Reader preferences and reading progress. Stored only on the device.
 class SettingsController extends ChangeNotifier {
   SettingsController(this._prefs, {DateTime Function()? clock})
@@ -32,6 +35,24 @@ class SettingsController extends ChangeNotifier {
   double get textScale => _prefs.getDouble('textScale') ?? 1.0;
   bool get showTransliteration => _prefs.getBool('showTransliteration') ?? true;
   bool get slowSpeech => _prefs.getBool('slowSpeech') ?? true;
+
+  ChapterAudioMode get chapterAudioMode =>
+      ChapterAudioMode.values[_prefs.getInt('chapterAudioMode') ??
+          ChapterAudioMode.sanskritAndMeaning.index];
+  Future<void> setChapterAudioMode(ChapterAudioMode v) =>
+      _update(() => _prefs.setInt('chapterAudioMode', v.index));
+
+  /// Where chapter audio was last playing, such as "1.12"; null when the
+  /// chapter was finished or never played.
+  String? get audioPosition => _prefs.getString('audioPosition');
+  Future<void> setAudioPosition(String? id) {
+    if (id == audioPosition) return Future.value();
+    return _update(
+      () => id == null
+          ? _prefs.remove('audioPosition')
+          : _prefs.setString('audioPosition', id),
+    );
+  }
 
   /// The verse last opened in the reader, such as "2.47", or null.
   String? get lastReadId => _prefs.getString('lastRead');
