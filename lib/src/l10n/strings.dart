@@ -144,6 +144,22 @@ class Strings {
       _t('Sanskrit + meaning', 'संस्कृत + अर्थ');
   String get audioSanskritOnly => _t('Sanskrit', 'संस्कृत');
   String get audioMeaningOnly => _t('Meaning', 'अर्थ');
+  String get setAsWallpaper => _t('Set as wallpaper', 'वॉलपेपर लगाएँ');
+  String get homeScreen => _t('Home screen', 'होम स्क्रीन');
+  String get lockScreen => _t('Lock screen', 'लॉक स्क्रीन');
+  String get bothScreens => _t('Both', 'दोनों');
+  String get wallpaperSet => _t('Wallpaper set', 'वॉलपेपर लग गया');
+  String get wallpaperFailed => _t(
+    'Could not set the wallpaper. Please try again.',
+    'वॉलपेपर नहीं लग सका। फिर कोशिश करें।',
+  );
+  String get saveImage =>
+      _t('Save or share image', 'चित्र सहेजें या शेयर करें');
+  String get iphoneWallpaperHint => _t(
+    'Choose "Save Image", then in Photos tap Share → Use as Wallpaper.',
+    '"Save Image" चुनें, फिर Photos में Share → Use as Wallpaper दबाएँ।',
+  );
+  String get style => _t('Style', 'रंग');
   String get learn => _t('Start here', 'शुरुआत');
   String get settings => _t('Settings', 'सेटिंग्स');
   String day(int n) => _t('Day $n', 'दिन $n');

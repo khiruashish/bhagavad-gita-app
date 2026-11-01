@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:gita_for_everyone/src/app_scope.dart';
 import 'package:gita_for_everyone/src/audio/verse_speaker.dart';
 import 'package:gita_for_everyone/src/content/models.dart';
+import 'package:gita_for_everyone/src/ui/quotes_screen.dart';
 import 'package:gita_for_everyone/src/ui/share/share_sheet.dart';
 import 'package:gita_for_everyone/src/ui/widgets/verse_view.dart';
 
@@ -190,7 +191,7 @@ void main() {
     },
   );
 
-  testWidgets('the Quotes tab groups well-known verses by chapter', (
+  testWidgets('the Quotes tab lists every quote and filters by chapter', (
     tester,
   ) async {
     useTallPhone(tester);
@@ -200,28 +201,31 @@ void main() {
 
     await tester.tap(find.text('Quotes'));
     await tester.pumpAndSettle();
+    final total = realContent.allQuotes.length;
+    expect(find.text('$total quotes'), findsOneWidget);
     expect(find.text('Where the story begins'), findsOneWidget);
 
-    // Filter to chapter 2, then open a quote in the reader.
     await tester.tap(find.widgetWithText(ChoiceChip, '2'));
     await tester.pumpAndSettle();
     expect(find.text('Where the story begins'), findsNothing);
+    final topic = find.text('Do the work, let go of the result');
     await tester.scrollUntilVisible(
-      find.text('Do the work, let go of the result'),
+      topic,
       300,
       scrollable: find.byWidgetPredicate(
         (w) => w is Scrollable && w.axisDirection == AxisDirection.down,
       ),
     );
+    // A verse with a short quote line shows that line.
     expect(
-      find.textContaining('Your concern is with the doing alone'),
+      find.text('“Your part is the work, never what comes of it.”'),
       findsOneWidget,
     );
-    final card = find.ancestor(
-      of: find.text('Do the work, let go of the result'),
-      matching: find.byType(Card),
+    final card = find.ancestor(of: topic, matching: find.byType(QuoteFeedCard));
+    final read = find.descendant(
+      of: card,
+      matching: find.byTooltip('Read verse'),
     );
-    final read = find.descendant(of: card, matching: find.text('Read verse'));
     await tester.ensureVisible(read);
     await tester.pumpAndSettle();
     await tester.tap(read);

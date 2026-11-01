@@ -1,11 +1,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <!-- No internet, storage, location or other runtime permissions. The only permissions
-         are install-time ones that let chapter audio keep playing with the screen locked
-         (a media-playback foreground service and a wake lock held only while it plays).
+         are install-time ones: chapter audio with the screen locked (a media-playback
+         foreground service and a wake lock held only while it plays) and setting a quote
+         as the wallpaper.
          (Debug/profile builds add INTERNET only for the Flutter tooling.) -->
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- Lets the Quotes tab set a quote picture as the wallpaper (no prompt). -->
+    <uses-permission android:name="android.permission.SET_WALLPAPER" />
     <application
         android:label="Gita for Everyone"
         android:name="${applicationName}"

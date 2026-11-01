@@ -47,6 +47,12 @@ notification with play, pause and skip buttons while chapter audio is open, and 
 app keeps the phone's processor awake only while audio is playing. On iPhone the same
 controls appear on the lock screen. Nothing is recorded or sent anywhere.
 
+## Wallpaper
+
+"Set as wallpaper" makes the picture on your phone and sets it with Android's wallpaper
+service (on iPhone it is saved or shared, and you set it yourself in Photos). Nothing is
+sent anywhere.
+
 ## Links
 
 "Rate this app", the contact email and "Source code" open your phone's app store, email

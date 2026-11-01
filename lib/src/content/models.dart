@@ -201,6 +201,28 @@ class Reflection {
   final String hindi;
 }
 
+/// One entry in the Quotes tab: a verse with the best line to show for it.
+class QuoteEntry {
+  const QuoteEntry({
+    required this.verse,
+    required this.english,
+    required this.hindi,
+    required this.labelEnglish,
+    required this.labelHindi,
+  });
+
+  final Verse verse;
+
+  /// A short quote line when one was written for the verse, otherwise its
+  /// full translation.
+  final String english;
+  final String hindi;
+
+  /// The quote's topic, or the feeling it was chosen for.
+  final String labelEnglish;
+  final String labelHindi;
+}
+
 /// Everything the app shows, parsed from the bundled `assets/content/gita.json`.
 class GitaContent {
   GitaContent({
@@ -234,6 +256,33 @@ class GitaContent {
 
   /// The Feelings tab: emotions with their best quotes.
   final List<Emotion> emotions;
+
+  /// Every quote in the app (well-known verses and the Feelings quotes), one
+  /// per verse, in reading order. Where a verse has a short quote line it is
+  /// used; the label is the verse's topic, or else the feeling.
+  late final List<QuoteEntry> allQuotes = () {
+    final lines = <String, EmotionQuote>{};
+    final feelings = <String, Emotion>{};
+    for (final e in emotions) {
+      for (final q in e.quotes) {
+        lines.putIfAbsent(q.verse.id, () => q);
+        feelings.putIfAbsent(q.verse.id, () => e);
+      }
+    }
+    final topics = {for (final q in quotes) q.verse.id: q};
+    return [
+      for (final v in verses)
+        if (lines[v.id] != null || topics[v.id] != null)
+          QuoteEntry(
+            verse: v,
+            english: lines[v.id]?.english ?? v.english!,
+            hindi: lines[v.id]?.hindi ?? v.hindi!,
+            labelEnglish:
+                topics[v.id]?.topicEnglish ?? feelings[v.id]!.titleEnglish,
+            labelHindi: topics[v.id]?.topicHindi ?? feelings[v.id]!.titleHindi,
+          ),
+    ];
+  }();
 
   /// Reflection questions by chapter number.
   final Map<int, List<Reflection>> reflections;

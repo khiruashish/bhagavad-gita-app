@@ -8,9 +8,9 @@ screen follows the same few rules so it feels calm and is easy for first-time re
 |---|---|---|---|---|
 | ![Today](screenshots/today.png) | ![Chapters](screenshots/chapters.png) | ![Chapter](screenshots/chapter.png) | ![Reader](screenshots/reader.png) | ![Quotes](screenshots/quotes.png) |
 
-| Feelings | Emotion | Share | Chapter audio |
-|---|---|---|---|
-| ![Feelings](screenshots/feelings.png) | ![Emotion](screenshots/emotion.png) | ![Share](screenshots/share.png) | ![Chapter audio](screenshots/chapter-audio.png) |
+| Feelings | Emotion | Share | Chapter audio | Wallpaper |
+|---|---|---|---|---|
+| ![Feelings](screenshots/feelings.png) | ![Emotion](screenshots/emotion.png) | ![Share](screenshots/share.png) | ![Chapter audio](screenshots/chapter-audio.png) | ![Wallpaper](screenshots/wallpaper.png) |
 
 ## Screens
 
@@ -35,10 +35,18 @@ list with a short preview of each, and a bottom bar with **← Chapter N-1** and
   share (the picture shows the short line) and *Read verse* for the full verse.
 - Content: `content/emotions.json`; similarity check: `tool/check_quote_similarity.py`.
 
-**Quotes**: 58 well-known verses, at least one from every chapter, grouped by chapter.
-Chips at the top filter to one chapter. Each card has a short topic line, the translation
-in the app's language, the first Sanskrit line, copy, save, share and *Read verse*. The list
-lives in `content/quotes.json`; the build checks that every pick is a complete sentence.
+**Quotes**: every quote in the app in one feed (97: the 58 well-known verses and the
+Feelings quotes, one per verse, in reading order), with chapter chips to filter.
+- Each is a large card on one of four warm gradients: its topic (or feeling) as a label,
+  the quote (the short line where one was written, otherwise the translation), the first
+  Sanskrit line and the reference, with ❤ save, share as picture, 🖼 **set as wallpaper**
+  and 📖 read the verse.
+- **Set as wallpaper** previews the quote at the phone's own screen shape and size, in four
+  colour styles, in Hindi or English. The quote sits in the middle half: the top quarter is
+  left for the lock-screen clock and the bottom fifth for the dock and icons, so it fits any
+  phone. The picture is made at the screen's exact pixel size. Android: *Home screen*, *Lock
+  screen* or *Both*. iPhone (apps cannot set wallpapers there): *Save or share image*, then
+  Photos → Use as Wallpaper.
 
 **Reader**: reads the whole Gita as one sequence.
 - Top bar: chapter number and title, with **⏮ previous chapter** and **⏭ next chapter**.

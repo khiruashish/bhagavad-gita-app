@@ -17,7 +17,7 @@ with sizes and limits, see [RELEASE_CHECKLIST.md](RELEASE_CHECKLIST.md).
 | Area | Status |
 |---|---|
 | App code (Android + iOS, Flutter) | Done: daily verse, chapters, reader with chapter navigation, Feelings (quotes by emotion), Quotes, share as image, saved verses and notes, search, reading progress, reflection questions, About & credits, Android widget, Sanskrit/Hindi/English, simple meanings, audio, Hindi/English interface, settings, offline, no data collection |
-| Automated tests | 41 app tests (including an accessibility check) + 12 content-tool tests, run in CI on every push |
+| Automated tests | 43 app tests (including an accessibility check) + 12 content-tool tests, run in CI on every push |
 | Sanskrit text, all 701 verses | Done (public domain) + our own generated pronunciation (IAST) |
 | Original translations + simple meanings | **701 of 701 verses drafted** (all 18 chapters); none reviewed yet |
 | Chapter summaries (18), "Start here" guide, glossary | Done (original) |
@@ -246,7 +246,8 @@ flutter build apk --release
 $ANDROID_HOME/build-tools/<version>/aapt2 dump permissions build/app/outputs/flutter-apk/app-release.apk
 ```
 It should list only `FOREGROUND_SERVICE`, `FOREGROUND_SERVICE_MEDIA_PLAYBACK` and
-`WAKE_LOCK` (install-time permissions for chapter audio with the screen locked), plus
+`WAKE_LOCK` (install-time permissions for chapter audio with the screen locked) and
+`SET_WALLPAPER` (set a quote as the wallpaper), plus
 `DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION`, which Android adds automatically.
 **No INTERNET permission**, and nothing that shows a permission prompt.
 
@@ -300,7 +301,7 @@ For recorded audio:
 
 ## Security checklist (already built in, keep it that way)
 
-- [x] **Offline only.** No network code and no INTERNET permission. The only permissions are install-time ones for background chapter audio (foreground media service, wake lock while playing); none shows a prompt.
+- [x] **Offline only.** No network code and no INTERNET permission. The only permissions are install-time ones for background chapter audio (foreground media service, wake lock while playing) and setting the wallpaper; none shows a prompt.
 - [x] **No data collection.** No accounts, analytics, ads or crash-reporting SDKs. Settings
       and the Day 1 date stay on the phone.
 - [x] **Only four runtime plugins** (`shared_preferences`, `flutter_tts`, `share_plus`, `url_launcher`), all widely used. None adds a permission: `share_plus` opens the phone's share menu and `url_launcher` opens the store, browser or email app.
