@@ -142,6 +142,87 @@ class GlossaryEntry {
   );
 }
 
+/// A well-known verse picked for the Quotes tab, with a short topic line.
+class Quote {
+  const Quote({
+    required this.verse,
+    required this.topicEnglish,
+    required this.topicHindi,
+  });
+
+  final Verse verse;
+  final String topicEnglish;
+  final String topicHindi;
+}
+
+/// A short, memorable line written from one verse, for the Feelings tab.
+class EmotionQuote {
+  const EmotionQuote({
+    required this.verse,
+    required this.english,
+    required this.hindi,
+  });
+
+  final Verse verse;
+  final String english;
+  final String hindi;
+}
+
+/// A human emotion with the verses that speak to it most.
+class Emotion {
+  const Emotion({
+    required this.id,
+    required this.emoji,
+    required this.isHard,
+    required this.titleEnglish,
+    required this.titleHindi,
+    required this.introEnglish,
+    required this.introHindi,
+    required this.quotes,
+  });
+
+  final String id;
+  final String emoji;
+
+  /// True for difficult feelings; false for those a reader wants to grow.
+  final bool isHard;
+  final String titleEnglish;
+  final String titleHindi;
+  final String introEnglish;
+  final String introHindi;
+  final List<EmotionQuote> quotes;
+}
+
+/// A question to think about after reading a verse.
+class Reflection {
+  const Reflection({required this.english, required this.hindi});
+
+  final String english;
+  final String hindi;
+}
+
+/// One entry in the Quotes tab: a verse with the best line to show for it.
+class QuoteEntry {
+  const QuoteEntry({
+    required this.verse,
+    required this.english,
+    required this.hindi,
+    required this.labelEnglish,
+    required this.labelHindi,
+  });
+
+  final Verse verse;
+
+  /// A short quote line when one was written for the verse, otherwise its
+  /// full translation.
+  final String english;
+  final String hindi;
+
+  /// The quote's topic, or the feeling it was chosen for.
+  final String labelEnglish;
+  final String labelHindi;
+}
+
 /// Everything the app shows, parsed from the bundled `assets/content/gita.json`.
 class GitaContent {
   GitaContent({
@@ -149,6 +230,9 @@ class GitaContent {
     required this.verses,
     required this.learn,
     required this.glossary,
+    this.quotes = const [],
+    this.emotions = const [],
+    this.reflections = const {},
   }) : dailyVerses = [
          for (final v in verses)
            if (v.isTranslated) v,
@@ -166,7 +250,51 @@ class GitaContent {
   final List<Verse> dailyVerses;
   final List<LearnSection> learn;
   final List<GlossaryEntry> glossary;
+
+  /// Well-known verses in reading order, for the Quotes tab.
+  final List<Quote> quotes;
+
+  /// The Feelings tab: emotions with their best quotes.
+  final List<Emotion> emotions;
+
+  /// Every quote in the app (well-known verses and the Feelings quotes), one
+  /// per verse, in reading order. Where a verse has a short quote line it is
+  /// used; the label is the verse's topic, or else the feeling.
+  late final List<QuoteEntry> allQuotes = () {
+    final lines = <String, EmotionQuote>{};
+    final feelings = <String, Emotion>{};
+    for (final e in emotions) {
+      for (final q in e.quotes) {
+        lines.putIfAbsent(q.verse.id, () => q);
+        feelings.putIfAbsent(q.verse.id, () => e);
+      }
+    }
+    final topics = {for (final q in quotes) q.verse.id: q};
+    return [
+      for (final v in verses)
+        if (lines[v.id] != null || topics[v.id] != null)
+          QuoteEntry(
+            verse: v,
+            english: lines[v.id]?.english ?? v.english!,
+            hindi: lines[v.id]?.hindi ?? v.hindi!,
+            labelEnglish:
+                topics[v.id]?.topicEnglish ?? feelings[v.id]!.titleEnglish,
+            labelHindi: topics[v.id]?.topicHindi ?? feelings[v.id]!.titleHindi,
+          ),
+    ];
+  }();
+
+  /// Reflection questions by chapter number.
+  final Map<int, List<Reflection>> reflections;
   final Map<String, Verse> _byId;
+
+  /// The reflection question shown with [verse], rotating through its chapter's
+  /// questions; null when the chapter has none.
+  Reflection? reflectionFor(Verse verse) {
+    final questions = reflections[verse.chapter];
+    if (questions == null || questions.isEmpty) return null;
+    return questions[(verse.number - 1) % questions.length];
+  }
 
   Verse? verseById(String id) => _byId[id];
 
@@ -178,15 +306,17 @@ class GitaContent {
   factory GitaContent.parse(String source) {
     final j = jsonDecode(source) as Map<String, dynamic>;
     final learn = j['learn'] as Map<String, dynamic>;
+    final verses = [
+      for (final v in j['verses'] as List)
+        Verse.fromJson(v as Map<String, dynamic>),
+    ];
+    final byId = {for (final v in verses) v.id: v};
     return GitaContent(
       chapters: [
         for (final c in j['chapters'] as List)
           Chapter.fromJson(c as Map<String, dynamic>),
       ],
-      verses: [
-        for (final v in j['verses'] as List)
-          Verse.fromJson(v as Map<String, dynamic>),
-      ],
+      verses: verses,
       learn: [
         for (final s in learn['sections'] as List)
           LearnSection.fromJson(s as Map<String, dynamic>),
@@ -195,6 +325,50 @@ class GitaContent {
         for (final g in learn['glossary'] as List)
           GlossaryEntry.fromJson(g as Map<String, dynamic>),
       ],
+      quotes: [
+        for (final q in (j['quotes'] as List?) ?? const [])
+          if (byId[(q as Map<String, dynamic>)['id']] case final verse?)
+            Quote(
+              verse: verse,
+              topicEnglish: q['topicEnglish'] as String,
+              topicHindi: q['topicHindi'] as String,
+            ),
+      ],
+      emotions: [
+        for (final x in (j['emotions'] as List?) ?? const [])
+          if (x case final Map<String, dynamic> m)
+            Emotion(
+              id: m['id'] as String,
+              emoji: m['emoji'] as String,
+              isHard: m['group'] == 'hard',
+              titleEnglish: m['titleEnglish'] as String,
+              titleHindi: m['titleHindi'] as String,
+              introEnglish: m['introEnglish'] as String,
+              introHindi: m['introHindi'] as String,
+              quotes: [
+                for (final q in m['quotes'] as List)
+                  if (byId[(q as Map<String, dynamic>)['verse']]
+                      case final verse?)
+                    EmotionQuote(
+                      verse: verse,
+                      english: q['english'] as String,
+                      hindi: q['hindi'] as String,
+                    ),
+              ],
+            ),
+      ],
+      reflections: {
+        for (final MapEntry(:key, :value)
+            in ((j['reflections'] as Map<String, dynamic>?) ?? const {})
+                .entries)
+          int.parse(key): [
+            for (final q in value as List)
+              Reflection(
+                english: (q as Map<String, dynamic>)['english'] as String,
+                hindi: q['hindi'] as String,
+              ),
+          ],
+      },
     );
   }
 }

@@ -1,11 +1,19 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
-    <!-- No permissions are requested: the release app has no internet access, no
-         storage access and collects no data. (Debug/profile builds add INTERNET only
-         for the Flutter tooling.) -->
+    <!-- No internet, storage, location or other runtime permissions. The only permissions
+         are install-time ones: chapter audio with the screen locked (a media-playback
+         foreground service and a wake lock held only while it plays) and setting a quote
+         as the wallpaper.
+         (Debug/profile builds add INTERNET only for the Flutter tooling.) -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- Lets the Quotes tab set a quote picture as the wallpaper (no prompt). -->
+    <uses-permission android:name="android.permission.SET_WALLPAPER" />
     <application
         android:label="Gita for Everyone"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:usesCleartextTraffic="false">
         <activity
             android:name=".MainActivity"
@@ -29,6 +37,23 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <!-- Chapter audio with the screen locked (see ChapterAudioService.kt). -->
+        <service
+            android:name=".ChapterAudioService"
+            android:exported="false"
+            android:foregroundServiceType="mediaPlayback" />
+        <!-- Home-screen widget with today's verse (reads on-device data only). -->
+        <receiver
+            android:name=".GitaWidgetProvider"
+            android:exported="true"
+            android:label="@string/widget_name">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/gita_widget_info" />
+        </receiver>
         <!-- Don't delete the meta-data below.
              This is used by the Flutter tool to generate GeneratedPluginRegistrant.java -->
         <meta-data

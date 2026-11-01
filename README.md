@@ -6,7 +6,13 @@ Gita. No ads, no account, no tracking.
 - **One verse a day.** Day 1 is the first verse, Day 2 the next, and so on.
 - **Sanskrit, Hindi and English** for every verse, with a pronunciation guide and a short
   "in simple words" explanation.
-- **Listen** to the Sanskrit, Hindi or English, read by your phone's own voice.
+- **Listen** to the Sanskrit, Hindi or English, read by your phone's own voice, one verse or a **whole chapter** (pause and continue any time).
+- **Feelings:** the best Gita quotes for 20 human emotions, from anxious, angry or grieving to grateful, hopeful or in love, plus "a thought for you".
+- **Quotes:** every quote in one feed, filterable by chapter, and **set any quote as your wallpaper**, sized to your phone's screen.
+- **Share as image:** a ready-made picture card for WhatsApp or Instagram.
+- **Save verses and write notes**, search by word or jump to a verse number ("2.47"), and see your reading progress.
+- **A question to think about** under each daily verse.
+- **Home-screen widget** with today's verse (Android; iOS planned).
 - **All 18 chapters** with plain summaries, a beginner's "Start here" guide and a glossary.
 - **Hindi or English interface**, dark mode, adjustable text size.
 - **Fully offline:** no internet permission and no data collected.
@@ -25,6 +31,9 @@ See [content/README.md](content/README.md).
 
 | | |
 |---|---|
+| [docs/TODO.md](docs/TODO.md) | What is left to do before release, in order, and who does it |
+| [docs/RELEASE_CHECKLIST.md](docs/RELEASE_CHECKLIST.md) | Everything required for release, as a checklist: owner info, accounts, assets, store forms, testing |
+| [docs/UI_LAYOUT.md](docs/UI_LAYOUT.md) | Screen layout, navigation and design rules, with screenshots |
 | [docs/GUIDE.md](docs/GUIDE.md) | Every step to the app stores: legal, content, design, security, release, timeline, costs |
 | [docs/MASTER_CONTENT_PROMPT.md](docs/MASTER_CONTENT_PROMPT.md) | Prompts for drafting original translations and simple meanings |
 | [docs/MASTER_CODE_PROMPT.md](docs/MASTER_CODE_PROMPT.md) | The full app specification as a prompt for an AI coding assistant |

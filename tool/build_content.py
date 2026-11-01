@@ -5,6 +5,9 @@ Inputs (all in content/):
   sanskrit.json          Sanskrit + generated IAST for all 701 verses (public domain)
   chapters.json          chapter titles and summaries (original to this project)
   learn.json             speaker labels, "Start here" sections, glossary (original)
+  quotes.json            verses picked for the Quotes tab, with short topics (original)
+  emotions.json          Feelings tab: emotions with short quote lines and their verses (original)
+  reflections.json       reflection questions for the daily verse, three per chapter (original)
   translations/chNN.json translations and simple meanings (original to this project)
 
 Usage:
@@ -100,11 +103,90 @@ def build(reviewed_only):
             item["status"] = t["status"]
         verses.append(item)
 
+    by_id = {f"{v['chapter']}.{v['verse']}": v for v in verses}
+
+    def standalone(where, verse_id):
+        """The verse exists and its translation reads as a complete sentence."""
+        v = by_id.get(verse_id)
+        if v is None:
+            errors.append(f"{where}: no such verse {verse_id}")
+            return None
+        text = translations.get((v["chapter"], v["verse"]), {}).get("english", "").strip()
+        if text and (text[0].islower() or text[-1] in ",;:"):
+            errors.append(f"{where}: {verse_id} is not a complete sentence on its own")
+        return v
+
+    def check_text(where, item, fields):
+        for k in fields:
+            if not item.get(k, "").strip():
+                errors.append(f"{where}: missing {k}")
+            m = BANNED.search(item.get(k, "")) if k.lower().endswith("english") else None
+            if m:
+                errors.append(f"{where}: banned word '{m.group(0)}' in {k}")
+
+    quotes, last = [], (0, 0)
+    for q in load(CONTENT / "quotes.json")["quotes"]:
+        where = f"quotes.json {q.get('id')}"
+        v = standalone(where, q.get("id"))
+        if v is None:
+            continue
+        if (v["chapter"], v["verse"]) <= last:
+            errors.append(f"{where}: quotes must be in reading order without repeats")
+        last = (v["chapter"], v["verse"])
+        check_text(where, q, ("topicEnglish", "topicHindi"))
+        # A store build leaves out quotes whose translation is not reviewed yet.
+        if "english" in v:
+            quotes.append(q)
+
+    emotions, seen = [], set()
+    for emo in load(CONTENT / "emotions.json")["emotions"]:
+        where = f"emotions.json {emo.get('id')}"
+        if emo.get("id") in seen:
+            errors.append(f"{where}: duplicate id")
+        seen.add(emo.get("id"))
+        if emo.get("group") not in ("hard", "grow"):
+            errors.append(f"{where}: group must be 'hard' or 'grow'")
+        check_text(where, emo, ("emoji", "titleEnglish", "titleHindi", "introEnglish", "introHindi"))
+        quotes_in = emo.get("quotes", [])
+        if not 3 <= len(quotes_in) <= 6:
+            errors.append(f"{where}: list 3 to 6 quotes")
+        if len({q.get("verse") for q in quotes_in}) != len(quotes_in):
+            errors.append(f"{where}: repeated verse")
+        kept = []
+        for q in quotes_in:
+            qwhere = f"{where} {q.get('verse')}"
+            v = by_id.get(q.get("verse"))
+            if v is None:
+                errors.append(f"{qwhere}: no such verse")
+                continue
+            check_text(qwhere, q, ("english", "hindi"))
+            for k in ("english", "hindi"):
+                if len(q.get(k, "")) > 160:
+                    errors.append(f"{qwhere}: {k} quote longer than 160 characters")
+            # A store build keeps only quotes whose verse translation is reviewed.
+            if "english" in v:
+                kept.append(q)
+        # ...and shows an emotion only once at least two of its quotes remain.
+        if len(kept) >= 2:
+            emotions.append({**emo, "quotes": kept})
+
+    reflections = load(CONTENT / "reflections.json")["chapters"]
+    if [r.get("chapter") for r in reflections] != list(range(1, 19)):
+        errors.append("reflections.json must list chapters 1..18 in order")
+    for r in reflections:
+        if not r.get("questions"):
+            errors.append(f"reflections.json chapter {r.get('chapter')}: no questions")
+        for i, q in enumerate(r.get("questions", [])):
+            check_text(f"reflections.json {r.get('chapter')}.{i + 1}", q, ("english", "hindi"))
+
     out = {
         "format": 1,
         "chapters": [{**c, "verseCount": CHAPTER_VERSES[c["number"] - 1]} for c in chapters],
         "verses": verses,
         "learn": {"sections": learn["sections"], "glossary": learn["glossary"]},
+        "quotes": quotes,
+        "emotions": emotions,
+        "reflections": {str(r["chapter"]): r["questions"] for r in reflections},
     }
     return out, errors
 

@@ -5,6 +5,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:gita_for_everyone/src/app.dart';
 import 'package:gita_for_everyone/src/app_scope.dart';
+import 'package:gita_for_everyone/src/audio/chapter_player.dart';
 import 'package:gita_for_everyone/src/audio/verse_speaker.dart';
 import 'package:gita_for_everyone/src/content/models.dart';
 import 'package:gita_for_everyone/src/settings/settings_controller.dart';
@@ -38,14 +39,18 @@ class FakeSpeaker implements VerseSpeaker {
 
   @override
   Future<void> stop() async => _speaking.value = null;
+
+  /// Simulates the current sentence coming to an end.
+  void finish() => _speaking.value = null;
 }
 
 class TestApp {
-  TestApp(this.widget, this.settings, this.speaker);
+  TestApp(this.widget, this.settings, this.speaker, this.player);
 
   final Widget widget;
   final SettingsController settings;
   final FakeSpeaker speaker;
+  final ChapterPlayer player;
 }
 
 /// Builds the app with in-memory preferences and a controllable clock.
@@ -59,15 +64,22 @@ Future<TestApp> buildApp({
     clock: clock,
   );
   final speaker = FakeSpeaker();
+  final player = ChapterPlayer(
+    speaker: speaker,
+    content: realContent,
+    settings: settings,
+  );
   return TestApp(
     AppScope(
       content: realContent,
       settings: settings,
       speaker: speaker,
+      player: player,
       child: const GitaApp(),
     ),
     settings,
     speaker,
+    player,
   );
 }
 

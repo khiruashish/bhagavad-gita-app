@@ -11,15 +11,20 @@ it and roughly how long it takes.
 
 ## Where things stand today
 
+For what is left to do, in order, see [TODO.md](TODO.md). For the full tick-box list
+with sizes and limits, see [RELEASE_CHECKLIST.md](RELEASE_CHECKLIST.md).
+
 | Area | Status |
 |---|---|
-| App code (Android + iOS, Flutter) | Done: daily verse, chapters, Sanskrit/Hindi/English, simple meanings, audio, Hindi/English interface, settings, offline, no data collection |
-| Automated tests | 17 app tests + 7 content-tool tests, run in CI on every push |
+| App code (Android + iOS, Flutter) | Done: daily verse, chapters, reader with chapter navigation, Feelings (quotes by emotion), Quotes, share as image, saved verses and notes, search, reading progress, reflection questions, About & credits, Android widget, Sanskrit/Hindi/English, simple meanings, audio, Hindi/English interface, settings, offline, no data collection |
+| Automated tests | 43 app tests (including an accessibility check) + 12 content-tool tests, run in CI on every push |
 | Sanskrit text, all 701 verses | Done (public domain) + our own generated pronunciation (IAST) |
 | Original translations + simple meanings | **701 of 701 verses drafted** (all 18 chapters); none reviewed yet |
 | Chapter summaries (18), "Start here" guide, glossary | Done (original) |
 | Human scholar review | Not started; **required before launch** |
-| App icon, store screenshots, store listings | Not started |
+| App icon, splash screen | Done (Krishna and Arjuna on the chariot) |
+| Store screenshots, feature graphic, store listings | Not started |
+| Licences, credits, contact details | Waiting on owner (`TODO(owner)` in `lib/src/release_info.dart`) |
 | Developer accounts, signing keys | Not started |
 | Human audio recordings | Optional, planned for v1.1 (v1 uses the phone's own voices) |
 
@@ -240,8 +245,11 @@ flutter build ipa --release --obfuscate --split-debug-info=build/symbols
 flutter build apk --release
 $ANDROID_HOME/build-tools/<version>/aapt2 dump permissions build/app/outputs/flutter-apk/app-release.apk
 ```
-It should list none apart from `DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION`, which
-Android adds automatically. **No INTERNET permission.**
+It should list only `FOREGROUND_SERVICE`, `FOREGROUND_SERVICE_MEDIA_PLAYBACK` and
+`WAKE_LOCK` (install-time permissions for chapter audio with the screen locked) and
+`SET_WALLPAPER` (set a quote as the wallpaper), plus
+`DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION`, which Android adds automatically.
+**No INTERNET permission**, and nothing that shows a permission prompt.
 
 ## Step 10: Testing (weeks 6–8)
 
@@ -293,10 +301,10 @@ For recorded audio:
 
 ## Security checklist (already built in, keep it that way)
 
-- [x] **Offline only.** The release build requests no permissions and has no network code.
+- [x] **Offline only.** No network code and no INTERNET permission. The only permissions are install-time ones for background chapter audio (foreground media service, wake lock while playing) and setting the wallpaper; none shows a prompt.
 - [x] **No data collection.** No accounts, analytics, ads or crash-reporting SDKs. Settings
       and the Day 1 date stay on the phone.
-- [x] **Only two runtime plugins** (`shared_preferences`, `flutter_tts`), both widely used.
+- [x] **Only four runtime plugins** (`shared_preferences`, `flutter_tts`, `share_plus`, `url_launcher`), all widely used. None adds a permission: `share_plus` opens the phone's share menu and `url_launcher` opens the store, browser or email app.
       The lockfile is enforced in CI (`--enforce-lockfile`).
 - [x] **Dependabot** checks dependencies and CI actions weekly. Read the changelog before
       merging updates.

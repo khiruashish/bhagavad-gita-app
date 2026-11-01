@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../app_scope.dart';
 import '../settings/settings_controller.dart';
+import 'widgets/actions.dart';
 
 /// Plain-language introduction for readers who are new to the Gita.
 class LearnScreen extends StatelessWidget {
@@ -14,7 +15,7 @@ class LearnScreen extends StatelessWidget {
     final content = AppScope.contentOf(context);
     final theme = Theme.of(context);
     return Scaffold(
-      appBar: AppBar(title: Text(s.learn)),
+      appBar: AppBar(title: Text(s.learn), actions: mainActions(context)),
       body: ListView(
         padding: const EdgeInsets.fromLTRB(16, 8, 16, 32),
         children: [

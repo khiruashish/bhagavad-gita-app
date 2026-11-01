@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 
 import '../app_scope.dart';
+import '../release_info.dart';
 import '../settings/settings_controller.dart';
+import 'about_screen.dart';
+import 'saved_screen.dart';
+import 'widgets/actions.dart';
 
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({super.key});
@@ -79,18 +83,70 @@ class SettingsScreen extends StatelessWidget {
             value: settings.slowSpeech,
             onChanged: settings.setSlowSpeech,
           ),
+          header(s.chapterAudio),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16),
+            child: SegmentedButton<ChapterAudioMode>(
+              segments: [
+                ButtonSegment(
+                  value: ChapterAudioMode.sanskritAndMeaning,
+                  label: Text(s.audioSanskritAndMeaning),
+                ),
+                ButtonSegment(
+                  value: ChapterAudioMode.sanskritOnly,
+                  label: Text(s.audioSanskritOnly),
+                ),
+                ButtonSegment(
+                  value: ChapterAudioMode.meaningOnly,
+                  label: Text(s.audioMeaningOnly),
+                ),
+              ],
+              selected: {settings.chapterAudioMode},
+              onSelectionChanged: (v) => settings.setChapterAudioMode(v.first),
+            ),
+          ),
           const Divider(height: 32),
           ListTile(
             leading: const Icon(Icons.restart_alt_rounded),
             title: Text(s.restart),
-            onTap: () => _confirmRestart(context),
+            onTap: () => _confirm(
+              context,
+              title: s.restart,
+              body: s.restartConfirm,
+              action: s.confirm,
+              onConfirm: settings.restartFromDayOne,
+            ),
+          ),
+          ListTile(
+            leading: const Icon(Icons.checklist_rounded),
+            title: Text(s.resetProgress),
+            onTap: () => _confirm(
+              context,
+              title: s.resetProgress,
+              body: s.resetProgressConfirm,
+              action: s.clear,
+              onConfirm: settings.clearReadingProgress,
+            ),
+          ),
+          header(s.more),
+          ListTile(
+            leading: const Icon(Icons.favorite_border_rounded),
+            title: Text(s.myVerses),
+            onTap: () => Navigator.of(context)
+                .push(MaterialPageRoute(builder: (_) => const SavedScreen())),
           ),
           ListTile(
             leading: const Icon(Icons.info_outline_rounded),
-            title: Text(s.about),
-            subtitle: Text(s.aboutBody),
-            isThreeLine: true,
+            title: Text(s.aboutCredits),
+            onTap: () => Navigator.of(context)
+                .push(MaterialPageRoute(builder: (_) => const AboutScreen())),
           ),
+          if (rateUrl(Theme.of(context).platform) case final url?)
+            ListTile(
+              leading: const Icon(Icons.star_outline_rounded),
+              title: Text(s.rateApp),
+              onTap: () => openLink(context, url),
+            ),
           ListTile(
             leading: const Icon(Icons.description_outlined),
             title: Text(s.licenses),
@@ -102,14 +158,19 @@ class SettingsScreen extends StatelessWidget {
     );
   }
 
-  Future<void> _confirmRestart(BuildContext context) async {
+  Future<void> _confirm(
+    BuildContext context, {
+    required String title,
+    required String body,
+    required String action,
+    required Future<void> Function() onConfirm,
+  }) async {
     final s = AppScope.stringsOf(context);
-    final settings = AppScope.settingsOf(context);
     final ok = await showDialog<bool>(
       context: context,
       builder: (context) => AlertDialog(
-        title: Text(s.restart),
-        content: Text(s.restartConfirm),
+        title: Text(title),
+        content: Text(body),
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context, false),
@@ -117,11 +178,22 @@ class SettingsScreen extends StatelessWidget {
           ),
           FilledButton(
             onPressed: () => Navigator.pop(context, true),
-            child: Text(s.confirm),
+            child: Text(action),
           ),
         ],
       ),
     );
-    if (ok == true) await settings.restartFromDayOne();
+    if (ok == true) await onConfirm();
   }
 }
+
+/// The store page for rating the app, or null where it is not known yet.
+Uri? rateUrl(TargetPlatform platform) => switch (platform) {
+  TargetPlatform.iOS || TargetPlatform.macOS =>
+    appStoreId.isEmpty
+        ? null
+        : Uri.parse(
+            'https://apps.apple.com/app/id$appStoreId?action=write-review',
+          ),
+  _ => Uri.parse('https://play.google.com/store/apps/details?id=$androidAppId'),
+};

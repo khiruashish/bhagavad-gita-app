@@ -19,7 +19,11 @@ information.
 The app saves a few settings on your own device so it works the way you left it:
 - the date you started (to know which daily verse to show);
 - the interface language, theme and text size;
-- your audio and pronunciation preferences.
+- your audio and pronunciation preferences;
+- the last verse you opened (for "Continue reading") and where chapter audio stopped (for "Continue from verse N");
+- which verses you have read (the ticks and chapter progress);
+- the verses you save with the heart, and any notes you write;
+- the next few weeks of daily verses, so the home-screen widget can show today's verse.
 
 This information never leaves your phone. It is deleted when you uninstall the app. Your
 phone's own backup service (Google or iCloud) may include it in your personal device
@@ -29,6 +33,31 @@ backup, under that service's terms.
 
 The Listen buttons use the text-to-speech voices built into your phone. The text is
 processed by your phone's speech engine; the app sends nothing anywhere.
+
+## Sharing
+
+When you tap Share, the app makes a picture of the verse on your phone and opens your
+phone's own share menu. Nothing is sent unless you choose an app to share it with, and
+then it goes only where you send it. The app itself does not receive or keep a copy.
+
+## Chapter audio in the background
+
+So that a chapter can keep playing with the screen locked, Android shows a media
+notification with play, pause and skip buttons while chapter audio is open, and the
+app keeps the phone's processor awake only while audio is playing. On iPhone the same
+controls appear on the lock screen. Nothing is recorded or sent anywhere.
+
+## Wallpaper
+
+"Set as wallpaper" makes the picture on your phone and sets it with Android's wallpaper
+service (on iPhone it is saved or shared, and you set it yourself in Photos). Nothing is
+sent anywhere.
+
+## Links
+
+"Rate this app", the contact email and "Source code" open your phone's app store, email
+app or browser. The app itself sends nothing; you see where the link goes before anything
+is sent.
 
 ## Children
 

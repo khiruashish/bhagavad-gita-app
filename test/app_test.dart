@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:gita_for_everyone/src/app_scope.dart';
 import 'package:gita_for_everyone/src/audio/verse_speaker.dart';
 import 'package:gita_for_everyone/src/content/models.dart';
+import 'package:gita_for_everyone/src/ui/quotes_screen.dart';
+import 'package:gita_for_everyone/src/ui/share/share_sheet.dart';
 import 'package:gita_for_everyone/src/ui/widgets/verse_view.dart';
 
 import 'helpers.dart';
@@ -85,12 +87,15 @@ void main() {
     await tester.pumpWidget(app.widget);
     await tester.pumpAndSettle();
 
-    await tester.tap(find.text('Settings'));
+    await tester.tap(find.byTooltip('Settings'));
     await tester.pumpAndSettle();
     await tester.tap(find.text('हिन्दी'));
     await tester.pumpAndSettle();
     expect(find.text('सेटिंग्स'), findsWidgets);
 
+    await tester.pageBack();
+    await tester.pumpAndSettle();
+    expect(find.text('भावनाएँ'), findsOneWidget);
     await tester.tap(find.text('आज'));
     await tester.pumpAndSettle();
     expect(find.text('दिन 1'), findsOneWidget);
@@ -116,6 +121,184 @@ void main() {
     await tester.tap(find.text('Next'));
     await tester.pumpAndSettle();
     expect(find.text('Chapter 2 · Verse 11'), findsOneWidget);
+  });
+
+  testWidgets(
+    'Next continues into the next chapter, and chapter buttons jump a chapter',
+    (tester) async {
+      useTallPhone(tester);
+      final app = await buildApp(clock: () => DateTime(2026, 1, 1));
+      await tester.pumpWidget(app.widget);
+      await tester.pumpAndSettle();
+
+      await tester.tap(find.text('Chapters'));
+      await tester.pumpAndSettle();
+      await tester.tap(find.text("Arjuna's Despair"));
+      await tester.pumpAndSettle();
+      await tester.scrollUntilVisible(find.text('1.47'), 300);
+      await tester.tap(find.text('1.47'));
+      await tester.pumpAndSettle();
+      expect(find.text('47 / 47'), findsOneWidget);
+
+      // At the last verse of a chapter, Next is labelled with the next chapter.
+      await tester.tap(find.text('Chapter 2'));
+      await tester.pumpAndSettle();
+      expect(find.text('Chapter 2 · Verse 1'), findsOneWidget);
+
+      await tester.tap(find.byTooltip('Next chapter'));
+      await tester.pumpAndSettle();
+      expect(find.text('Chapter 3 · Verse 1'), findsOneWidget);
+
+      await tester.tap(find.byTooltip('Previous chapter'));
+      await tester.pumpAndSettle();
+      expect(find.text('Chapter 2 · Verse 1'), findsOneWidget);
+
+      await tester.tap(find.text('Previous'));
+      await tester.pumpAndSettle();
+      expect(find.text('Chapter 1 · Verse 47'), findsOneWidget);
+      expect(app.settings.lastReadId, '1.47');
+    },
+  );
+
+  testWidgets(
+    'a chapter page moves to the next chapter and offers to continue reading',
+    (tester) async {
+      useTallPhone(tester);
+      final app = await buildApp(
+        prefs: {'lastRead': '2.47'},
+        clock: () => DateTime(2026, 1, 1),
+      );
+      await tester.pumpWidget(app.widget);
+      await tester.pumpAndSettle();
+
+      await tester.tap(find.text('Chapters'));
+      await tester.pumpAndSettle();
+      expect(find.text('Continue reading'), findsOneWidget);
+      await tester.tap(find.text('Continue reading'));
+      await tester.pumpAndSettle();
+      expect(find.text('Chapter 2 · Verse 47'), findsOneWidget);
+      await tester.pageBack();
+      await tester.pumpAndSettle();
+
+      await tester.tap(find.text('Knowledge of the Self'));
+      await tester.pumpAndSettle();
+      await tester.tap(find.text('Chapter 3'));
+      await tester.pumpAndSettle();
+      expect(find.text('The Path of Action'), findsOneWidget);
+      await tester.tap(find.text('Start reading'));
+      await tester.pumpAndSettle();
+      expect(find.text('Chapter 3 · Verse 1'), findsOneWidget);
+    },
+  );
+
+  testWidgets('the Quotes tab lists every quote and filters by chapter', (
+    tester,
+  ) async {
+    useTallPhone(tester);
+    final app = await buildApp(clock: () => DateTime(2026, 1, 1));
+    await tester.pumpWidget(app.widget);
+    await tester.pumpAndSettle();
+
+    await tester.tap(find.text('Quotes'));
+    await tester.pumpAndSettle();
+    final total = realContent.allQuotes.length;
+    expect(find.text('$total quotes'), findsOneWidget);
+    expect(find.text('Where the story begins'), findsOneWidget);
+
+    await tester.tap(find.widgetWithText(ChoiceChip, '2'));
+    await tester.pumpAndSettle();
+    expect(find.text('Where the story begins'), findsNothing);
+    final topic = find.text('Do the work, let go of the result');
+    await tester.scrollUntilVisible(
+      topic,
+      300,
+      scrollable: find.byWidgetPredicate(
+        (w) => w is Scrollable && w.axisDirection == AxisDirection.down,
+      ),
+    );
+    // A verse with a short quote line shows that line.
+    expect(
+      find.text('“Your part is the work, never what comes of it.”'),
+      findsOneWidget,
+    );
+    final card = find.ancestor(of: topic, matching: find.byType(QuoteFeedCard));
+    final read = find.descendant(
+      of: card,
+      matching: find.byTooltip('Read verse'),
+    );
+    await tester.ensureVisible(read);
+    await tester.pumpAndSettle();
+    await tester.tap(read);
+    await tester.pumpAndSettle();
+    expect(find.text('Chapter 2 · Verse 47'), findsOneWidget);
+  });
+
+  testWidgets('the Feelings tab gives the best quotes for an emotion', (
+    tester,
+  ) async {
+    useTallPhone(tester);
+    final app = await buildApp(clock: () => DateTime(2026, 1, 1));
+    await tester.pumpWidget(app.widget);
+    await tester.pumpAndSettle();
+
+    await tester.tap(find.text('Feelings'));
+    await tester.pumpAndSettle();
+    expect(find.text('A thought for you'), findsOneWidget);
+    expect(find.text('How are you feeling right now?'), findsOneWidget);
+    expect(find.text("When it's hard"), findsOneWidget);
+    expect(find.text('When you want to grow'), findsOneWidget);
+
+    await tester.tap(find.text('Angry'));
+    await tester.pumpAndSettle();
+    expect(find.textContaining('See where anger starts'), findsOneWidget);
+    expect(find.textContaining('three doors to darkness'), findsOneWidget);
+
+    // Sharing a quote puts the short line on the picture, not the whole verse.
+    final card = find.ancestor(
+      of: find.textContaining('three doors to darkness'),
+      matching: find.byType(Card),
+    );
+    await tester.ensureVisible(card);
+    await tester.pumpAndSettle();
+    await tester.tap(
+      find.descendant(of: card, matching: find.byTooltip('Share')),
+    );
+    await tester.pumpAndSettle();
+    expect(
+      find.descendant(
+        of: find.byType(ShareCard),
+        matching: find.textContaining('three doors to darkness'),
+      ),
+      findsOneWidget,
+    );
+  });
+
+  testWidgets('a verse can be shared as a picture', (tester) async {
+    useTallPhone(tester);
+    final app = await buildApp(clock: () => DateTime(2026, 1, 1));
+    final shared = <(int, String, String)>[];
+    final original = imageSharer;
+    imageSharer = (png, name, caption, origin) async =>
+        shared.add((png.length, name, caption));
+    addTearDown(() => imageSharer = original);
+    await tester.pumpWidget(app.widget);
+    await tester.pumpAndSettle();
+
+    await tester.tap(find.byTooltip('Share'));
+    await tester.pumpAndSettle();
+    expect(find.text('Share as image'), findsOneWidget);
+    expect(find.byType(ShareCard), findsOneWidget);
+
+    await tester.runAsync(() async {
+      await tester.tap(find.widgetWithText(FilledButton, 'Share'));
+      await Future<void>.delayed(const Duration(seconds: 1));
+    });
+    await tester.pumpAndSettle();
+    expect(shared, hasLength(1));
+    expect(shared.single.$1, greaterThan(1000));
+    expect(shared.single.$2, 'bhagavad-gita-1-1.png');
+    expect(shared.single.$3, endsWith('— Bhagavad Gita 1.1'));
+    expect(find.byType(ShareCard), findsNothing);
   });
 
   testWidgets(
