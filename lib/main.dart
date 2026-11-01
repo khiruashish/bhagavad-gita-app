@@ -5,6 +5,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import 'src/app.dart';
 import 'src/app_scope.dart';
+import 'src/audio/background_audio.dart';
 import 'src/audio/chapter_player.dart';
 import 'src/audio/verse_speaker.dart';
 import 'src/content/models.dart';
@@ -26,16 +27,18 @@ Future<void> main() async {
   final settings = SettingsController(prefs);
   WidgetFeed(settings, content).start();
   final speaker = DeviceVerseSpeaker();
+  final player = ChapterPlayer(
+    speaker: speaker,
+    content: content,
+    settings: settings,
+  );
+  BackgroundAudio(player, settings, content).start();
   runApp(
     AppScope(
       content: content,
       settings: settings,
       speaker: speaker,
-      player: ChapterPlayer(
-        speaker: speaker,
-        content: content,
-        settings: settings,
-      ),
+      player: player,
       child: const GitaApp(),
     ),
   );

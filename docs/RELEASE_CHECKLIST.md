@@ -17,7 +17,7 @@ the repo with an AI coding assistant.
 | App features: daily verse, chapters, reader with chapter navigation, Feelings (quotes by emotion), Quotes, share as image, audio, Hindi/English interface, dark mode, text size | ✅ Done |
 | Bookmarks, notes, search / go to verse, reading progress, reflection questions, About & credits screen, rate link, Android home-screen widget | ✅ Done |
 | App icon (Krishna and Arjuna on the chariot), splash screen, bundled Devanagari font | ✅ Done (replace the icon art any time, see section 5) |
-| Tests: 40 app tests (incl. accessibility) + 12 content-tool tests, run in CI | ✅ Passing |
+| Tests: 41 app tests (incl. accessibility) + 12 content-tool tests, run in CI | ✅ Passing |
 | Sanskrit text (701 verses, public domain) + pronunciation | ✅ Done |
 | Original translations and simple meanings | ✅ 701/701 drafted · ❌ 0 reviewed |
 | Licences, credits, contact details | ❌ Waiting on owner (section 1) |
@@ -151,6 +151,7 @@ Google Play:
 - [ ] **Content rating** questionnaire (reference / religious text; expected "Everyone").
 - [ ] **Target audience**: 13+ (choosing under-13 brings in the Families policy).
 - [ ] **Ads**: "No ads".
+- [ ] **Foreground service declaration** (App content → Foreground service permissions): type *media playback*, used for "chapter audio keeps playing with the screen locked; the user starts it and can pause or stop it from the notification". Google may ask for a short video showing this.
 - [ ] App category: Books & Reference (or Lifestyle). Tags.
 - [ ] Contact details and privacy policy URL.
 - [ ] If the account is personal and new: **closed test with at least 12 testers for 14 days** before production access (section 9).
@@ -189,6 +190,7 @@ flutter build ipa --release --obfuscate --split-debug-info=build/symbols   # on 
   - Share as image works with WhatsApp and Instagram; the picture is readable.
   - Listen works in Sanskrit, Hindi and English (or shows the "no voice" message).
   - Listen to chapter: plays verse after verse; Pause and Continue work; it keeps playing with the screen locked or while using other tabs; Continue from verse N after reopening the app.
+  - Screen locked: the lock screen / notification shows the verse with ⏮ ⏯ ⏭ and stop, and they work; headset buttons pause and continue; swiping the app away stops the audio and removes the notification.
   - Hindi interface, dark mode, largest text size.
   - Airplane mode: everything still works.
   - A small, older Android phone (Android 7–9) and an older iPhone (iOS 15).

@@ -40,6 +40,13 @@ When you tap Share, the app makes a picture of the verse on your phone and opens
 phone's own share menu. Nothing is sent unless you choose an app to share it with, and
 then it goes only where you send it. The app itself does not receive or keep a copy.
 
+## Chapter audio in the background
+
+So that a chapter can keep playing with the screen locked, Android shows a media
+notification with play, pause and skip buttons while chapter audio is open, and the
+app keeps the phone's processor awake only while audio is playing. On iPhone the same
+controls appear on the lock screen. Nothing is recorded or sent anywhere.
+
 ## Links
 
 "Rate this app", the contact email and "Source code" open your phone's app store, email

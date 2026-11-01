@@ -59,6 +59,10 @@ chapter ends.
 - Where you stopped is remembered: the chapter page then offers *Continue from verse N*
   or *Start over*. Continuing restarts the sentence that was interrupted.
 - A single verse's Listen button pauses chapter audio.
+- **Screen locked / app in the background**: audio keeps playing. Android shows a media
+  notification (and lock-screen controls) with ⏮ ⏯ ⏭ and stop; iPhone shows the same
+  controls on the lock screen. Native code: `ChapterAudioService.kt`, `AppDelegate.swift`;
+  Dart bridge: `lib/src/audio/background_audio.dart`.
 
 **Search** (top bar on every tab): type a verse number like `2.47`,
 `2 47` or `2:47` to jump to it, or words in English, Hindi or Roman-letter Sanskrit

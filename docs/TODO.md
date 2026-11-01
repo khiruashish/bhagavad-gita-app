@@ -95,6 +95,6 @@ Then 🤖: add `LICENSE` and `content/LICENSE` files to match your choices.
 - Content: Sanskrit for all 701 verses (public domain, typos fixed); our own pronunciation; original drafts of all 701 translations and simple meanings with 0 similarity flags; self-review of all verses done (one meaning error fixed in 11.48)
 - Navigation: tabs Today, Chapters, Feelings, Quotes, Start here; Settings, search and My verses in the top bar
 - Look: redesigned layout; Krishna and Arjuna app icon; splash screen; bundled Sanskrit font
-- Quality: 40 app tests (including accessibility) + 12 content-tool tests; CI builds Android and iOS on every push
-- Privacy: no internet, no account, no data collected, no new permissions; privacy policy written
+- Quality: 41 app tests (including accessibility) + 12 content-tool tests; CI builds Android and iOS on every push
+- Privacy: no internet, no account, no data collected, no permission prompts (only install-time permissions for background chapter audio); privacy policy written
 - Docs: guide, release checklist, UI layout with screenshots, master prompts, content sources

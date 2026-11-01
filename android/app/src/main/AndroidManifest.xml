@@ -1,7 +1,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
-    <!-- No permissions are requested: the release app has no internet access, no
-         storage access and collects no data. (Debug/profile builds add INTERNET only
-         for the Flutter tooling.) -->
+    <!-- No internet, storage, location or other runtime permissions. The only permissions
+         are install-time ones that let chapter audio keep playing with the screen locked
+         (a media-playback foreground service and a wake lock held only while it plays).
+         (Debug/profile builds add INTERNET only for the Flutter tooling.) -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
     <application
         android:label="Gita for Everyone"
         android:name="${applicationName}"
@@ -30,6 +34,11 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <!-- Chapter audio with the screen locked (see ChapterAudioService.kt). -->
+        <service
+            android:name=".ChapterAudioService"
+            android:exported="false"
+            android:foregroundServiceType="mediaPlayback" />
         <!-- Home-screen widget with today's verse (reads on-device data only). -->
         <receiver
             android:name=".GitaWidgetProvider"

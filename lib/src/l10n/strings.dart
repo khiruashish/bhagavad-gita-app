@@ -137,6 +137,7 @@ class Strings {
     'Chapter $chapter · Verse $verse of $total',
     'अध्याय $chapter · श्लोक $verse / $total',
   );
+  String get chapterAudioChannel => _t('Chapter audio', 'अध्याय का ऑडियो');
   String get chapterAudio =>
       _t('Chapter audio reads', 'अध्याय सुनते समय पढ़ें');
   String get audioSanskritAndMeaning =>
